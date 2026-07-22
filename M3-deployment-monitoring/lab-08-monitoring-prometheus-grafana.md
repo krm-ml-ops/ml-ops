@@ -1,20 +1,20 @@
-# Lab 08. Model Monitoring with Prometheus and Grafana
+# Лабораторная работа 08. Мониторинг модели с Prometheus и Grafana
 
-## Objective
+## Цель работы
 
-Instrument an ML service, collect technical and model-related metrics, and analyze system behavior using Prometheus and Grafana.
+Инструментировать ML-сервис, собирать технические и модельные метрики и анализировать поведение системы с помощью Prometheus и Grafana.
 
-## Tasks
+## Задачи работы
 
-1. Expose service metrics from the FastAPI application.
-2. Deploy Prometheus and Grafana with Docker Compose.
-3. Build a dashboard for service and model behavior.
-4. Generate normal traffic, spikes, and invalid requests.
-5. Configure and validate alerting rules.
+1. Экспортировать метрики сервиса из FastAPI-приложения.
+2. Развернуть Prometheus и Grafana через Docker Compose.
+3. Построить dashboard по сервисным и модельным показателям.
+4. Сгенерировать нормальную нагрузку, всплески и невалидные запросы.
+5. Настроить и проверить alert-правила.
 
-## Required Software
+## Необходимое программное обеспечение
 
-- Linux or Windows 10/11 with WSL2
+- Linux или Windows 10/11 с WSL2
 - Python 3.10+
 - Git
 - Docker Compose
@@ -22,40 +22,51 @@ Instrument an ML service, collect technical and model-related metrics, and analy
 - Grafana
 - `prometheus-client`
 
-## Theory Summary
+## Краткие теоретические сведения
 
-Monitoring in MLOps covers infrastructure, service behavior, and model behavior. Since true labels often arrive late, operational monitoring also relies on proxy indicators such as prediction distributions, input drift, latency, and error rates.
+Мониторинг в MLOps охватывает инфраструктуру, поведение сервиса и поведение модели. Так как истинные метки часто поступают с задержкой, эксплуатационный контроль опирается и на прокси-индикаторы: распределение предсказаний, drift входных данных, задержки и частоту ошибок.
 
-## Assignment
+## Задание
 
-- Extend the Lab 07 service with a `/metrics` endpoint.
-- Add request counters, latency histograms, active-request gauges, and error counters.
-- Add at least two model-related metrics defined by the assigned variant.
-- Configure Docker Compose for the service, Prometheus, and Grafana.
-- Create a Grafana dashboard with at least six panels.
-- Define one technical alert and one model alert, trigger both intentionally, and document the outcome.
+- Расширить сервис лабораторной работы 07 endpoint `/metrics`.
+- Добавить счетчики запросов, histogram задержки, gauge активных запросов и счетчики ошибок.
+- Добавить не менее двух модельных метрик, определенных вариантом.
+- Настроить Docker Compose для сервиса, Prometheus и Grafana.
+- Создать Grafana dashboard минимум из шести панелей.
+- Описать один технический и один модельный alert, намеренно вызвать оба и зафиксировать результат.
 
-## Individual Variants
+## Индивидуальные варианты
 
-Use the variant matrix from `materials/md/лабораторные.md`, including the assigned model metric and alert thresholds.
+| Вариант | ML-метрика | Модельный alert | Технический alert |
+|---|---|---|---|
+| 1 | Доля классов прогнозов | рост доли одного класса > 80% | `p95 latency > 0.5 c` |
+| 2 | Средняя confidence | `confidence < 0.6` | `error rate > 5%` |
+| 3 | Число значений вне train-диапазона | `out-of-range > 10%` | `service down` |
+| 4 | Сдвиг среднего ключевого признака | отклонение > `2σ` | `p99 latency > 1 c` |
+| 5 | Доля пропусков или нулевых значений | `missing > 5%` | `requests/sec > лимита` |
+| 6 | Распределение batch size | `batch > 100` | `memory proxy gauge > порога` |
+| 7 | Средний прогноз регрессии | изменение > 30% `baseline` | `error rate > 3%` |
+| 8 | Распределение кластеров | пустой или доминирующий кластер | `p95 > 0.7 c` |
+| 9 | Длина текста и доля пустых строк | `empty > 2%` | `HTTP 422 > порога` |
+| 10 | Размер изображения или вектора | `invalid shape > 1%` | `throughput < порога` |
 
-## Report Requirements
+## Требования к отчету
 
-- Monitoring architecture and scrape configuration
-- Dashboard overview
-- Alert rules and proof of triggering
-- Analysis of service health and possible model degradation
-- Final recommendations
+- архитектура мониторинга и `scrape`-конфигурация;
+- обзор dashboard;
+- alert-правила и подтверждение их срабатывания;
+- анализ состояния сервиса и возможной деградации модели;
+- итоговые рекомендации.
 
-## Control Questions
+## Контрольные вопросы
 
-1. Which metric groups matter in ML monitoring?
-2. How does a `Counter` differ from a `Gauge`?
-3. When is a `Histogram` preferable?
-4. Why is label cardinality important?
-5. Why is model monitoring harder when ground truth is delayed?
+1. Какие группы метрик важны для мониторинга ML-систем?
+2. Чем `Counter` отличается от `Gauge`?
+3. Когда предпочтительно использовать `Histogram`?
+4. Почему важна кардинальность `label`?
+5. Почему мониторинг модели сложнее, если `ground truth` поступает с задержкой?
 
-## Related Competencies and Indicators
+## Связанные компетенции и индикаторы
 
 - BD-5.1
 - BD-5.3

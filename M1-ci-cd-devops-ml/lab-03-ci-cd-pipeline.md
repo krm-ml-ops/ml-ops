@@ -1,61 +1,72 @@
-# Lab 03. Creating a CI/CD Pipeline for an ML Project
+# Лабораторная работа 03. Создание CI/CD pipeline для ML-проекта
 
-## Objective
+## Цель работы
 
-Automate quality checks, testing, build, and delivery steps for an ML project using a reproducible CI/CD pipeline.
+Автоматизировать проверки качества, тестирование, сборку и поставку ML-проекта с использованием воспроизводимого CI/CD pipeline.
 
-## Tasks
+## Задачи работы
 
-1. Add automated code and data quality checks.
-2. Configure CI to run tests and verify a minimum model-quality threshold.
-3. Build the Docker image only after validation succeeds.
-4. Publish an artifact or simulate deployment under controlled conditions.
-5. Demonstrate both successful and failing pipeline behavior.
+1. Добавить автоматические проверки качества кода и данных.
+2. Настроить CI на запуск тестов и проверку минимального порога качества модели.
+3. Собирать Docker-образ только после успешной валидации.
+4. Публиковать артефакт или имитировать deploy при контролируемых условиях.
+5. Продемонстрировать как успешный, так и падающий сценарий pipeline.
 
-## Required Software
+## Необходимое программное обеспечение
 
-- Linux or Windows 10/11 with WSL2
+- Linux или Windows 10/11 с WSL2
 - Python 3.10+
 - Git
-- Docker Engine or Docker Desktop
-- GitHub Actions or Jenkins
-- Code editor or IDE
+- Docker Engine или Docker Desktop
+- GitHub Actions или Jenkins
+- редактор кода или IDE
 
-## Theory Summary
+## Краткие теоретические сведения
 
-CI focuses on automated verification of every change, while CD prepares or performs delivery. In ML systems, pipelines should validate not only application code but also data assumptions, training reproducibility, and model-quality thresholds.
+CI отвечает за автоматическую проверку каждого изменения, а CD подготавливает или выполняет поставку. В ML-системах pipeline должен валидировать не только код приложения, но и предпосылки по данным, воспроизводимость обучения и пороги качества модели.
 
-## Assignment
+## Задание
 
-- Add at least two unit tests and one data-quality test.
-- Add a linter, formatter check, or static analysis step.
-- Implement a workflow or Jenkins pipeline according to the assigned variant.
-- Cache Python dependencies.
-- Train on a reduced dataset during CI and fail the pipeline if the required metric threshold is not met.
-- Build the Docker image after successful checks.
-- Archive test reports and metrics as CI artifacts.
+- Добавить минимум два unit-теста и один тест качества данных.
+- Добавить линтер, проверку форматирования или этап статического анализа.
+- Реализовать workflow или Jenkins pipeline согласно назначенному варианту.
+- Настроить кэширование Python-зависимостей.
+- Выполнять обучение на уменьшенной выборке в CI и завершать pipeline ошибкой, если порог метрики не достигнут.
+- Собирать Docker-образ после успешных проверок.
+- Архивировать отчеты тестов и метрики как CI-артефакты.
 
-## Individual Variants
+## Индивидуальные варианты
 
-Use the variant matrix from `materials/md/лабораторные.md`, including the assigned CI system, checks, metric threshold, and delivery rule.
+| Вариант | Система | Проверки | Порог | Этап доставки |
+|---|---|---|---|---|
+| 1 | GitHub Actions | `pytest` + `ruff` | `accuracy >= 0.90` | build без публикации |
+| 2 | GitHub Actions | `pytest` + `flake8` | `F1 >= 0.85` | публикация по тегу |
+| 3 | GitHub Actions | `pytest` + `mypy` | `RMSE <= заданного порога` | build + artifact |
+| 4 | GitHub Actions | `pytest` + `black --check` | `ROC-AUC >= 0.90` | публикация `main` |
+| 5 | Jenkins Declarative Pipeline | `pytest` + `pylint` | `accuracy >= 0.80` | локальный registry |
+| 6 | Jenkins Declarative Pipeline | `pytest` + `ruff` | `MAE <= заданного порога` | архивирование модели |
+| 7 | GitHub Actions | `unittest` + `flake8` | проверка числа пропусков | build matrix Python 3.10/3.11 |
+| 8 | GitHub Actions | `pytest` + `bandit` | `silhouette >= 0.40` | security report |
+| 9 | Jenkins Pipeline | `pytest` + `mypy` | `F1 >= 0.75` | ручное подтверждение deploy |
+| 10 | GitHub Actions | `pytest` + `ruff` | `latency smoke-test < 1 c` | публикация по release |
 
-## Report Requirements
+## Требования к отчету
 
-- Pipeline stages and triggers
-- Checks included and their rationale
-- Artifact and metric retention
-- Evidence of one successful and one failing run
-- Conclusion on readiness for team development
+- этапы pipeline и триггеры;
+- набор проверок и обоснование их выбора;
+- хранение артефактов и метрик;
+- подтверждение одного успешного и одного падающего прогона;
+- вывод о готовности решения к командной разработке.
 
-## Control Questions
+## Контрольные вопросы
 
-1. What triggers a CI pipeline?
-2. How does CI differ from CD?
-3. Which checks are especially important for ML projects?
-4. Why should model-quality checks not replace unit tests?
-5. How are registry credentials handled safely in CI/CD?
+1. Что может выступать триггером CI pipeline?
+2. Чем этап CI отличается от CD?
+3. Какие проверки особенно важны для ML-проектов?
+4. Почему проверки качества модели не заменяют unit-тесты?
+5. Как безопасно хранить учетные данные registry в CI/CD?
 
-## Related Competencies and Indicators
+## Связанные компетенции и индикаторы
 
 - BD-5.3
 - DL-3.2

@@ -1,6 +1,6 @@
-# Test Banks
+# Банки тестов
 
-| Bank | Link | Purpose | Related labs or assessment |
+| Банк | Ссылка | Назначение | Связь с лабораторными или аттестацией |
 |---|---|---|---|
-| Theoretical zachet questions | ../../Exam/theoretical-questions.md | oral or written coverage of the full course | Final zachet |
-| Competence-oriented final tests | ../../Exam/competence-tests.md | objective checks of tool selection, reproducibility, deployment, and monitoring understanding | Final zachet |
+| Теоретические вопросы к зачету | ../../Exam/theoretical-questions.md | устная или письменная проверка полного содержания курса | зачет |
+| Компетентностно-ориентированные тесты | ../../Exam/competence-tests.md | объективная проверка понимания выбора инструментов, воспроизводимости, развертывания и мониторинга | зачет |

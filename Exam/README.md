@@ -1,39 +1,39 @@
-# Final Assessment: Zachet
+# Материалы зачета
 
-This course uses a `zachet` as the final form of intermediate assessment.
+По дисциплине используется `зачет` как форма промежуточной аттестации.
 
-## Admission Rule
+## Правило допуска
 
-Students are admitted to the final zachet only after completing and defending all eight laboratory works.
+К зачету допускаются только студенты, выполнившие и защитившие все восемь лабораторных работ.
 
-## Assessment Format
+## Формат зачета
 
-The final zachet may be conducted in written or combined form and includes:
+Зачет может проводиться в письменной или комбинированной форме и включает:
 
-1. theoretical questions;
-2. competence-oriented test items;
-3. practical tasks when the instructor needs to verify applied understanding.
+1. теоретические вопросы;
+2. компетентностно-ориентированные тестовые задания;
+3. практические задания, если необходимо проверить прикладное понимание материала.
 
-## Point Distribution
+## Распределение баллов
 
-- 8 laboratory works with defense: 80 points total
-- final zachet: 20 points
-- total: 100 points
+- 8 лабораторных работ с защитой: 80 баллов суммарно
+- зачет: 20 баллов
+- всего: 100 баллов
 
-The detailed grading table is published in [grading.md](grading.md).
+Подробная таблица оценивания опубликована в [grading.md](grading.md).
 
-## Threshold
+## Порог успешного прохождения
 
-- `60-100` points: passed
-- `<60` points: not passed
+- `60-100` баллов: зачтено
+- `<60` баллов: не зачтено
 
-## Assessment Materials
+## Оценочные материалы
 
-- [Theoretical questions](theoretical-questions.md)
-- [Competence-oriented test bank](competence-tests.md)
-- [Practical zachet tasks](practical-tasks.md)
-- [Grading and thresholds](grading.md)
+- [Теоретические вопросы](theoretical-questions.md)
+- [Компетентностно-ориентированные тесты](competence-tests.md)
+- [Практические задания к зачету](practical-tasks.md)
+- [Шкала оценивания и пороги](grading.md)
 
-## Coverage of Course Outcomes
+## Что проверяет зачет
 
-The zachet verifies the student's ability to connect the three modules into a single MLOps workflow: reproducible environment setup, lifecycle management, deployment, and monitoring.
+Зачет проверяет способность студента связать три модуля курса в единый MLOps workflow: воспроизводимое окружение, управление жизненным циклом модели, развертывание и мониторинг.

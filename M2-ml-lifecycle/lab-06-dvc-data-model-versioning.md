@@ -1,59 +1,70 @@
-# Lab 06. Tracking Data and Model Changes with DVC
+# Лабораторная работа 06. Отслеживание изменений в моделях и данных с DVC
 
-## Objective
+## Цель работы
 
-Version datasets, models, and pipeline stages with DVC and reproduce past ML states together with Git revisions.
+Научиться версионировать данные, модели и этапы ML-процесса с помощью DVC и воспроизводить прошлые состояния проекта вместе с ревизиями Git.
 
-## Tasks
+## Задачи работы
 
-1. Initialize DVC in a Git-based ML project.
-2. Configure a remote storage location outside the repository.
-3. Track datasets and model outputs with DVC.
-4. Describe the workflow in `dvc.yaml`.
-5. Compare metrics across revisions and restore a previous state.
+1. Инициализировать DVC в ML-проекте на базе Git.
+2. Настроить удаленное хранилище вне репозитория.
+3. Добавить датасеты и результаты модели под контроль DVC.
+4. Описать workflow в `dvc.yaml`.
+5. Сравнить метрики между ревизиями и восстановить предыдущее состояние.
 
-## Required Software
+## Необходимое программное обеспечение
 
-- Linux or Windows 10/11 with WSL2
+- Linux или Windows 10/11 с WSL2
 - Python 3.10+
 - Git
 - DVC
-- Code editor or IDE
+- редактор кода или IDE
 
-## Theory Summary
+## Краткие теоретические сведения
 
-Git is effective for source code and lightweight metadata, while DVC extends version control to large datasets, trained models, and reproducible pipelines. Together, Git tags and DVC metadata make it possible to recover both code and data state for a given experiment.
+Git хорошо подходит для исходного кода и легковесных метаданных, а DVC расширяет контроль версий на большие датасеты, обученные модели и воспроизводимые pipeline. Связка Git-тегов и DVC-метаданных позволяет восстановить как состояние кода, так и состояние данных для конкретного эксперимента.
 
-## Assignment
+## Задание
 
-- Initialize Git and DVC.
-- Configure a local remote directory outside the repository.
-- Add source data under DVC control and push it to the remote.
-- Define at least `prepare`, `train`, and `evaluate` stages in `dvc.yaml`.
-- Commit metadata files for one baseline version, modify the data according to the assigned variant, and compare metrics across versions.
-- Restore a previous tagged revision with `dvc pull` and verify reproducibility.
+- Инициализировать Git и DVC.
+- Настроить локальный `remote`-каталог вне репозитория.
+- Добавить исходные данные под DVC-контроль и выполнить `push`.
+- Описать в `dvc.yaml` как минимум этапы `prepare`, `train` и `evaluate`.
+- Зафиксировать метафайлы для базовой версии, изменить данные по варианту и сравнить метрики между версиями.
+- Восстановить предыдущую отмеченную тегом ревизию через `dvc pull` и подтвердить воспроизводимость.
 
-## Individual Variants
+## Индивидуальные варианты
 
-Use the variant matrix from `materials/md/лабораторные.md`, including the assigned data change scenario, evaluation metric, and analysis goal.
+| Вариант | Изменение данных | Метрики | Цель анализа |
+|---|---|---|---|
+| 1 | Добавить 10% корректных объектов | `accuracy` / `F1` | ожидается устойчивость или рост |
+| 2 | Удалить 10% объектов одного класса | `macro-F1` | проанализировать дисбаланс |
+| 3 | Добавить 5% пропусков | `MAE` / `accuracy` | изменить preprocessing |
+| 4 | Добавить шум к числовым признакам | `ROC-AUC` | оценить деградацию |
+| 5 | Изменить правило `train/test split` | `accuracy` | сравнить вариативность |
+| 6 | Добавить новый признак | `MAE` / `R²` | оценить полезность |
+| 7 | Удалить один признак | `F1` | оценить влияние |
+| 8 | Изменить словарь текстов | `macro-F1` | сравнить размер словаря |
+| 9 | Изменить разрешение изображений | `accuracy` / `время` | сравнить ресурсы |
+| 10 | Изменить число кластеров или состав данных | `silhouette` | сравнить структуру |
 
-## Report Requirements
+## Требования к отчету
 
-- DVC setup and remote configuration
-- Pipeline graph and tracked artifacts
-- Comparison of at least two revisions
-- Evidence of restoring a prior version
-- Conclusions on data and model traceability
+- настройка DVC и удаленного хранилища;
+- граф pipeline и отслеживаемые артефакты;
+- сравнение минимум двух ревизий;
+- подтверждение восстановления предыдущей версии;
+- выводы о трассируемости данных и моделей.
 
-## Control Questions
+## Контрольные вопросы
 
-1. Why should large datasets not be stored directly in Git?
-2. What is stored in a `.dvc` file?
-3. How does `dvc.yaml` differ from `dvc.lock`?
-4. What do `deps` and `outs` represent?
-5. How do Git revisions and DVC versions work together?
+1. Почему большие датасеты не рекомендуется хранить напрямую в Git?
+2. Что хранится в `.dvc`-файле?
+3. Чем `dvc.yaml` отличается от `dvc.lock`?
+4. Что обозначают `deps` и `outs`?
+5. Как совместно работают ревизии Git и версии DVC?
 
-## Related Competencies and Indicators
+## Связанные компетенции и индикаторы
 
 - BD-5.3
 - ML-2.2

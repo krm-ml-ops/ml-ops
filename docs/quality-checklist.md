@@ -1,20 +1,20 @@
-# Repository Readiness Checklist
+# Чек-лист готовности репозитория
 
-## Content
+## Содержательная проверка
 
-- [ ] Root title is `Fundamentals of MLOps`.
-- [ ] The cleaned course program in `docs/rpd.md` matches the published course structure.
-- [ ] The repository contains 3 real module folders.
-- [ ] The repository contains 8 lab files mapped across the 3 modules.
-- [ ] `Exam/README.md` reflects a zachet rather than a generic placeholder.
-- [ ] `Project/README.md` clearly states that a separate project is not used.
-- [ ] Student and teacher guidelines are populated.
-- [ ] Resource sections contain curated entries instead of empty templates.
-- [ ] Team placeholders remain only where source data is missing.
+- [ ] Корневой заголовок имеет вид `Fundamentals of MLOps`.
+- [ ] `docs/rpd.md` соответствует опубликованной структуре курса.
+- [ ] В репозитории есть 3 реальные папки модулей.
+- [ ] В репозитории есть 8 файлов лабораторных работ, распределенных по 3 модулям.
+- [ ] `Exam/README.md` описывает зачет, а не шаблонный экзамен.
+- [ ] `Project/README.md` явно указывает, что отдельный проект по дисциплине не используется.
+- [ ] Методические указания для студентов и преподавателей заполнены.
+- [ ] Разделы ресурсов содержат краткие подобранные материалы, а не пустые шаблоны.
+- [ ] TODO-заполнители по команде оставлены только там, где исходные данные отсутствуют.
 
-## Technical Checks
+## Техническая проверка
 
-- [ ] No active published files contain `[ЗАПОЛНИТЬ]` markers.
-- [ ] Relative Markdown links resolve correctly after folder renames.
-- [ ] Source archive files remain under `materials/` and are not presented as the published structure.
-- [ ] Large binary materials are kept only where needed.
+- [ ] В опубликованных файлах нет активных маркеров `[ЗАПОЛНИТЬ]`.
+- [ ] Относительные Markdown-ссылки корректно работают после переименования папок.
+- [ ] Архив исходников остается в `materials/` и не выдается за опубликованную структуру курса.
+- [ ] Крупные бинарные материалы хранятся только там, где это действительно нужно.

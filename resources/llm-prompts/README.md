@@ -1,3 +1,3 @@
 # LLM Prompts
 
-This section is intentionally left without curated prompt content in the current course release. Any use of external AI tools should be governed by instructor rules rather than embedded into the official assessment structure.
+Раздел намеренно оставлен без подобранного prompt-контента в текущем выпуске курса. Использование внешних AI-инструментов должно регулироваться правилами преподавателя, а не встраиваться в официальную структуру оценивания.

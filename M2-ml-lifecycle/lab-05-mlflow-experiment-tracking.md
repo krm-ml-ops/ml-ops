@@ -1,59 +1,70 @@
-# Lab 05. Experiment Tracking with MLflow
+# Лабораторная работа 05. Логирование экспериментов с MLflow
 
-## Objective
+## Цель работы
 
-Use MLflow to track experiments, compare model runs, and register the best candidate for further lifecycle stages.
+Освоить использование MLflow для отслеживания экспериментов, сравнения запусков и регистрации лучшего кандидата для дальнейших этапов жизненного цикла.
 
-## Tasks
+## Задачи работы
 
-1. Deploy a local MLflow Tracking Server.
-2. Run a parameterized experiment grid.
-3. Log metrics, parameters, artifacts, and runtime context.
-4. Compare runs and justify the best result.
-5. Register the selected model and verify loading it back.
+1. Развернуть локальный MLflow Tracking Server.
+2. Выполнить серию параметризованных запусков.
+3. Логировать метрики, параметры, артефакты и runtime-контекст.
+4. Сравнить запуски и обосновать лучший результат.
+5. Зарегистрировать выбранную модель и проверить ее обратную загрузку.
 
-## Required Software
+## Необходимое программное обеспечение
 
-- Linux or Windows 10/11 with WSL2
+- Linux или Windows 10/11 с WSL2
 - Python 3.10+
 - Git
 - MLflow
-- Code editor or IDE
+- редактор кода или IDE
 
-## Theory Summary
+## Краткие теоретические сведения
 
-Experiment tracking is essential for comparing runs, understanding model behavior, and ensuring that training decisions are explainable and reproducible. MLflow connects parameters, metrics, artifacts, and registered models across the ML lifecycle.
+Логирование экспериментов необходимо для сравнения запусков, понимания поведения модели и обеспечения объяснимости и воспроизводимости решений по обучению. MLflow связывает параметры, метрики, артефакты и зарегистрированные модели на разных этапах жизненного цикла ML.
 
-## Assignment
+## Задание
 
-- Launch MLflow with local backend and artifact stores.
-- Create an experiment named using the group and variant convention.
-- Execute at least eight runs over a parameter grid.
-- Log train and test metrics, parameters, seed, artifacts, and training duration.
-- Register the best model and assign alias `candidate`.
-- Load the model from MLflow and perform a control inference.
+- Запустить MLflow с локальными `backend store` и `artifact store`.
+- Создать experiment с именем по шаблону группы и варианта.
+- Выполнить не менее восьми запусков по сетке параметров.
+- Логировать train- и test-метрики, параметры, `seed`, артефакты и длительность обучения.
+- Зарегистрировать лучшую модель и назначить alias `candidate`.
+- Загрузить модель из MLflow и выполнить контрольный инференс.
 
-## Individual Variants
+## Индивидуальные варианты
 
-Use the variant matrix from `materials/md/лабораторные.md`, including the assigned model family, search parameters, and primary selection metric.
+| Вариант | Модель | Исследуемые параметры | Критерий выбора |
+|---|---|---|---|
+| 1 | `LogisticRegression` | `C: 0.01-10`, `penalty` | `macro-F1` |
+| 2 | `RandomForestClassifier` | `n_estimators`, `max_depth` | `ROC-AUC` |
+| 3 | `SVC` | `C`, `gamma`, `kernel` | `accuracy` |
+| 4 | `GradientBoostingClassifier` | `n_estimators`, `learning_rate` | `F1` |
+| 5 | `Ridge` | `alpha` | `RMSE` (минимум) |
+| 6 | `RandomForestRegressor` | `n_estimators`, `max_depth` | `MAE` (минимум) |
+| 7 | `KNeighborsClassifier` | `n_neighbors`, `weights` | `accuracy` |
+| 8 | `KMeans` | `n_clusters`, `init` | `silhouette` |
+| 9 | `Tfidf + LinearSVC` | `ngram_range`, `C` | `macro-F1` |
+| 10 | `Pipeline` с выбором модели | тип модели и ее параметры | составная: качество и время |
 
-## Report Requirements
+## Требования к отчету
 
-- Tracking server configuration
-- Run comparison table
-- Best-model selection rationale
-- Registered model evidence
-- Notes on reproducibility of the chosen run
+- конфигурация tracking server;
+- таблица сравнения запусков;
+- обоснование выбора лучшей модели;
+- подтверждение регистрации модели;
+- замечания о воспроизводимости выбранного запуска.
 
-## Control Questions
+## Контрольные вопросы
 
-1. What is an MLflow run?
-2. How do parameters differ from metrics?
-3. What belongs in artifact storage?
-4. Why should seed and data split be logged?
-5. Why is the best offline metric not always the best production model?
+1. Что такое `run` в MLflow?
+2. Чем параметры отличаются от метрик?
+3. Что относится к `artifact storage`?
+4. Почему нужно логировать `seed` и способ разбиения данных?
+5. Почему лучшая offline-метрика не всегда означает лучшую production-модель?
 
-## Related Competencies and Indicators
+## Связанные компетенции и индикаторы
 
 - BD-5.3
 - ML-2.2

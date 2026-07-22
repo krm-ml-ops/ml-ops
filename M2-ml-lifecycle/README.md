@@ -1,14 +1,14 @@
-# Module 2. ML Lifecycle Management
+# Модуль 2. ML Lifecycle Management
 
-## Purpose
+## Назначение модуля
 
-This module focuses on reproducible training workflows, experiment management, and controlled versioning of data, models, and artifacts.
+Модуль посвящен воспроизводимым процессам обучения, управлению экспериментами и контролируемому версионированию данных, моделей и артефактов.
 
-## Related Course Section
+## Связь с рабочей программой
 
-- Section 2 from the course program: `ML Lifecycle Management`
+- Раздел 2 РПД: `ML Lifecycle Management`
 
-## Related Competencies and Indicators
+## Связанные компетенции и индикаторы
 
 - ML-2.2
 - PL-1.3
@@ -16,14 +16,14 @@ This module focuses on reproducible training workflows, experiment management, a
 - LC-5.1
 - BD-5.3
 
-## Included Labs
+## Лабораторные работы модуля
 
-| Lab | Focus |
+| Лабораторная работа | Фокус |
 |---|---|
-| [Lab 04](lab-04-ml-pipeline.md) | modular and reproducible ML pipeline implementation |
-| [Lab 05](lab-05-mlflow-experiment-tracking.md) | experiment tracking and model registration with MLflow |
-| [Lab 06](lab-06-dvc-data-model-versioning.md) | data and model versioning with DVC |
+| [ЛР 04](lab-04-ml-pipeline.md) | модульная и воспроизводимая реализация ML-pipeline |
+| [ЛР 05](lab-05-mlflow-experiment-tracking.md) | логирование экспериментов и регистрация моделей в MLflow |
+| [ЛР 06](lab-06-dvc-data-model-versioning.md) | версионирование данных и моделей с использованием DVC |
 
-## Module Outcome
+## Результат освоения модуля
 
-After this module, students should be able to organize the ML lifecycle so that experiments, versions, metrics, and artifacts can be reproduced and compared reliably.
+После изучения модуля студент должен уметь организовать жизненный цикл ML так, чтобы эксперименты, версии, метрики и артефакты воспроизводились и надежно сравнивались.

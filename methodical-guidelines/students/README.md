@@ -1,52 +1,52 @@
-# Student Guidelines
+# Методические указания для студентов
 
-## Lab Workflow
+## Порядок выполнения лабораторных работ
 
-1. Keep all code, configuration, and run instructions in a Git repository.
-2. Build the work so it can be launched on a clean machine from documented commands.
-3. Prepare the report and repository before the defense, not after it.
+1. Храните весь код, конфигурацию и инструкции запуска в Git-репозитории.
+2. Проект должен запускаться на чистой машине по документированной последовательности команд.
+3. Подготавливайте репозиторий и отчет до защиты, а не после нее.
 
-## Reproducibility Expectations
+## Требования к воспроизводимости
 
-- pin dependencies;
-- document environment setup;
-- provide commands for training, testing, and serving;
-- separate configuration from source code where practical;
-- avoid manual steps that cannot be repeated.
+- фиксируйте версии зависимостей;
+- документируйте настройку окружения;
+- приводите команды для обучения, тестирования и запуска сервиса;
+- по возможности отделяйте конфигурацию от исходного кода;
+- избегайте ручных шагов, которые невозможно повторить.
 
-## Reports
+## Отчет по лабораторной работе
 
-Each lab report should include:
+В каждом отчете должны быть:
 
-- course, lab number, topic, student name, group, and variant;
-- objective and assigned task;
-- architecture and tool choices;
-- key commands, configurations, and code fragments;
-- evidence of successful execution;
-- errors encountered and fixes;
-- final conclusions.
+- дисциплина, номер и тема лабораторной работы, Ф.И.О. студента, группа и вариант;
+- цель работы и индивидуальное задание;
+- описание архитектуры решения и выбранных инструментов;
+- ключевые команды, конфигурации и фрагменты кода;
+- подтверждение успешного выполнения;
+- возникшие ошибки и способы их устранения;
+- итоговые выводы.
 
-## Defense
+## Защита работы
 
-During defense, the student should be ready to:
+На защите студент должен быть готов:
 
-- explain repository structure and launch steps;
-- demonstrate the running solution;
-- justify tool and design choices;
-- answer control questions;
-- discuss known limitations and possible improvements.
+- объяснить структуру репозитория и шаги запуска;
+- продемонстрировать работающее решение;
+- обосновать выбор инструментов и архитектурных решений;
+- ответить на контрольные вопросы;
+- описать известные ограничения и возможные улучшения.
 
-## Individual Variants
+## Индивидуальные варианты
 
-Variant-specific datasets, constraints, and task parameters are defined in the lab descriptions. If the instructor adjusts the dataset or technical limits, the learning objective must remain unchanged.
+Индивидуальные датасеты, ограничения и параметры задания приведены в описаниях лабораторных работ. Если преподаватель корректирует исходные данные или технические ограничения, учебная цель работы не должна меняться.
 
-## Data and Security Rules
+## Правила работы с данными и безопасностью
 
-- do not commit secrets, tokens, passwords, or private data;
-- document the source and usage restrictions of external datasets;
-- avoid logging sensitive request content without need;
-- use synthetic or public educational data whenever possible.
+- не коммитьте секреты, токены, пароли и приватные данные;
+- указывайте источник и ограничения использования внешних датасетов;
+- не логируйте чувствительное содержимое запросов без необходимости;
+- по возможности используйте синтетические или открытые учебные данные.
 
-## Independent Preparation
+## Самостоятельная подготовка
 
-Students should review lecture material, official documentation, and the control-question banks before each lab and before the final zachet.
+Перед каждой лабораторной работой и перед зачетом рекомендуется повторять лекционный материал, официальную документацию и банки контрольных вопросов.

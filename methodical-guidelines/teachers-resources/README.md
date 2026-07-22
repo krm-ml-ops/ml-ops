@@ -1,37 +1,37 @@
-# Teacher Guidelines for Resources
+# Методические указания для преподавателей по ресурсам
 
-## Recommended Software Stack
+## Рекомендуемый стек программного обеспечения
 
 - Python 3.10+
 - Git
-- Docker Engine or Docker Desktop
-- Linux or Windows with WSL2
+- Docker Engine или Docker Desktop
+- Linux или Windows с WSL2
 - FastAPI
 - MLflow
 - DVC
-- Prometheus and Grafana
+- Prometheus и Grafana
 
-## Environment Setup Expectations
+## Ожидания по настройке среды
 
-The teaching environment should support container builds, local API serving, basic CI workflows, and local or simulated monitoring. If cloud infrastructure is unavailable, all labs should still remain executable on a local workstation.
+Учебная среда должна поддерживать сборку контейнеров, локальный запуск API, базовые CI workflow и локальный либо имитируемый мониторинг. Если облачная инфраструктура недоступна, все лабораторные работы все равно должны быть выполнимы на локальной рабочей станции.
 
-## Platform Notes
+## Замечания по платформе
 
-- Linux is the reference environment.
-- Windows setups should use WSL2 where possible.
-- Docker permissions and mounted-volume behavior should be explained before Lab 01.
-- Local registry, MLflow, and DVC remotes may be simulated with local directories and containers.
+- Linux является эталонной средой.
+- На Windows по возможности следует использовать WSL2.
+- Права Docker и поведение смонтированных томов желательно разобрать до лабораторной работы 01.
+- Локальный registry, MLflow и DVC remote можно моделировать через локальные каталоги и контейнеры.
 
-## Topic-Aligned References
+## Тематические ссылки
 
-- Docker official documentation for Labs 01-02
-- GitHub Actions or Jenkins documentation for Lab 03
-- scikit-learn pipeline documentation for Lab 04
-- MLflow documentation for Lab 05
-- DVC documentation for Lab 06
-- FastAPI documentation for Lab 07
-- Prometheus and Grafana documentation for Lab 08
+- официальная документация Docker для лабораторных работ 01-02;
+- документация GitHub Actions или Jenkins для лабораторной работы 03;
+- документация `scikit-learn pipeline` для лабораторной работы 04;
+- документация MLflow для лабораторной работы 05;
+- документация DVC для лабораторной работы 06;
+- документация FastAPI для лабораторной работы 07;
+- документация Prometheus и Grafana для лабораторной работы 08.
 
-## Teaching Support Strategy
+## Подход к обеспечению курса
 
-Use small public datasets and lightweight local infrastructure first. The course goal is to build disciplined engineering habits around ML systems rather than large-scale distributed training.
+Предпочтительно использовать небольшие открытые датасеты и легковесную локальную инфраструктуру. Цель курса состоит в формировании инженерной дисциплины вокруг ML-систем, а не в построении крупномасштабного распределенного обучения.

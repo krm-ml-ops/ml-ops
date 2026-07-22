@@ -1,7 +1,7 @@
-# Methodical Guidelines
+# Методические указания
 
-| Section | Audience | Purpose |
+| Раздел | Аудитория | Назначение |
 |---|---|---|
-| [students](students/README.md) | students | lab workflow, reporting, defense, and reproducibility expectations |
-| [teachers-assessment](teachers-assessment/README.md) | instructors | evaluation logic, defense checks, and zachet admission policy |
-| [teachers-resources](teachers-resources/README.md) | instructors | recommended toolchain, platform setup, and topic-aligned references |
+| [students](students/README.md) | студенты | порядок выполнения лабораторных, отчеты, защита и требования к воспроизводимости |
+| [teachers-assessment](teachers-assessment/README.md) | преподаватели | логика оценивания, проверка защиты и правила допуска к зачету |
+| [teachers-resources](teachers-resources/README.md) | преподаватели | рекомендуемый toolchain, настройка платформы и тематические ссылки |

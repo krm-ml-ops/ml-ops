@@ -1,12 +1,20 @@
-# Resources
+# Ресурсы
 
-This section contains short curated lists that support the course modules, lab work, and final zachet.
+В этом разделе собраны краткие подобранные материалы, поддерживающие модули курса, лабораторные работы и зачет.
 
-| Type | Section | Purpose |
+| Тип | Раздел | Назначение |
 |---|---|---|
-| Textbooks and core materials | [textbooks](textbooks/README.md) | primary course reading |
-| Software and libraries | [software/python-libs](software/python-libs/README.md) | hands-on tooling for labs |
-| Datasets | [datasets](datasets/README.md) | public and synthetic datasets suitable for educational use |
-| Test banks | [test-banks](test-banks/README.md) | final theoretical and competence-oriented checks |
-| Problem banks | [problem-banks](problem-banks/README.md) | practical zachet tasks and lab variants |
-| Other references | [other](other/README.md) | official documentation and supporting references |
+| Учебники и основные материалы | [textbooks](textbooks/README.md) | базовое чтение по курсу |
+| Программные средства и библиотеки | [software/python-libs](software/python-libs/README.md) | практический toolchain для лабораторных работ |
+| Датасеты | [datasets](datasets/README.md) | открытые и синтетические данные для учебного использования |
+| Банки тестов | [test-banks](test-banks/README.md) | теоретические и компетентностно-ориентированные материалы зачета |
+| Банки задач | [problem-banks](problem-banks/README.md) | практические задания к зачету и источники вариантов |
+| Прочие ссылки | [other](other/README.md) | официальная документация и дополнительные справочные материалы |
+
+## Дополнительные разделы шаблона
+
+Ниже сохранены вспомогательные разделы структуры репозитория. Для текущего выпуска курса они не являются обязательными и не используются как основные опубликованные каталоги ресурсов:
+
+- [benchmarks](benchmarks/README.md)
+- [papers](papers/README.md)
+- [llm-prompts](llm-prompts/README.md)

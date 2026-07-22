@@ -1,14 +1,14 @@
 # Project
 
-This folder remains in the repository for structural consistency, but a separate project assignment is not used in the `Fundamentals of MLOps` discipline.
+Папка сохранена в репозитории для структурной совместимости шаблона, но отдельная проектная работа в дисциплине `Fundamentals of MLOps` не используется.
 
-## Status
+## Статус
 
-- not used as a standalone assessment element;
-- not required for admission to the final zachet;
-- retained only to preserve the broader repository template structure.
+- не используется как самостоятельный элемент оценивания;
+- не требуется для допуска к зачету;
+- сохранена только для совместимости с общей структурой репозитория.
 
-## What Students Should Use Instead
+## Что использовать вместо этого
 
-- module laboratory works in `M1-ci-cd-devops-ml/`, `M2-ml-lifecycle/`, and `M3-deployment-monitoring/`;
-- final assessment materials in [Exam/README.md](../Exam/README.md).
+- лабораторные работы в `M1-ci-cd-devops-ml/`, `M2-ml-lifecycle/` и `M3-deployment-monitoring/`;
+- материалы зачета в [Exam/README.md](../Exam/README.md).

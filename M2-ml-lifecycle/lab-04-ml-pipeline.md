@@ -1,60 +1,71 @@
-# Lab 04. Simple ML Pipeline Implementation
+# Лабораторная работа 04. Реализация ML pipeline от данных до модели
 
-## Objective
+## Цель работы
 
-Implement a reproducible ML pipeline from data loading to model persistence with explicit validation, configuration, and metrics.
+Реализовать воспроизводимый ML pipeline от загрузки данных до сохранения модели с явной валидацией, конфигурацией и метриками.
 
-## Tasks
+## Задачи работы
 
-1. Split the workflow into clear processing stages.
-2. Separate configuration from code.
-3. Validate input data before training.
-4. Prevent data leakage in preprocessing.
-5. Save the model, configuration, and evaluation metrics.
+1. Разделить workflow на понятные этапы обработки.
+2. Отделить конфигурацию от кода.
+3. Валидировать входные данные перед обучением.
+4. Исключить утечку данных на этапе preprocessing.
+5. Сохранять модель, конфигурацию и метрики оценки.
 
-## Required Software
+## Необходимое программное обеспечение
 
-- Linux or Windows 10/11 with WSL2
+- Linux или Windows 10/11 с WSL2
 - Python 3.10+
 - Git
 - scikit-learn
 - pandas
-- PyYAML or JSON-based configuration tooling
+- PyYAML или инструменты конфигурации на основе JSON
 
-## Theory Summary
+## Краткие теоретические сведения
 
-An ML pipeline formalizes the sequence from raw data to evaluated model artifacts. Clear stage boundaries improve debugging, repeatability, and future automation. Configuration-driven execution is a prerequisite for reliable experiment management and lifecycle control.
+ML pipeline формализует последовательность шагов от сырых данных до оцененных модельных артефактов. Явные границы этапов упрощают отладку, воспроизводимость и последующую автоматизацию. Управление выполнением через конфигурацию является основой надежного управления экспериментами и жизненным циклом.
 
-## Assignment
+## Задание
 
-- Implement `load`, `validate`, `split`, `preprocess`, `train`, `evaluate`, and `save` stages.
-- Store parameters in YAML or JSON.
-- Validate schema, missing values, and ranges.
-- Use `sklearn.pipeline.Pipeline` or an equivalent functional design.
-- Save the trained model, metrics, configuration, and data-version information.
-- Add at least two automated tests.
+- Реализовать этапы `load`, `validate`, `split`, `preprocess`, `train`, `evaluate` и `save`.
+- Хранить параметры в YAML или JSON.
+- Проверять схему данных, пропуски и допустимые диапазоны.
+- Использовать `sklearn.pipeline.Pipeline` или эквивалентную функциональную схему.
+- Сохранять обученную модель, метрики, конфигурацию и сведения о версии данных.
+- Добавить минимум два автоматических теста.
 
-## Individual Variants
+## Индивидуальные варианты
 
-Use the variant matrix from `materials/md/лабораторные.md`, including the assigned dataset, pipeline design, and target metrics.
+| Вариант | Данные | Pipeline | Метрики |
+|---|---|---|---|
+| 1 | Iris | `StandardScaler + LogisticRegression` | `accuracy`, `macro-F1` |
+| 2 | Wine | `StandardScaler + SVC` | `accuracy`, `macro-F1` |
+| 3 | Breast Cancer | `StandardScaler + RandomForest` | `ROC-AUC`, `F1` |
+| 4 | Diabetes | `StandardScaler + Ridge` | `MAE`, `RMSE` |
+| 5 | Digits | `MinMaxScaler + LogisticRegression` | `accuracy`, `confusion matrix` |
+| 6 | Синтетическая классификация | `SimpleImputer + RandomForest` | `accuracy`, `ROC-AUC` |
+| 7 | Синтетическая регрессия | `SimpleImputer + RandomForestRegressor` | `MAE`, `R²` |
+| 8 | Смешанные признаки из CSV | `ColumnTransformer + LogisticRegression` | `F1`, `ROC-AUC` |
+| 9 | Текстовая классификация | `TfidfVectorizer + LinearSVC` | `accuracy`, `macro-F1` |
+| 10 | Кластеризация | `StandardScaler + KMeans` | `silhouette`, `inertia` |
 
-## Report Requirements
+## Требования к отчету
 
-- Pipeline architecture and configuration design
-- Validation strategy
-- Saved artifacts and reproducibility notes
-- Test evidence and measured metrics
-- Lessons learned about pipeline modularity
+- архитектура pipeline и схема конфигурации;
+- стратегия валидации;
+- сохраненные артефакты и замечания по воспроизводимости;
+- подтверждение тестов и измеренные метрики;
+- выводы о модульности pipeline.
 
-## Control Questions
+## Контрольные вопросы
 
-1. Which stages typically belong to an ML pipeline?
-2. What is data leakage?
-3. Why should preprocessing be fit only on training data?
-4. Why keep configuration outside the source code?
-5. Which pipeline stages benefit most from automated tests?
+1. Какие этапы обычно входят в ML pipeline?
+2. Что такое утечка данных?
+3. Почему preprocessing должен обучаться только на train-выборке?
+4. Зачем выносить конфигурацию из исходного кода?
+5. Какие части pipeline наиболее полезно покрывать автотестами?
 
-## Related Competencies and Indicators
+## Связанные компетенции и индикаторы
 
 - ML-2.2
 - PL-1.3

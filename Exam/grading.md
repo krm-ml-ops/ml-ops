@@ -1,25 +1,25 @@
-# Grading and Thresholds
+# Шкала оценивания и пороги
 
-## Point Distribution
+## Распределение баллов
 
-| Assessment element | Points |
+| Элемент оценивания | Баллы |
 |---|---:|
-| Lab 01 defense | 10 |
-| Lab 02 defense | 10 |
-| Lab 03 defense | 10 |
-| Lab 04 defense | 10 |
-| Lab 05 defense | 10 |
-| Lab 06 defense | 10 |
-| Lab 07 defense | 10 |
-| Lab 08 defense | 10 |
-| Final zachet | 20 |
-| Total | 100 |
+| Защита лабораторной работы 01 | 10 |
+| Защита лабораторной работы 02 | 10 |
+| Защита лабораторной работы 03 | 10 |
+| Защита лабораторной работы 04 | 10 |
+| Защита лабораторной работы 05 | 10 |
+| Защита лабораторной работы 06 | 10 |
+| Защита лабораторной работы 07 | 10 |
+| Защита лабораторной работы 08 | 10 |
+| Зачет | 20 |
+| Итого | 100 |
 
-## Threshold
+## Порог успешного прохождения
 
-- `60-100` points: passed (`zachet`)
-- `<60` points: not passed
+- `60-100` баллов: зачтено
+- `<60` баллов: не зачтено
 
-## Admission Rule
+## Правило допуска
 
-Students are admitted to the final zachet only after completing and defending all eight laboratory works.
+К зачету допускаются только студенты, выполнившие и защитившие все восемь лабораторных работ.

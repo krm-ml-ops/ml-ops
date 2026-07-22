@@ -1,59 +1,70 @@
-# Lab 01. Docker and Reproducible Environment Setup
+# Лабораторная работа 01. Docker и настройка воспроизводимого окружения
 
-## Objective
+## Цель работы
 
-Build a reproducible ML project environment and validate that the same workflow runs consistently on the host machine and inside a container.
+Подготовить воспроизводимое окружение ML-проекта и проверить, что один и тот же workflow одинаково выполняется на хост-машине и внутри контейнера.
 
-## Tasks
+## Задачи работы
 
-1. Install and verify Docker and the local Python toolchain.
-2. Create a minimal ML project structure with `src/`, `data/`, `tests/`, `requirements.txt`, `Dockerfile`, and `README.md`.
-3. Pin project dependencies and document how the environment is recreated.
-4. Build a Docker image and run a validation script inside the container.
-5. Compare host and container execution results.
+1. Установить и проверить Docker и локальный Python toolchain.
+2. Создать минимальную структуру ML-проекта с `src/`, `data/`, `tests/`, `requirements.txt`, `Dockerfile` и `README.md`.
+3. Зафиксировать зависимости проекта и описать пересоздание окружения.
+4. Собрать Docker-образ и выполнить проверочный скрипт внутри контейнера.
+5. Сравнить результаты запуска на хосте и в контейнере.
 
-## Required Software
+## Необходимое программное обеспечение
 
-- Linux or Windows 10/11 with WSL2
+- Linux или Windows 10/11 с WSL2
 - Python 3.10+
 - Git
-- Docker Engine or Docker Desktop
-- Code editor or IDE
+- Docker Engine или Docker Desktop
+- редактор кода или IDE
 
-## Theory Summary
+## Краткие теоретические сведения
 
-Reproducibility in MLOps depends on controlled versions of the interpreter, dependencies, and runtime environment. Docker images provide an immutable build artifact, while containers provide isolated runtime instances. For ML workflows, this reduces environment drift between development, CI, and deployment.
+Воспроизводимость в MLOps зависит от контролируемых версий интерпретатора, зависимостей и runtime-окружения. Docker-образ выступает неизменяемым build-артефактом, а контейнер - изолированным экземпляром запуска. Для ML workflow это снижает расхождения между разработкой, CI и развертыванием.
 
-## Assignment
+## Задание
 
-- Create `src/check_environment.py` to print Python and library versions, load a small dataset, and perform one preprocessing step.
-- Prepare a `Dockerfile` based on the base image required by the assigned variant.
-- Build the image with tag `mlops-lab1:<variant>`.
-- Run the container with the `data/` directory mounted read-only.
-- Record the differences, if any, between host and container execution.
+- Создать `src/check_environment.py`, который выводит версии Python и библиотек, загружает небольшой датасет и выполняет один шаг предобработки.
+- Подготовить `Dockerfile` на основе базового образа, указанного для варианта.
+- Собрать образ с тегом `mlops-lab1:<вариант>`.
+- Запустить контейнер с каталогом `data/`, смонтированным в режиме read-only.
+- Зафиксировать различия, если они есть, между запуском на хосте и в контейнере.
 
-## Individual Variants
+## Индивидуальные варианты
 
-Use one of the ten variants defined in `materials/md/лабораторные.md`, including the assigned dataset, base image, and mandatory dependencies.
+| Вариант | Задача / данные | Базовый образ | Обязательные зависимости |
+|---|---|---|---|
+| 1 | Классификация Iris | `python:3.11-slim` | `pandas`, `scikit-learn`, `joblib` |
+| 2 | Классификация Wine | `python:3.10-slim` | `numpy`, `pandas`, `scikit-learn` |
+| 3 | Регрессия Diabetes | `python:3.11-bookworm` | `pandas`, `scikit-learn`, `matplotlib` |
+| 4 | Классификация Breast Cancer | `python:3.12-slim` | `numpy`, `scikit-learn`, `pydantic` |
+| 5 | Классификация Digits | `python:3.11-slim` | `numpy`, `scikit-learn`, `pillow` |
+| 6 | Синтетическая бинарная классификация | `python:3.10-bookworm` | `numpy`, `pandas`, `scikit-learn` |
+| 7 | Синтетическая регрессия | `python:3.11-slim` | `numpy`, `pandas`, `scikit-learn` |
+| 8 | Кластеризация синтетических данных | `python:3.12-slim` | `numpy`, `scikit-learn`, `matplotlib` |
+| 9 | Анализ текстовых сообщений из локального CSV | `python:3.11-slim` | `pandas`, `scikit-learn`, `nltk` |
+| 10 | Анализ изображений из локального каталога | `python:3.10-slim` | `numpy`, `pillow`, `scikit-learn` |
 
-## Report Requirements
+## Требования к отчету
 
-- Goal and assigned variant
-- Repository structure and key configuration files
-- Build and run commands
-- Evidence of successful execution on host and in container
-- Problems encountered and how they were resolved
-- Final conclusions on reproducibility
+- цель работы и назначенный вариант;
+- структура репозитория и ключевые конфигурационные файлы;
+- команды сборки и запуска;
+- подтверждение успешного выполнения на хосте и в контейнере;
+- возникшие проблемы и способы их устранения;
+- итоговые выводы о воспроизводимости.
 
-## Control Questions
+## Контрольные вопросы
 
-1. What makes an ML environment reproducible?
-2. How does a Docker image differ from a container?
-3. Why should dependency versions be pinned?
-4. What is the difference between `COPY` and a bind mount?
-5. Why should secrets never be committed to the repository?
+1. Что делает ML-окружение воспроизводимым?
+2. Чем Docker-образ отличается от контейнера?
+3. Зачем фиксировать версии зависимостей?
+4. В чем разница между `COPY` и bind mount?
+5. Почему секреты нельзя коммитить в репозиторий?
 
-## Related Competencies and Indicators
+## Связанные компетенции и индикаторы
 
 - LC-5.1
 - BD-5.1

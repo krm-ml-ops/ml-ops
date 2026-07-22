@@ -1,14 +1,14 @@
-# Module 3. Deployment, Monitoring, and Model Support
+# Модуль 3. Deployment, Monitoring, and Model Support
 
-## Purpose
+## Назначение модуля
 
-This module covers production-style model serving, operational observability, and support practices for ML systems after deployment.
+Модуль охватывает развертывание моделей в формате production-like сервисов, эксплуатационную наблюдаемость и практики сопровождения ML-систем после публикации.
 
-## Related Course Section
+## Связь с рабочей программой
 
-- Section 3 from the course program: `Deployment, Monitoring, and Model Support`
+- Раздел 3 РПД: `Deployment, Monitoring, and Model Support`
 
-## Related Competencies and Indicators
+## Связанные компетенции и индикаторы
 
 - LC-3.1
 - LC-5.1
@@ -17,13 +17,13 @@ This module covers production-style model serving, operational observability, an
 - DL-3.2
 - PL-1.3
 
-## Included Labs
+## Лабораторные работы модуля
 
-| Lab | Focus |
+| Лабораторная работа | Фокус |
 |---|---|
-| [Lab 07](lab-07-fastapi-model-service.md) | serving a trained model through a validated API |
-| [Lab 08](lab-08-monitoring-prometheus-grafana.md) | technical and model monitoring with alerts and dashboards |
+| [ЛР 07](lab-07-fastapi-model-service.md) | публикация обученной модели через валидируемый API |
+| [ЛР 08](lab-08-monitoring-prometheus-grafana.md) | технический и модельный мониторинг с alert-правилами и dashboard |
 
-## Module Outcome
+## Результат освоения модуля
 
-After this module, students should be able to expose a model as an operational service and monitor both service behavior and early model-quality risks.
+После изучения модуля студент должен уметь публиковать модель как сопровождаемый сервис и мониторить как поведение сервиса, так и ранние признаки деградации качества модели.

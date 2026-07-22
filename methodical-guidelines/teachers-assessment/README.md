@@ -1,40 +1,40 @@
-# Teacher Guidelines for Assessment
+# Методические указания для преподавателей по оцениванию
 
-## What to Evaluate in Each Lab
+## Что оценивать в каждой лабораторной работе
 
-- technical correctness of the implementation;
-- reproducibility from documented commands;
-- quality of repository structure and configuration;
-- clarity of report and explanation during defense;
-- alignment with the assigned variant and lab objective.
+- техническую корректность реализации;
+- воспроизводимость по документированным командам;
+- качество структуры репозитория и конфигурации;
+- ясность отчета и объяснений на защите;
+- соответствие назначенному варианту и цели работы.
 
-## Reproducibility Checks
+## Проверка воспроизводимости
 
-Instructors should confirm that:
+Преподавателю следует убедиться, что:
 
-- dependencies and environment setup are explicit;
-- the solution runs without hidden manual steps;
-- data, models, and artifacts are stored in a controlled way;
-- secrets are not committed into the repository.
+- зависимости и настройка окружения заданы явно;
+- решение запускается без скрытых ручных шагов;
+- данные, модели и артефакты хранятся контролируемо;
+- секреты не попали в репозиторий.
 
-## Code and Documentation Checks
+## Проверка кода и документации
 
-Review whether the submission includes:
+Следует оценивать, включает ли сдача:
 
-- meaningful file structure and naming;
-- basic error handling;
-- readable configuration;
-- test coverage where the lab requires it;
-- concise but sufficient documentation for launch and verification.
+- осмысленную структуру файлов и именование;
+- базовую обработку ошибок;
+- читаемую конфигурацию;
+- тесты там, где они требуются по заданию;
+- краткую, но достаточную документацию для запуска и проверки.
 
-## Defense Expectations
+## Ожидания на защите
 
-During defense, students should demonstrate the working result, explain the lifecycle of their solution, and answer control questions without relying only on copied commands.
+Во время защиты студент должен показать работающее решение, объяснить жизненный цикл своей реализации и ответить на контрольные вопросы, не опираясь только на механическое воспроизведение команд.
 
-## Admission to the Final Zachet
+## Допуск к зачету
 
-Admission requires completion and defense of all eight laboratory works.
+Допуск к зачету возможен только после выполнения и защиты всех восьми лабораторных работ.
 
-## Grading Consistency
+## Единообразие оценивания
 
-Use the published point distribution in `Exam/grading.md` and apply comparable expectations across student variants. When students use different datasets or parameters, grading should focus on engineering quality and achievement of the stated learning objective.
+Используйте опубликованное распределение баллов из `Exam/grading.md` и применяйте сопоставимые требования ко всем вариантам. Если студенты работают с разными данными или параметрами, акцент оценки должен оставаться на инженерном качестве решения и достижении заявленной учебной цели.

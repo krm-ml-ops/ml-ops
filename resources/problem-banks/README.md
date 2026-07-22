@@ -1,6 +1,6 @@
-# Problem Banks
+# Банки задач
 
-| Bank | Link | Purpose | Related labs or assessment |
+| Банк | Ссылка | Назначение | Связь с лабораторными или аттестацией |
 |---|---|---|---|
-| Practical zachet tasks | ../../Exam/practical-tasks.md | integrated final tasks covering repository design, CI/CD, API deployment, versioning, and monitoring | Final zachet |
-| Lab variant matrix | ../../materials/md/лабораторные.md | source bank of assigned datasets, parameters, and scenario variations | Labs 01-08 |
+| Практические задания к зачету | ../../Exam/practical-tasks.md | итоговые интегрированные задания по структуре репозитория, CI/CD, API, версионированию и мониторингу | зачет |
+| Архивная матрица вариантов лабораторных | ../../materials/md/лабораторные.md | исходный банк назначаемых датасетов, параметров и сценариев | лабораторные 01-08 |

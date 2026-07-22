@@ -1,8 +1,8 @@
-# Textbooks and Core Learning Materials
+# Учебники и основные учебные материалы
 
-| Resource | Link | Purpose | Related labs or assessment |
+| Ресурс | Ссылка | Назначение | Связь с лабораторными или аттестацией |
 |---|---|---|---|
-| DevOps: principles, tools, and practice | https://www.iprbookshop.ru/148788.html | background on DevOps workflows, automation, and engineering practices | Labs 01-03 |
-| Using Docker by Elton Mouat | https://e.lanbook.com/book/93576 | practical reference for containerization and image design | Labs 01-02, Lab 07 |
-| Yandex Machine Learning Handbook | https://education.yandex.ru/handbook/ml | compact reference for ML workflow concepts and production-oriented ML topics | Labs 04-06, final zachet |
-| Full Stack Deep Learning | https://fullstackdeeplearning.com | production ML perspective across serving, monitoring, and lifecycle design | Labs 05-08, final zachet |
+| `DevOps: принципы, инструменты и практика` | https://www.iprbookshop.ru/148788.html | базовый материал по DevOps workflow, автоматизации и инженерным практикам | лабораторные 01-03 |
+| `Использование Docker` Э. Моуэта | https://e.lanbook.com/book/93576 | практический источник по контейнеризации и проектированию образов | лабораторные 01-02, 07 |
+| Учебник Яндекс по машинному обучению | https://education.yandex.ru/handbook/ml | компактный справочник по ML workflow и production-ориентированным темам | лабораторные 04-06, зачет |
+| Full Stack Deep Learning | https://fullstackdeeplearning.com | взгляд на production ML, serving, monitoring и проектирование жизненного цикла | лабораторные 05-08, зачет |

@@ -1,11 +1,11 @@
-# Datasets
+# Датасеты
 
-| Dataset | Link | Purpose | Related labs or assessment |
+| Датасет | Ссылка | Назначение | Связь с лабораторными или аттестацией |
 |---|---|---|---|
-| Iris | https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html | compact classification dataset for environment, pipeline, and serving exercises | Labs 01, 04, 07 |
-| Wine | https://scikit-learn.org/stable/datasets/toy_dataset.html | multi-feature classification dataset for ML lifecycle exercises | Labs 01, 04, 07 |
-| Breast Cancer Wisconsin | https://scikit-learn.org/stable/datasets/toy_dataset.html | binary classification dataset for evaluation and drift-oriented exercises | Labs 01, 04, 07 |
-| Diabetes | https://scikit-learn.org/stable/datasets/toy_dataset.html | lightweight regression dataset for pipeline and API tasks | Labs 01, 04, 07 |
-| Digits | https://scikit-learn.org/stable/datasets/toy_dataset.html | compact image-like classification dataset for serving and testing variants | Labs 01, 04, 07 |
-| Synthetic datasets | https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_classification.html | controllable data for variant-based experiments and drift simulation | Labs 01, 04, 06, 08 |
-| Local CSV text inputs | https://pandas.pydata.org/ | simple tabular or text inputs for reproducibility and inference variants | Labs 01, 02, 07 |
+| Iris | https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html | компактный набор для задач классификации в работах по окружению, pipeline и serving | лабораторные 01, 04, 07 |
+| Wine | https://scikit-learn.org/stable/datasets/toy_dataset.html | многопризнаковый классификационный набор для задач жизненного цикла ML | лабораторные 01, 04, 07 |
+| Breast Cancer Wisconsin | https://scikit-learn.org/stable/datasets/toy_dataset.html | набор для бинарной классификации и задач оценки качества и drift | лабораторные 01, 04, 07 |
+| Diabetes | https://scikit-learn.org/stable/datasets/toy_dataset.html | легковесный регрессионный набор для pipeline и API-задач | лабораторные 01, 04, 07 |
+| Digits | https://scikit-learn.org/stable/datasets/toy_dataset.html | компактный image-like набор для serving и тестовых вариантов | лабораторные 01, 04, 07 |
+| Синтетические датасеты | https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_classification.html | управляемые данные для вариантных экспериментов и моделирования drift | лабораторные 01, 04, 06, 08 |
+| Локальные CSV и текстовые входы | https://pandas.pydata.org/ | простые табличные и текстовые входы для задач воспроизводимости и инференса | лабораторные 01, 02, 07 |

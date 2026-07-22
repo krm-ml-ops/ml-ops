@@ -1,14 +1,30 @@
-# Competence-Oriented Test Bank
+# Компетентностно-ориентированные тесты
 
-Sample final test topics:
+Ниже приведены типовые тестовые задания, покрывающие все три модуля дисциплины.
 
-- selecting the correct build artifact for containerization;
-- identifying the right tool for data and model versioning;
-- choosing what must be logged in experiment tracking;
-- recognizing reproducibility requirements;
-- selecting the correct monitoring stack component;
-- identifying drift and service-quality symptoms;
-- choosing secure ways to manage secrets in CI/CD;
-- distinguishing service metrics from non-operational metadata.
+1. Какой артефакт Docker содержит инструкции для сборки образа?
+   `docker-compose.yml`, `Dockerfile`, `requirements.lock` или `workflow.log`.
+2. Какой инструмент в первую очередь предназначен для версионирования данных и ML-артефактов?
+   `DVC`, `Grafana`, `FastAPI` или `Prometheus`.
+3. Какова основная функция MLflow Tracking?
+   Оркестрация контейнеров, логирование параметров и метрик, визуализация инфраструктурных метрик или компиляция Python-кода.
+4. Что является обязательным признаком воспроизводимого эксперимента?
+   Фиксация версии кода, данных, параметров и окружения.
+5. Какой компонент обычно предоставляет HTTP-интерфейс для модели?
+   `FastAPI`, `DVC`, `Git` или `Grafana`.
+6. Какой инструмент собирает временные ряды метрик по pull-модели?
+   `Prometheus`, `Docker Hub`, `MLflow Models` или `SQLite`.
+7. Что лучше всего описывает `data drift`?
+   Изменение распределения входных данных.
+8. Какой этап CI должен предшествовать публикации Docker-образа?
+   Автоматические тесты и проверки качества.
+9. Что помогает предотвратить попадание секретов в репозиторий?
+   Secrets-хранилище и переменные окружения.
+10. Какой показатель относится к сервисным метрикам?
+   `latency`, а не имя автора модели или размер README.
+11. Что следует сделать при обнаружении деградации качества модели?
+   Провести анализ причин, проверить данные и запустить контролируемое переобучение.
+12. Какова цель A/B-тестирования моделей?
+   Сравнить варианты на контролируемых группах по заранее выбранной метрике.
 
-The full item pool is based on Appendix 2 of `materials/md/ФОС.md` and should be sampled to cover all three modules.
+Полный пул тестовых заданий основан на приложении 2 файла `materials/md/ФОС.md`.

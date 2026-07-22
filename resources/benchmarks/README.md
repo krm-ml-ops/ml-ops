@@ -1,3 +1,3 @@
 # Benchmarks
 
-This section is optional for the current course release. Benchmark-style comparison is introduced through lab metrics and monitoring tasks rather than through a standalone benchmark registry.
+Раздел является необязательным для текущего выпуска курса. Сравнение решений в формате benchmark вводится через метрики лабораторных работ и задания по мониторингу, а не через отдельный реестр benchmark-материалов.

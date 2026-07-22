@@ -1,13 +1,13 @@
-# Software and Python Libraries
+# Программные средства и Python-библиотеки
 
-| Tool | Link | Purpose | Related labs or assessment |
+| Инструмент | Ссылка | Назначение | Связь с лабораторными или аттестацией |
 |---|---|---|---|
-| Docker | https://www.docker.com/ | containerization and reproducible runtime environments | Labs 01-03, 07-08 |
-| FastAPI | https://fastapi.tiangolo.com/ | model serving and API validation | Lab 07, Lab 08 |
-| MLflow | https://mlflow.org/ | experiment tracking and model registry workflows | Lab 05 |
-| DVC | https://dvc.org/ | versioning datasets, models, and pipeline stages | Lab 06 |
-| Prometheus | https://prometheus.io/ | metrics collection and alerting | Lab 08 |
-| Grafana | https://grafana.com/ | dashboarding and visualization of operational metrics | Lab 08 |
-| scikit-learn | https://scikit-learn.org/ | baseline ML pipelines and educational models | Labs 01, 04-07 |
-| pytest | https://docs.pytest.org/ | unit and integration testing | Labs 03 and 07 |
-| httpx | https://www.python-httpx.org/ | API testing and request validation workflows | Lab 07 |
+| Docker | https://www.docker.com/ | контейнеризация и воспроизводимые runtime-окружения | лабораторные 01-03, 07-08 |
+| FastAPI | https://fastapi.tiangolo.com/ | публикация модели как сервиса и валидация API | лабораторные 07-08 |
+| MLflow | https://mlflow.org/ | логирование экспериментов и регистрация моделей | лабораторная 05 |
+| DVC | https://dvc.org/ | версионирование датасетов, моделей и этапов pipeline | лабораторная 06 |
+| Prometheus | https://prometheus.io/ | сбор метрик и alerting | лабораторная 08 |
+| Grafana | https://grafana.com/ | dashboard и визуализация эксплуатационных метрик | лабораторная 08 |
+| scikit-learn | https://scikit-learn.org/ | базовые ML-pipeline и учебные модели | лабораторные 01, 04-07 |
+| pytest | https://docs.pytest.org/ | unit- и integration-тестирование | лабораторные 03 и 07 |
+| httpx | https://www.python-httpx.org/ | тестирование API и проверка request/response workflow | лабораторная 07 |

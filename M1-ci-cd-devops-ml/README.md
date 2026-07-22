@@ -1,14 +1,14 @@
-# Module 1. CI/CD and DevOps for ML
+# Модуль 1. CI/CD and DevOps for ML
 
-## Purpose
+## Назначение модуля
 
-This module introduces the engineering foundations required to move ML work from local experimentation to reproducible and automated delivery.
+Модуль вводит инженерные основы, необходимые для перехода от локальных экспериментов к воспроизводимой и автоматизированной поставке ML-решений.
 
-## Related Course Section
+## Связь с рабочей программой
 
-- Section 1 from the course program: `CI/CD and DevOps for ML`
+- Раздел 1 РПД: `CI/CD and DevOps for ML`
 
-## Related Competencies and Indicators
+## Связанные компетенции и индикаторы
 
 - LC-3.1
 - LC-5.1
@@ -16,14 +16,14 @@ This module introduces the engineering foundations required to move ML work from
 - BD-5.3
 - DL-3.2
 
-## Included Labs
+## Лабораторные работы модуля
 
-| Lab | Focus |
+| Лабораторная работа | Фокус |
 |---|---|
-| [Lab 01](lab-01-docker-reproducible-environment.md) | reproducible environments and basic containerization |
-| [Lab 02](lab-02-docker-images-and-containers.md) | image design, runtime configuration, and container operations |
-| [Lab 03](lab-03-ci-cd-pipeline.md) | automated testing, build, and delivery for ML projects |
+| [ЛР 01](lab-01-docker-reproducible-environment.md) | воспроизводимые окружения и базовая контейнеризация |
+| [ЛР 02](lab-02-docker-images-and-containers.md) | проектирование образов, конфигурация runtime и работа с контейнерами |
+| [ЛР 03](lab-03-ci-cd-pipeline.md) | автоматические проверки, сборка и поставка ML-проектов |
 
-## Module Outcome
+## Результат освоения модуля
 
-After this module, students should be able to package an ML project into a reproducible environment and automate its basic validation and delivery pipeline.
+После изучения модуля студент должен уметь упаковать ML-проект в воспроизводимое окружение и автоматизировать базовые проверки и поставку через CI/CD.

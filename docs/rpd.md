@@ -1,158 +1,163 @@
-# Fundamentals of MLOps: Cleaned Course Program
+# Fundamentals of MLOps: рабочая программа дисциплины
 
-## 1. General Course Information
+## 1. Общие сведения о дисциплине
 
-| Field | Value |
+| Поле | Значение |
 |---|---|
-| Course title | Fundamentals of MLOps |
-| Institution | Moscow Technical University of Communications and Informatics (MTUCI) |
-| Degree program | 09.03.01 Informatics and Computer Engineering |
-| Program profile | TOP-AI: Engineering of Artificial Intelligence Systems |
-| Qualification | Bachelor |
-| Delivery mode | Full-time |
-| Semester | 5 |
-| Workload | 3 ECTS / 108 academic hours |
-| Final assessment | Zachet |
+| Наименование дисциплины | Fundamentals of MLOps |
+| Вуз | Московский технический университет связи и информатики (МТУСИ) |
+| Направление подготовки | 09.03.01 Информатика и вычислительная техника |
+| Направленность программы | ТОП-ИИ: Инженерия систем искусственного интеллекта |
+| Квалификация | Бакалавр |
+| Форма обучения | Очная |
+| Семестр | 5 |
+| Трудоемкость | 3 з.е. / 108 академических часов |
+| Форма промежуточной аттестации | Зачет |
 
-## 2. Goal and Tasks
+## 2. Цель и задачи дисциплины
 
-The course forms practical and system-level understanding of MLOps approaches for the full lifecycle of machine learning systems: data preparation, model training, versioning, testing, containerization, CI/CD, deployment, monitoring, and production support.
+Цель дисциплины состоит в формировании у обучающихся системных знаний и практических навыков применения MLOps-подходов для автоматизации жизненного цикла моделей машинного обучения: подготовки данных, обучения, версионирования, тестирования, контейнеризации, CI/CD, развертывания, мониторинга и сопровождения ML-сервисов в продуктивной среде.
 
-Key learning tasks:
+Основные задачи дисциплины:
 
-1. Understand MLOps as a combination of DevOps, Data Engineering, and ML Engineering practices.
-2. Build reproducible environments and containerized ML applications.
-3. Design CI/CD workflows for ML projects.
-4. Manage versions of data, models, experiments, and artifacts.
-5. Deploy and monitor ML services with attention to reliability, security, and documentation.
+1. Сформировать представление об MLOps как совокупности практик DevOps, Data Engineering и ML Engineering.
+2. Сформировать навыки контейнеризации ML-приложений и подготовки воспроизводимого программного окружения.
+3. Научить строить CI/CD-pipeline для ML-проектов с использованием современных средств автоматизации.
+4. Освоить версионирование данных, моделей, экспериментов и артефактов машинного обучения.
+5. Научить развертыванию моделей в виде API-сервисов и организации мониторинга, логирования, A/B-тестирования и контроля качества моделей в продуктивной среде.
+6. Сформировать навыки документирования, оценки надежности и сопровождения ML-решений с учетом этических требований и рисков деградации моделей.
 
-## 3. Place in the Curriculum
+## 3. Место дисциплины в образовательной программе
 
-The discipline belongs to the variable part of the degree program block and is delivered as `B1.V.06`. It supports later study in courses related to natural language processing, multi-agent systems, and final qualification work.
+Дисциплина `Основы MLOps` включена в часть, формируемую участниками образовательных отношений, блока дисциплин учебного плана и реализуется как `Б1.В.06`.
 
-Students are expected to enter the course with basic Python programming skills, understanding of machine learning workflows, and familiarity with Git and command-line work in Linux or WSL.
+Материалы дисциплины используются при изучении курсов, связанных с обработкой естественного языка, мультиагентными системами, а также при выполнении выпускной квалификационной работы.
 
-## 4. Planned Learning Outcomes and Competencies
+Для успешного освоения курса студентам необходимы базовые навыки программирования на Python, понимание базового ML workflow, а также владение Git и командной строкой в Linux или WSL.
 
-| Competency / indicator | Course focus |
+## 4. Планируемые результаты обучения и компетенции
+
+| Компетенция / индикатор | Фокус дисциплины |
 |---|---|
-| BD-5.1 | selecting infrastructure and toolchain components for ML work |
-| BD-5.3 | testing, evaluating, and monitoring AI solutions |
-| ML-2.2 | data preparation and feature processing in ML pipelines |
-| DL-3.2 | building training and deployment pipelines for model-based services |
-| PL-1.3 | implementing maintainable Python services and processing workflows |
-| LC-3.1 | designing AI system architecture across lifecycle stages |
-| LC-5.1 | choosing and applying engineering practices for ML deployment and support |
+| BD-5.1 | выбор инфраструктурных и технологических решений для ML-стека |
+| BD-5.3 | тестирование, оценка качества и мониторинг ИИ-решений |
+| ML-2.2 | подготовка данных и работа с признаками в ML-pipeline |
+| DL-3.2 | построение pipeline обучения и развертывания модельных сервисов |
+| PL-1.3 | разработка и сопровождение поддерживаемых Python-сервисов и процессов обработки |
+| LC-3.1 | проектирование архитектуры ИИ-систем на разных этапах жизненного цикла |
+| LC-5.1 | выбор и применение инженерных практик развертывания и сопровождения ML-решений |
 
-Expected outcomes after course completion:
+Ожидаемые результаты освоения дисциплины:
 
-1. Select and justify a practical MLOps stack for an ML project.
-2. Implement reproducible training and delivery workflows.
-3. Track experiments, datasets, models, and artifacts.
-4. Deploy a model as an API service with validation and tests.
-5. Monitor operational and model-related signals in production-like conditions.
+1. Выбирать и обосновывать практический стек MLOps-инструментов для ML-проекта.
+2. Реализовывать воспроизводимые процессы обучения и поставки.
+3. Отслеживать эксперименты, датасеты, модели и артефакты.
+4. Развертывать модель как API-сервис с валидацией и тестами.
+5. Мониторить эксплуатационные и модельные сигналы в условиях, приближенных к продуктивной среде.
 
-## 5. Workload and Semester Structure
+## 5. Трудоемкость и структура семестра
 
-| Type of work | Hours |
+| Вид учебной работы | Часы |
 |---|---:|
-| Lectures | 18 |
-| Laboratory works | 32 |
-| Other contact work | 1 |
-| Independent study | 53 |
-| Total | 108 |
+| Лекции | 18 |
+| Лабораторные работы | 32 |
+| Иная контактная работа | 1 |
+| Самостоятельная работа | 53 |
+| Итого | 108 |
 
-The course is delivered in semester 5. The final form of intermediate assessment is a zachet.
+Дисциплина реализуется в 5 семестре. Формой промежуточной аттестации является зачет.
 
-## 6. Thematic Plan
+## 6. Тематический план
 
-| Module | Topics | Lectures | Labs | Independent study | Total |
-|---|---|---:|---:|---:|---:|
-| Module 1. CI/CD and DevOps for ML | DevOps principles, CI/CD, Docker, infrastructure basics | 6 | 12 | 16 | 34 |
-| Module 2. ML Lifecycle Management | ML pipelines, experiment tracking, data and model versioning | 6 | 12 | 16 | 34 |
-| Module 3. Deployment, Monitoring, and Model Support | FastAPI deployment, monitoring, drift, support, documentation | 6 | 8 | 26 | 40 |
-| Total |  | 18 | 32 | 58 | 108 |
+| Модуль | Тематика | Лекции | Лабораторные | Всего часов по разделу |
+|---|---|---:|---:|---:|
+| Модуль 1. CI/CD and DevOps for ML | принципы DevOps, CI/CD, Docker, основы инфраструктуры | 6 | 12 | 34 |
+| Модуль 2. ML Lifecycle Management | ML-pipeline, логирование экспериментов, версионирование данных и моделей | 6 | 12 | 34 |
+| Модуль 3. Deployment, Monitoring, and Model Support | развертывание FastAPI-сервисов, мониторинг, drift, сопровождение и документация | 6 | 8 | 40 |
+| Итого |  | 18 | 32 | 108 |
 
-## 7. Lecture and Lab Breakdown
+Примечание: в исходной РПД отдельно указаны 53 часа самостоятельной работы и суммарная внеаудиторная нагрузка по тематическому плану. В репозиторной версии сохранены итоговые часы разделов без смешения их с самостоятельной работой как отдельным видом нагрузки.
 
-### Module 1. CI/CD and DevOps for ML
+## 7. Структура лекций и лабораторных работ
 
-- Lecture 1: Introduction to DevOps and CI/CD
-- Lecture 2: Infrastructure as code, Docker, and virtualization
-- Lecture 3: GitHub Actions and Jenkins for ML delivery
-- Lab 01: Docker and reproducible environment setup
-- Lab 02: Building Docker images and working with containers
-- Lab 03: Creating a CI/CD pipeline for an ML project
+### Модуль 1. CI/CD and DevOps for ML
 
-### Module 2. ML Lifecycle Management
+- Лекция 1. Введение в DevOps и принципы CI/CD
+- Лекция 2. Инфраструктура как код, Docker и виртуализация
+- Лекция 3. Инструменты CI/CD: GitHub Actions и Jenkins
+- Лабораторная работа 01. Docker и настройка воспроизводимого окружения
+- Лабораторная работа 02. Создание Docker-образа и работа с контейнерами
+- Лабораторная работа 03. Создание CI/CD pipeline для ML-проекта
 
-- Lecture 4: ML pipelines from data to model
-- Lecture 5: Experiment tracking with MLflow
-- Lecture 6: Data and model versioning with DVC
-- Lab 04: Simple ML pipeline implementation
-- Lab 05: Experiment tracking with MLflow
-- Lab 06: Tracking data and model changes with DVC
+### Модуль 2. ML Lifecycle Management
 
-### Module 3. Deployment, Monitoring, and Model Support
+- Лекция 4. ML pipeline: от данных до модели
+- Лекция 5. Управление экспериментами: MLflow
+- Лекция 6. Контроль версий моделей и данных: DVC
+- Лабораторная работа 04. Реализация ML pipeline от данных до модели
+- Лабораторная работа 05. Логирование экспериментов с MLflow
+- Лабораторная работа 06. Отслеживание изменений в моделях и данных с DVC
 
-- Lecture 7: Deploying models as API services with FastAPI and Docker
-- Lecture 8: Monitoring, logging, and A/B testing
-- Lecture 9: Documentation, ethics, and service stability
-- Lab 07: FastAPI service for a model
-- Lab 08: Model monitoring with Prometheus and Grafana
+### Модуль 3. Deployment, Monitoring, and Model Support
 
-## 8. Independent Study Guidance
+- Лекция 7. Развертывание моделей как API с использованием FastAPI и Docker
+- Лекция 8. Мониторинг, логирование и A/B-тестирование
+- Лекция 9. Документация, этика и стабильность сервиса
+- Лабораторная работа 07. Сервис на FastAPI для модели
+- Лабораторная работа 08. Мониторинг модели с Prometheus и Grafana
 
-Independent study includes:
+## 8. Рекомендации по самостоятельной работе
 
-- reviewing lecture notes and core literature;
-- preparing for laboratory implementation and defense;
-- studying official documentation for Docker, FastAPI, MLflow, DVC, Prometheus, and Grafana;
-- completing missed tasks and refining reports;
-- preparing for the final zachet.
+Самостоятельная работа включает:
 
-Suggested self-study questions are derived from the official source materials and cover reproducibility, CI/CD, versioning, deployment, monitoring, drift, and lifecycle governance.
+- проработку лекционных материалов и основной литературы;
+- подготовку к выполнению и защите лабораторных работ;
+- изучение официальной документации Docker, FastAPI, MLflow, DVC, Prometheus и Grafana;
+- доработку пропущенных заданий и улучшение отчетов;
+- подготовку к зачету.
 
-## 9. Assessment Materials Summary
+Контрольные вопросы для самостоятельной подготовки охватывают темы воспроизводимости, CI/CD, версионирования, развертывания, мониторинга, drift и управления жизненным циклом ML-систем.
 
-The assessment model combines current and final control:
+## 9. Краткое описание оценочных материалов
 
-- current assessment through 8 labs and their defense;
-- final zachet after all labs are completed;
-- zachet components: theoretical questions, competence-oriented tests, and practical tasks where needed.
+Модель оценивания включает текущий и промежуточный контроль:
 
-Detailed materials are published in [Exam/README.md](../Exam/README.md) and the module folders.
+- текущий контроль через 8 лабораторных работ и их защиту;
+- зачет после успешного выполнения всех лабораторных работ;
+- состав зачета: теоретические вопросы, компетентностно-ориентированные тесты и практические задания при необходимости.
 
-## 10. Learning and Information Resources
+Подробные материалы опубликованы в [Exam/README.md](../Exam/README.md) и в папках модулей.
 
-Core and recommended resources include:
+## 10. Учебно-информационные ресурсы
 
-- DevOps textbook by Kirillova and Mishina;
-- Docker textbook by Elton Mouat;
-- Yandex Machine Learning Handbook sections on MLOps;
-- Full Stack Deep Learning course materials.
+К основным и рекомендуемым ресурсам относятся:
 
-The repository version of these resources is curated in [resources/README.md](../resources/README.md).
+- учебное пособие по DevOps Кирилловой и Мишиной;
+- учебник по Docker Элтона Моуэта;
+- разделы по MLOps из учебника Яндекс по машинному обучению;
+- материалы курса Full Stack Deep Learning.
 
-## 11. Software and Infrastructure Requirements
+Подборка ресурсов в репозитории опубликована в [resources/README.md](../resources/README.md).
 
-Recommended student stack:
+## 11. Требования к программному обеспечению и инфраструктуре
+
+Рекомендуемый стек для студентов:
 
 - Python 3.10+
 - Git
-- Docker Engine or Docker Desktop
-- Linux or Windows with WSL2
+- Docker Engine или Docker Desktop
+- Linux или Windows с WSL2
 - FastAPI
 - MLflow
 - DVC
-- Prometheus and Grafana for monitoring labs
+- Prometheus и Grafana для лабораторных по мониторингу
 
-Students should be able to run projects from documented commands on a clean machine and must not commit secrets, tokens, or private data into the repository.
+Проекты должны запускаться по документированным командам на чистой машине. Секреты, токены и приватные данные не должны коммититься в репозиторий.
 
-## 12. Accessibility and Inclusive Learning Guidance
+## 12. Доступность и инклюзивное обучение
 
-The course may be adapted for students with disabilities and special educational needs. Delivery should support flexible formats, individual pacing where needed, and alternative presentation or submission formats without changing the academic goals of the discipline.
+Дисциплина может адаптироваться для обучающихся с инвалидностью и ограниченными возможностями здоровья. При необходимости допускаются гибкие форматы работы, индивидуальный темп и альтернативные формы представления результатов без изменения академических целей дисциплины.
 
-## 13. Student Methodological Recommendations
+## 13. Методические рекомендации студентам
 
-Students should maintain all source code, configuration, and run instructions in version control, document setup and launch steps clearly, and treat reproducibility as a graded quality attribute of every practical task.
+Студентам рекомендуется хранить исходный код, конфигурации и инструкции запуска под контролем версий, явно документировать настройку и запуск среды и рассматривать воспроизводимость как оцениваемое качество каждой практической работы.

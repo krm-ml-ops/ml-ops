@@ -1,19 +1,31 @@
-# Theoretical Questions
+# Теоретические вопросы
 
-The final zachet may include questions from the following bank:
+Зачет может включать вопросы из следующего банка:
 
-1. What is MLOps and how does it extend classical DevOps?
-2. Which stages make up the ML lifecycle?
-3. How do CI, CD, and reproducibility interact in ML systems?
-4. What should be fixed to make an experiment reproducible?
-5. How do Docker images, containers, volumes, and networks differ?
-6. What are the main stages of an ML pipeline?
-7. How do MLflow and DVC solve different lifecycle problems?
-8. How is a model deployed as a FastAPI service?
-9. Which tests are appropriate for an ML API?
-10. Which service, infrastructure, and model metrics should be monitored in production?
-11. What are data drift and concept drift?
-12. How should logs and prediction traces be handled securely?
-13. How can A/B testing be applied to models?
-14. What belongs in model documentation and model cards?
-15. Which ethical and operational risks must be considered in ML deployment?
+1. Что такое MLOps и какую роль он играет в промышленной эксплуатации моделей машинного обучения?
+2. Чем MLOps отличается от классического DevOps?
+3. Какие этапы включает жизненный цикл ML-модели?
+4. Что понимается под CI, CD и CT в контексте ML-систем?
+5. Какие особенности CI/CD возникают из-за наличия данных, моделей и экспериментов?
+6. Что такое воспроизводимость ML-эксперимента и как ее обеспечить?
+7. Чем контейнер отличается от виртуальной машины?
+8. Какова роль Dockerfile, Docker-образа, контейнера, тома и сети?
+9. Какие практики позволяют уменьшить размер и повысить безопасность Docker-образа?
+10. Что такое инфраструктура как код и какие задачи она решает в ML-проектах?
+11. Из каких этапов состоит типовой ML pipeline?
+12. Как контролировать качество данных перед обучением?
+13. Для чего используются MLflow Tracking и Model Registry?
+14. Для чего используется DVC и как он связан с Git и внешним хранилищем?
+15. Как организовать версионирование данных, кода, моделей и окружения?
+16. Как развернуть модель как REST API с использованием FastAPI?
+17. Какие требования предъявляются к контракту и тестам ML API?
+18. Какие метрики относятся к инфраструктурному, сервисному и модельному мониторингу?
+19. Как Prometheus и Grafana используются для мониторинга ML-сервисов?
+20. Чем отличаются `data drift`, `concept drift` и деградация качества модели?
+21. Какие подходы применяются для обнаружения дрейфа данных и запуска переобучения?
+22. Как организовать логирование и трассировку запросов с учетом информационной безопасности?
+23. В чем заключается A/B-тестирование моделей и как определить критерий успеха?
+24. Какие подходы обеспечивают масштабирование и отказоустойчивость ML-сервиса?
+25. Что должно входить в документацию модели и model card?
+26. Какие этические риски следует учитывать при эксплуатации систем ИИ?
+27. Как организовать командную работу и распределение ролей в MLOps-проекте?

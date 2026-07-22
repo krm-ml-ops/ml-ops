@@ -1,59 +1,70 @@
-# Lab 02. Building Docker Images and Working with Containers
+# Лабораторная работа 02. Создание Docker-образа и работа с контейнерами
 
-## Objective
+## Цель работы
 
-Design a practical and maintainable Docker image for an ML application and manage container lifecycle operations.
+Спроектировать практичный и сопровождаемый Docker-образ для ML-приложения и освоить управление жизненным циклом контейнера.
 
-## Tasks
+## Задачи работы
 
-1. Implement a small training or inference application.
-2. Optimize the Docker build for caching, size, and repeatability.
-3. Configure runtime parameters through environment variables.
-4. Add a health check and persist artifacts outside the container.
-5. Inspect and measure the resulting container behavior.
+1. Реализовать небольшое приложение обучения или инференса.
+2. Оптимизировать Docker build по кэшированию, размеру и повторяемости.
+3. Настроить параметры запуска через переменные окружения.
+4. Добавить health check и сохранять артефакты вне контейнера.
+5. Проанализировать и измерить поведение полученного контейнера.
 
-## Required Software
+## Необходимое программное обеспечение
 
-- Linux or Windows 10/11 with WSL2
+- Linux или Windows 10/11 с WSL2
 - Python 3.10+
 - Git
-- Docker Engine or Docker Desktop
-- Code editor or IDE
+- Docker Engine или Docker Desktop
+- редактор кода или IDE
 
-## Theory Summary
+## Краткие теоретические сведения
 
-Container quality is measured not only by correctness, but also by rebuild speed, image size, security, and operational clarity. Proper Docker layering, `.dockerignore`, non-root execution, and explicit runtime configuration are core MLOps practices.
+Качество контейнера определяется не только работоспособностью, но и скоростью повторной сборки, размером образа, безопасностью и эксплуатационной прозрачностью. Грамотное разбиение на слои, `.dockerignore`, запуск не от `root` и явная runtime-конфигурация относятся к базовым MLOps-практикам.
 
-## Assignment
+## Задание
 
-- Implement `train.py` or `predict.py` according to the assigned variant.
-- Create `.dockerignore`.
-- Build a Docker image with efficient layer reuse; use multi-stage build where the variant requires it.
-- Expose configuration through environment variables and command-line arguments.
-- Save generated artifacts into a mounted `/artifacts` directory.
-- Demonstrate `docker inspect`, `docker logs`, `docker exec`, and `docker stats` during validation.
+- Реализовать `train.py` или `predict.py` согласно назначенному варианту.
+- Создать `.dockerignore`.
+- Собрать Docker-образ с эффективным переиспользованием слоев; при необходимости использовать multi-stage build.
+- Вывести конфигурацию в переменные окружения и аргументы командной строки.
+- Сохранять артефакты в смонтированный каталог `/artifacts`.
+- Продемонстрировать `docker inspect`, `docker logs`, `docker exec` и `docker stats` при проверке.
 
-## Individual Variants
+## Индивидуальные варианты
 
-Use the variant matrix from `materials/md/лабораторные.md`, including the assigned application type, build mode, environment parameter, and output artifact.
+| Вариант | Приложение | Сборка | Параметр окружения | Выходной артефакт |
+|---|---|---|---|---|
+| 1 | Обучение `LogisticRegression` | обычный build | `MODEL_C=1.0` | модель `joblib` |
+| 2 | Обучение `RandomForestClassifier` | multi-stage | `N_ESTIMATORS=100` | модель `joblib` |
+| 3 | Обучение `Ridge` | обычный build | `ALPHA=1.0` | модель `joblib` |
+| 4 | Обучение `GradientBoostingClassifier` | multi-stage | `LEARNING_RATE=0.1` | метрики `JSON` |
+| 5 | Инференс сохраненной модели по CSV | обычный build | `INPUT_FILE=/data/input.csv` | `predictions.csv` |
+| 6 | Пакетная предобработка CSV | multi-stage | `DROP_NA=true` | `clean.csv` |
+| 7 | Генерация отчета качества данных | обычный build | `REPORT_FORMAT=json` | `report.json` |
+| 8 | Кластеризация `KMeans` | multi-stage | `N_CLUSTERS=3` | `labels.csv` |
+| 9 | TF-IDF-преобразование текстов | обычный build | `MAX_FEATURES=1000` | `matrix.npz` |
+| 10 | Извлечение признаков изображений | multi-stage | `IMAGE_SIZE=64` | `features.csv` |
 
-## Report Requirements
+## Требования к отчету
 
-- Build strategy and image structure
-- Runtime configuration and artifact handling
-- Image size and repeat build behavior
-- Evidence of health check and container inspection
-- Conclusions on security and maintainability
+- стратегия сборки и структура образа;
+- runtime-конфигурация и работа с артефактами;
+- размер образа и поведение при повторной сборке;
+- подтверждение работы health check и инспекции контейнера;
+- выводы о безопасности и сопровождаемости.
 
-## Control Questions
+## Контрольные вопросы
 
-1. Why does instruction order matter in a `Dockerfile`?
-2. What is the purpose of `.dockerignore`?
-3. When is a multi-stage build useful?
-4. Why should artifacts usually live outside the container filesystem?
-5. What reduces the attack surface of a containerized service?
+1. Почему порядок инструкций в `Dockerfile` влияет на скорость повторной сборки?
+2. Для чего нужен `.dockerignore`?
+3. Когда полезен multi-stage build?
+4. Почему артефакты обычно лучше хранить вне файловой системы контейнера?
+5. Что уменьшает поверхность атаки контейнеризированного сервиса?
 
-## Related Competencies and Indicators
+## Связанные компетенции и индикаторы
 
 - LC-5.1
 - BD-5.3

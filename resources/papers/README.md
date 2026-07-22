@@ -1,3 +1,3 @@
 # Papers
 
-This section is optional for the current course release. The published repository focuses on textbooks, official documentation, and practical tooling resources instead of a separate paper catalog.
+Раздел является необязательным для текущего выпуска курса. В опубликованной версии репозиторий делает упор на учебники, официальную документацию и практические инструменты, а не на отдельный каталог статей.

@@ -1,20 +1,20 @@
-# Lab 07. FastAPI Service for a Model
+# Лабораторная работа 07. Сервис на FastAPI для модели
 
-## Objective
+## Цель работы
 
-Deploy a trained ML model as a documented REST API with validation, testing, and containerized execution.
+Развернуть обученную ML-модель в виде документированного REST API с валидацией, тестированием и контейнеризированным запуском.
 
-## Tasks
+## Задачи работы
 
-1. Design a stable API contract for inference.
-2. Load the model at application startup.
-3. Implement single and batch prediction endpoints.
-4. Validate inputs and handle errors explicitly.
-5. Test and containerize the service.
+1. Спроектировать стабильный API-контракт для инференса.
+2. Загружать модель при старте приложения.
+3. Реализовать endpoint для одиночного и batch-предсказания.
+4. Валидировать входные данные и явно обрабатывать ошибки.
+5. Протестировать и контейнеризировать сервис.
 
-## Required Software
+## Необходимое программное обеспечение
 
-- Linux or Windows 10/11 with WSL2
+- Linux или Windows 10/11 с WSL2
 - Python 3.10+
 - Git
 - FastAPI
@@ -22,41 +22,52 @@ Deploy a trained ML model as a documented REST API with validation, testing, and
 - pytest
 - httpx
 
-## Theory Summary
+## Краткие теоретические сведения
 
-Model serving separates inference from the training environment and exposes a stable contract to consumers. FastAPI is well suited for educational MLOps because it combines Pydantic-based validation, generated API documentation, and testable endpoint structure.
+Сервис инференса отделяет использование модели от среды обучения и предоставляет стабильный программный контракт потребителям. FastAPI хорошо подходит для учебного MLOps, так как сочетает валидацию на базе Pydantic, автоматическую OpenAPI-документацию и удобную структуру для тестирования endpoint.
 
-## Assignment
+## Задание
 
-- Prepare a serialized model and input schema.
-- Implement `GET /health` and `GET /model-info`.
-- Implement `POST /predict` and `POST /predict-batch`.
-- Add request and response schemas with validation ranges and examples.
-- Load the model once at startup and avoid repeated initialization.
-- Add at least six tests, including invalid-input cases.
-- Build and run the containerized service and verify the OpenAPI UI.
+- Подготовить сериализованную модель и схему входных признаков.
+- Реализовать `GET /health` и `GET /model-info`.
+- Реализовать `POST /predict` и `POST /predict-batch`.
+- Добавить схемы запроса и ответа с диапазонами валидации и примерами.
+- Загружать модель один раз при старте и избегать повторной инициализации.
+- Добавить минимум шесть тестов, включая случаи с невалидными входными данными.
+- Собрать и запустить контейнеризированный сервис и проверить OpenAPI UI.
 
-## Individual Variants
+## Индивидуальные варианты
 
-Use the variant matrix from `materials/md/лабораторные.md`, including the assigned model type, request shape, and response format.
+| Вариант | Модель / сервис | Вход | Выход |
+|---|---|---|---|
+| 1 | Iris classifier | 4 числовых признака | класс + вероятности |
+| 2 | Wine classifier | 13 признаков | класс + confidence |
+| 3 | Breast Cancer classifier | выбранные признаки | класс + вероятность риска |
+| 4 | Diabetes regressor | 10 признаков | числовой прогноз |
+| 5 | Digits classifier | массив из 64 значений | цифра + top-3 |
+| 6 | Синтетический churn classifier | числовые и категориальные поля | класс + вероятность |
+| 7 | Синтетический price regressor | числовые и категориальные поля | цена + версия модели |
+| 8 | KMeans segmenter | набор признаков | кластер + расстояние |
+| 9 | Text classifier | строка текста | метка + score |
+| 10 | Image feature classifier | `base64` или путь в тестовой среде | класс + score |
 
-## Report Requirements
+## Требования к отчету
 
-- API contract and schema design
-- Error handling and logging strategy
-- Test coverage summary
-- Container run evidence and sample requests
-- Performance notes from repeated requests
+- описание API-контракта и схем;
+- стратегия обработки ошибок и логирования;
+- краткое резюме по покрытию тестами;
+- подтверждение запуска контейнера и примеры запросов;
+- замечания по производительности при повторных запросах.
 
-## Control Questions
+## Контрольные вопросы
 
-1. Why is Pydantic useful in ML APIs?
-2. Why should the model be loaded once at startup?
-3. What is the difference between health and readiness checks?
-4. Which HTTP status codes fit validation errors and internal failures?
-5. Why should raw request data be logged carefully?
+1. Почему Pydantic полезен в ML API?
+2. Почему модель следует загружать один раз при старте?
+3. Чем `health check` отличается от `readiness check`?
+4. Какие HTTP-коды подходят для ошибок валидации и внутренних сбоев?
+5. Почему сырые данные запросов нужно логировать с осторожностью?
 
-## Related Competencies and Indicators
+## Связанные компетенции и индикаторы
 
 - LC-5.1
 - DL-3.2
