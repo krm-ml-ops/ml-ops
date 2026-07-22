@@ -1,7 +1,7 @@
-# Методические указания
+# Methodical Guidelines
 
-| Раздел | Для кого | Содержание |
+| Section | Audience | Purpose |
 |---|---|---|
-| [students](students/README.md) | обучающиеся | выполнение, сдача и защита КИМ |
-| [teachers-assessment](teachers-assessment/README.md) | преподаватели | оценивание, рубрики, обратная связь, апелляции |
-| [teachers-resources](teachers-resources/README.md) | преподаватели | подбор и применение ресурсов при разработке КИМ |
+| [students](students/README.md) | students | lab workflow, reporting, defense, and reproducibility expectations |
+| [teachers-assessment](teachers-assessment/README.md) | instructors | evaluation logic, defense checks, and zachet admission policy |
+| [teachers-resources](teachers-resources/README.md) | instructors | recommended toolchain, platform setup, and topic-aligned references |

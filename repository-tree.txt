@@ -1,45 +1,46 @@
 .
-├── data/
-│   ├── competency-catalog.csv
-│   ├── krm-v3.0.xlsx
-│   ├── README.md
-│   └── role-competency-matrix.csv
+├── README.md
 ├── docs/
+│   ├── README.md
 │   ├── quality-checklist.md
-│   ├── README.md
-│   ├── repository_example.pdf
 │   └── rpd.md
-├── Exam/
-│   ├── attachments/
-│   │   └── .gitkeep
-│   └── README.md
-├── M1-module-name/
-│   ├── attachments/
-│   │   └── .gitkeep
-│   ├── kim-01-practical-work.md
+├── M1-ci-cd-devops-ml/
 │   ├── README.md
-│   └── rubric-01.md
-├── M2-module-name/
 │   ├── attachments/
-│   │   └── .gitkeep
-│   ├── kim-01-practical-work.md
-│   ├── kim-01-template.md
-│   └── README.md
+│   ├── lab-01-docker-reproducible-environment.md
+│   ├── lab-02-docker-images-and-containers.md
+│   └── lab-03-ci-cd-pipeline.md
+├── M2-ml-lifecycle/
+│   ├── README.md
+│   ├── attachments/
+│   ├── lab-04-ml-pipeline.md
+│   ├── lab-05-mlflow-experiment-tracking.md
+│   └── lab-06-dvc-data-model-versioning.md
+├── M3-deployment-monitoring/
+│   ├── README.md
+│   ├── attachments/
+│   ├── lab-07-fastapi-model-service.md
+│   └── lab-08-monitoring-prometheus-grafana.md
+├── Exam/
+│   ├── README.md
+│   ├── attachments/
+│   ├── competence-tests.md
+│   ├── grading.md
+│   ├── practical-tasks.md
+│   └── theoretical-questions.md
+├── Project/
+│   ├── README.md
+│   └── attachments/
 ├── methodical-guidelines/
+│   ├── README.md
 │   ├── students/
 │   │   └── README.md
 │   ├── teachers-assessment/
 │   │   └── README.md
-│   ├── teachers-resources/
-│   │   └── README.md
-│   └── README.md
-├── other/
-│   └── README.md
-├── Project/
-│   ├── attachments/
-│   │   └── .gitkeep
-│   └── README.md
+│   └── teachers-resources/
+│       └── README.md
 ├── resources/
+│   ├── README.md
 │   ├── benchmarks/
 │   │   └── README.md
 │   ├── datasets/
@@ -57,18 +58,17 @@
 │   │       └── README.md
 │   ├── test-banks/
 │   │   └── README.md
-│   ├── textbooks/
-│   │   └── README.md
-│   └── README.md
+│   └── textbooks/
+│       └── README.md
 ├── team/
-│   ├── images/
-│   │   └── .gitkeep
-│   └── README.md
-├── tools/
 │   ├── README.md
-│   └── validate_repository.py
-├── .gitignore
+│   └── images/
+├── data/
+│   ├── README.md
+│   └── krm-v3.0.xlsx
+├── materials/
+├── other/
+├── backlog/
 ├── CONTRIBUTING.md
 ├── LICENSE.md
-├── README.md
-└── validation-report.txt
+└── .gitignore

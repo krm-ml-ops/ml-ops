@@ -1,91 +1,80 @@
-# Фонд оценочных средств по дисциплине «[НАЗВАНИЕ ДИСЦИПЛИНЫ]»
+# Fundamentals of MLOps
 
-> **Статус:** шаблон репозитория. Замените все маркеры `[ЗАПОЛНИТЬ]` и удалите учебные примеры перед публикацией.
+This repository publishes the course structure, assessment materials, and methodological support for the discipline `Fundamentals of MLOps`.
 
-Этот репозиторий предназначен для открытого и воспроизводимого представления фонда оценочных средств (ФОС) по дисциплине «[НАЗВАНИЕ ДИСЦИПЛИНЫ]». Здесь объединены рабочая программа дисциплины, модель измерения результатов обучения, контрольно-измерительные материалы (КИМ), критерии оценивания, методические рекомендации и используемые образовательные ресурсы. Результаты обучения связываются с компетентностно-ролевой моделью в области искусственного интеллекта (КРМ версии 3.0).
+## Course Overview
 
-## Быстрая навигация
+- Institution: Moscow Technical University of Communications and Informatics (MTUCI)
+- Degree program: `09.03.01 Informatics and Computer Engineering`
+- Profile: `TOP-AI: Engineering of Artificial Intelligence Systems`
+- Qualification: Bachelor
+- Delivery mode: full-time
+- Semester: 5
+- Workload: `3 ECTS / 108 academic hours`
+- Final assessment: `zachet`
 
-- [Рабочая программа дисциплины](docs/rpd.md)
-- [Методические указания](methodical-guidelines/README.md)
-- [Информационные ресурсы](resources/README.md)
-- [Команда проекта](team/README.md)
-- [Контроль качества репозитория](docs/quality-checklist.md)
+## Goal
 
-## 1. О дисциплине
+The course develops practical MLOps skills for the full lifecycle of machine learning systems: reproducible environments, containerization, CI/CD, experiment tracking, data and model versioning, deployment, monitoring, and production support.
 
-**Цель дисциплины.** [ЗАПОЛНИТЬ: 2–3 предложения о том, чему и зачем обучаются слушатели/студенты.]
+## Key Learning Tasks
 
-**Основные задачи.** [ЗАПОЛНИТЬ: перечислите ключевые учебные задачи без чрезмерной детализации.]
+1. Understand MLOps as a combination of DevOps, Data Engineering, and ML Engineering practices.
+2. Build reproducible ML environments and containerized services.
+3. Automate quality checks, testing, and delivery with CI/CD.
+4. Manage experiments, datasets, models, and artifacts across the ML lifecycle.
+5. Deploy models as API services and monitor them in operation.
 
-**Структура и содержание.** Дисциплина состоит из [ЗАПОЛНИТЬ: количество] модулей: [ЗАПОЛНИТЬ: названия модулей]. Обучение включает [лекции / практические занятия / лабораторные работы / проект / самостоятельную работу] и завершается [экзаменом / зачетом / защитой проекта].
+## Course Structure
 
-**Пререквизиты и связи с другими дисциплинами.** [ЗАПОЛНИТЬ: необходимые входные знания и дисциплины, результаты которых используются в курсе.]
+### Module 1. CI/CD and DevOps for ML
 
-**Планируемые результаты обучения.** По завершении дисциплины обучающийся сможет [ЗАПОЛНИТЬ: 3–6 проверяемых результатов обучения, сформулированных через наблюдаемые действия].
+- [Module overview](M1-ci-cd-devops-ml/README.md)
+- Lab 01: [Docker and reproducible environment setup](M1-ci-cd-devops-ml/lab-01-docker-reproducible-environment.md)
+- Lab 02: [Building Docker images and working with containers](M1-ci-cd-devops-ml/lab-02-docker-images-and-containers.md)
+- Lab 03: [Creating a CI/CD pipeline for an ML project](M1-ci-cd-devops-ml/lab-03-ci-cd-pipeline.md)
 
-Полное описание приведено в [РПД](docs/rpd.md).
+### Module 2. ML Lifecycle Management
 
-## 2. Модель измерения
+- [Module overview](M2-ml-lifecycle/README.md)
+- Lab 04: [Simple ML pipeline implementation](M2-ml-lifecycle/lab-04-ml-pipeline.md)
+- Lab 05: [Experiment tracking with MLflow](M2-ml-lifecycle/lab-05-mlflow-experiment-tracking.md)
+- Lab 06: [Tracking data and model changes with DVC](M2-ml-lifecycle/lab-06-dvc-data-model-versioning.md)
 
-| №       | Модуль / элемент | Код и название компетенции | Индикатор | Уровень | Дескриптор освоения                                                                                                                                          | Форма контроля                     | КИМ | Ресурсы |
-|---------|---|----------------------------|-----------|:-------:|--------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------|-----|---|
-| [Номер] | [Модуль 1] | [Код и название]           | [Номер]   |  Б/С/П  | [Описывает команда в контексте курса так, чтобы было видно, что покрывается заданная часть компетенции – что может делать студент после освоения дисциплины] | Текущая / Рубежная / Промежуточная | [ссылка](M1-module-name/README.md) | [ссылка](resources/README.md) |
+### Module 3. Deployment, Monitoring, and Model Support
 
-## 3. Контрольно-измерительные материалы
+- [Module overview](M3-deployment-monitoring/README.md)
+- Lab 07: [FastAPI service for a model](M3-deployment-monitoring/lab-07-fastapi-model-service.md)
+- Lab 08: [Model monitoring with Prometheus and Grafana](M3-deployment-monitoring/lab-08-monitoring-prometheus-grafana.md)
 
-- [Модуль 1](M1-module-name/README.md) — шаблон описания КИМ для отдельного модуля;
-- [Модуль 2](M2-module-name/README.md) — второй модуль-заготовка;
-- [Проектная работа](Project/README.md) — интегральный КИМ по нескольким результатам обучения;
-- [Экзамен / зачет](Exam/README.md) — промежуточная аттестация.
+## Planned Learning Outcomes
 
-Каждый КИМ должен содержать назначение, проверяемые результаты, условия выполнения, материалы задания, формат сдачи, критерии и шкалу оценивания, правила использования внешних ресурсов и генеративного ИИ.
+By the end of the course, students should be able to:
 
-## 4. Итоговая оценка
+1. Choose an appropriate MLOps toolchain for a training and serving workflow.
+2. Build reproducible ML pipelines and track experiments and artifacts.
+3. Version datasets, models, and pipeline stages in a controlled way.
+4. Deploy models as maintainable API services.
+5. Monitor service health and early signs of model degradation.
 
-Правила суммирования баллов, минимальные пороги и перевод результата в принятую шкалу оценок приводятся в системе итогового оценивания. Таблица должна соответствовать локальным нормативным актам образовательной организации.
+## Assessment Summary
 
-## 5. Методические материалы
+- Ongoing assessment: 8 laboratory works with implementation and defense
+- Admission to final assessment: all labs completed and defended
+- Final assessment: [zachet materials](Exam/README.md)
+- Total score: 100 points
+- Pass threshold: 60 points
 
-- [Рекомендации обучающимся](methodical-guidelines/students/README.md);
-- [Рекомендации преподавателям по оцениванию](methodical-guidelines/teachers-assessment/README.md);
-- [Рекомендации преподавателям по использованию ресурсов](methodical-guidelines/teachers-resources/README.md).
+## Main Repository Sections
 
-## 6. Структура репозитория
+- [Cleaned course program](docs/rpd.md)
+- [Methodical guidelines](methodical-guidelines/README.md)
+- [Curated resources](resources/README.md)
+- [Project folder status](Project/README.md)
+- [Quality checklist](docs/quality-checklist.md)
+- [Team metadata](team/README.md) - TODO placeholders remain where source data is not available
 
-```text
-.
-├── README.md
-├── LICENSE.md
-├── CONTRIBUTING.md
-├── docs/
-├── M1-module-name/
-├── M2-module-name/
-├── Project/
-├── Exam/
-├── methodical-guidelines/
-├── resources/
-├── data/
-├── team/
-└── other/
-```
+## Notes
 
-Подробное дерево приведено в файле [`repository-tree.txt`](repository-tree.txt).
-
-## 7. Порядок заполнения
-
-1. Заполните РПД и сформулируйте проверяемые результаты обучения.
-2. Выберите релевантные профессиональные роли и компетенции КРМ.
-3. Для каждого результата выберите индикатор и требуемый уровень.
-4. Заполните модель измерения.
-5. Создайте КИМ и рубрики оценивания по шаблонам.
-6. Согласуйте систему итогового балла.
-7. Добавьте ресурсы, сведения о команде и лицензию.
-
-## 8. Команда
-
-Сведения об авторах, ролях и вкладе участников размещаются в разделе [«Команда проекта»](team/README.md). Рекомендуется, чтобы участники добавляли материалы через собственные GitHub-аккаунты: история коммитов будет отражать их вклад.
-
-## 9. Лицензия
-
-Предлагаемая лицензия для открытых образовательных материалов — **Creative Commons Attribution 4.0 International (CC BY 4.0)**. Перед публикацией согласуйте выбор лицензии с правообладателем и заполните файл [LICENSE.md](LICENSE.md).
+- `materials/` remains the source archive used to build this published structure.
+- `Project/` is preserved in the repository but is not used as a separate assessment element for this discipline.

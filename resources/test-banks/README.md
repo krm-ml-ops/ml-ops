@@ -1,9 +1,6 @@
-# Банки тестовых заданий
+# Test Banks
 
-| Название | Аннотация | Связанные КИМ | Доступ | Лицензия / условия | Дата проверки |
-|---|---|---|---|---|---|
-| [ЗАПОЛНИТЬ] | [Кратко опишите назначение] | [ссылка] | [ссылка или путь] | [ЗАПОЛНИТЬ] | [ГГГГ-ММ-ДД] |
-
-## Требования к добавлению
-
-Для каждого банка укажите темы, количество заданий, уровни сложности, правила выборки, ключи и порядок обновления.
+| Bank | Link | Purpose | Related labs or assessment |
+|---|---|---|---|
+| Theoretical zachet questions | ../../Exam/theoretical-questions.md | oral or written coverage of the full course | Final zachet |
+| Competence-oriented final tests | ../../Exam/competence-tests.md | objective checks of tool selection, reproducibility, deployment, and monitoring understanding | Final zachet |

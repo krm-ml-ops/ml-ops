@@ -1,9 +1,3 @@
-# LLM-сервисы и промпты
+# LLM Prompts
 
-| Название | Аннотация | Связанные КИМ | Доступ | Лицензия / условия | Дата проверки |
-|---|---|---|---|---|---|
-| [ЗАПОЛНИТЬ] | [Кратко опишите назначение] | [ссылка] | [ссылка или путь] | [ЗАПОЛНИТЬ] | [ГГГГ-ММ-ДД] |
-
-## Требования к добавлению
-
-Укажите модель/сервис, назначение промпта, входные данные, ожидаемый формат результата, ограничения и способ верификации ответа.
+This section is intentionally left without curated prompt content in the current course release. Any use of external AI tools should be governed by instructor rules rather than embedded into the official assessment structure.

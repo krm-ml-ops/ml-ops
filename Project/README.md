@@ -1,5 +1,14 @@
-> ⚠️ Данный специфичный вид задания содержит MD-файл для описания мероприятия как общего КИМ для всей дисциплины, а также вспомогательные описательные файлы, например приложения; в описании приводятся ссылки не необходимые ресурсы папка именуется в соответствии с видом КИМ, к примеру, для проектного задания вместо [WA-Name] папке именуется «Project», для экзамена – «Exam»), подобных папок может быть несколько.
+# Project
 
-# Проектная работа
+This folder remains in the repository for structural consistency, but a separate project assignment is not used in the `Fundamentals of MLOps` discipline.
 
-Проектная работа — интегральный КИМ, позволяющий проверить несколько компетенций и индикаторов в условиях комплексной практической задачи.
+## Status
+
+- not used as a standalone assessment element;
+- not required for admission to the final zachet;
+- retained only to preserve the broader repository template structure.
+
+## What Students Should Use Instead
+
+- module laboratory works in `M1-ci-cd-devops-ml/`, `M2-ml-lifecycle/`, and `M3-deployment-monitoring/`;
+- final assessment materials in [Exam/README.md](../Exam/README.md).

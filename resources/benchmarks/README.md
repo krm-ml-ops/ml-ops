@@ -1,9 +1,3 @@
-# Бенчмарки и бейзлайны
+# Benchmarks
 
-| Название | Аннотация | Связанные КИМ | Доступ | Лицензия / условия | Дата проверки |
-|---|---|---|---|---|---|
-| [ЗАПОЛНИТЬ] | [Кратко опишите назначение] | [ссылка] | [ссылка или путь] | [ЗАПОЛНИТЬ] | [ГГГГ-ММ-ДД] |
-
-## Требования к добавлению
-
-Опишите задачу, метрики, протокол эксперимента, базовые решения, требования к воспроизводимости и правила сравнения.
+This section is optional for the current course release. Benchmark-style comparison is introduced through lab metrics and monitoring tasks rather than through a standalone benchmark registry.

@@ -1,9 +1,3 @@
-# Научные статьи
+# Papers
 
-| Название | Аннотация | Связанные КИМ | Доступ | Лицензия / условия | Дата проверки |
-|---|---|---|---|---|---|
-| [ЗАПОЛНИТЬ] | [Кратко опишите назначение] | [ссылка] | [ссылка или путь] | [ЗАПОЛНИТЬ] | [ГГГГ-ММ-ДД] |
-
-## Требования к добавлению
-
-Добавляйте DOI или устойчивую ссылку, краткую аннотацию и пояснение, для какого результата обучения используется публикация.
+This section is optional for the current course release. The published repository focuses on textbooks, official documentation, and practical tooling resources instead of a separate paper catalog.

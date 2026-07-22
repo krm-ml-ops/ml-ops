@@ -1,8 +1,8 @@
-# Документация дисциплины
+# Course Documentation
 
-В этой папке хранится документация верхнего уровня:
+This folder contains the top-level course documents.
 
-| Файл                                             | Назначение                                          |
-|--------------------------------------------------|-----------------------------------------------------|
-| [rpd.md](rpd.md)                                 | рабочая программа дисциплины                 |
-| [quality-checklist.md](quality-checklist.md)     | проверка готовности репозитория к публикации        |
+| File | Purpose |
+|---|---|
+| [rpd.md](rpd.md) | cleaned repository version of the course program |
+| [quality-checklist.md](quality-checklist.md) | publication and consistency checklist |
