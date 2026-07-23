@@ -6,6 +6,7 @@
 
 - `source-materials/md/РПД.md` - рабочая программа дисциплины
 - `source-materials/md/ФОС.md` - оценочные материалы для текущего контроля и промежуточной аттестации
+- `source-materials/md/лабораторные.md` - методические указания к выполнению лабораторных работ
 
 ## Правило публикации
 
@@ -42,9 +43,27 @@
 
 - `Exam/theoretical-questions.md` <- приложение № 1 и приложение № 6 `source-materials/md/ФОС.md`
 - `Exam/competence-tests.md` <- приложение № 2 `source-materials/md/ФОС.md`
+- `Exam/current-control-practical-tasks.md` <- приложение № 3 `source-materials/md/ФОС.md`
 - `Exam/practical-tasks.md` <- приложение № 7 `source-materials/md/ФОС.md`
 - `Exam/grading.md` <- раздел 4 `source-materials/md/ФОС.md` (регламент, пороги, распределение баллов, критерии)
+- `Exam/assessment-map.md` <- разделы 1-3 и приложение № 5 `source-materials/md/ФОС.md`
 - `Exam/README.md` <- обзорная навигация по материалам `ФОС.md`
+
+### Методические указания к лабораторным работам
+
+- `methodical-guidelines/students/README.md` <- общие положения, требования к воспроизводимости, отчету, защите, информационной безопасности и рекомендуемая структура репозитория из `source-materials/md/лабораторные.md`
+- `modules/M1-ci-cd-devops-ml/lab-01-docker-reproducible-environment.md` <- лабораторная работа № 1 `source-materials/md/лабораторные.md`
+- `modules/M1-ci-cd-devops-ml/lab-02-docker-images-and-containers.md` <- лабораторная работа № 2 `source-materials/md/лабораторные.md`
+- `modules/M1-ci-cd-devops-ml/lab-03-ci-cd-pipeline.md` <- лабораторная работа № 3 `source-materials/md/лабораторные.md`
+- `modules/M2-ml-lifecycle/lab-04-ml-pipeline.md` <- лабораторная работа № 4 `source-materials/md/лабораторные.md`
+- `modules/M2-ml-lifecycle/lab-05-mlflow-experiment-tracking.md` <- лабораторная работа № 5 `source-materials/md/лабораторные.md`
+- `modules/M2-ml-lifecycle/lab-06-dvc-data-model-versioning.md` <- лабораторная работа № 6 `source-materials/md/лабораторные.md`
+- `modules/M3-deployment-monitoring/lab-07-fastapi-model-service.md` <- лабораторная работа № 7 `source-materials/md/лабораторные.md`
+- `modules/M3-deployment-monitoring/lab-08-monitoring-prometheus-grafana.md` <- лабораторная работа № 8 `source-materials/md/лабораторные.md`
+
+В этой публикации осознанно не воспроизводятся:
+
+- титульный блок и административные реквизиты методических указаний.
 
 ## Намеренные структурные решения
 
@@ -52,6 +71,7 @@
 2. Тесты публикуются как нумерованный список с вложенными вариантами ответа для читаемости в Markdown.
 3. Практические задания к промежуточной аттестации вынесены в отдельный файл без смешения с заданиями текущего контроля.
 4. `docs/rpd.md` оставляет официальное содержание, но не дублирует административные блоки, которые хуже читаются и не используются как учебное содержимое в репозитории.
+5. Материалы `лабораторные.md` распределены между `modules/*` и `methodical-guidelines/students/README.md`, чтобы общие правила не дублировались в каждой лабораторной работе.
 
 ## Если потребуется дальнейшая адаптация
 
