@@ -67,7 +67,7 @@
 ├── data/
 │   ├── README.md
 │   └── krm-v3.0.xlsx
-├── materials/
+├── source-materials/
 ├── other/
 ├── backlog/
 ├── CONTRIBUTING.md
