@@ -22,7 +22,7 @@
 | Лабораторная работа | Фокус |
 |---|---|
 | [ЛР 07](lab-07-fastapi-model-service.md) | публикация обученной модели через валидируемый API |
-| [ЛР 08](lab-08-monitoring-prometheus-grafana.md) | технический и модельный мониторинг с alert-правилами и dashboard |
+| [ЛР 08](lab-08-monitoring-prometheus-grafana.md) | мониторинг модели с Prometheus, Grafana, alert-правилами и dashboard |
 
 ## Результат освоения модуля
 
