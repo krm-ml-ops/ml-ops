@@ -22,7 +22,7 @@
 
 ## Именование
 
-- папки модулей: `M1-short-name`, `M2-short-name`;
+- папки модулей: `modules/M1-short-name`, `modules/M2-short-name`, `modules/M3-short-name`;
 - КИМ: `kim-01-practical-work.md`, `kim-02-test.md`;
 - рубрики: `rubric-01.md`;
 - приложения: `appendix-01-<name>.<ext>`.

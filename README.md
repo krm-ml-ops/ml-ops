@@ -29,23 +29,23 @@
 
 ### Модуль 1. CI/CD and DevOps for ML
 
-- [Описание модуля](M1-ci-cd-devops-ml/README.md)
-- Лабораторная работа 01: [Docker и настройка воспроизводимого окружения](M1-ci-cd-devops-ml/lab-01-docker-reproducible-environment.md)
-- Лабораторная работа 02: [Создание Docker-образа и работа с контейнерами](M1-ci-cd-devops-ml/lab-02-docker-images-and-containers.md)
-- Лабораторная работа 03: [Создание CI/CD pipeline для ML-проекта](M1-ci-cd-devops-ml/lab-03-ci-cd-pipeline.md)
+- [Описание модуля](modules/M1-ci-cd-devops-ml/README.md)
+- Лабораторная работа 01: [Docker и настройка воспроизводимого окружения](modules/M1-ci-cd-devops-ml/lab-01-docker-reproducible-environment.md)
+- Лабораторная работа 02: [Создание Docker-образа и работа с контейнерами](modules/M1-ci-cd-devops-ml/lab-02-docker-images-and-containers.md)
+- Лабораторная работа 03: [Создание CI/CD pipeline для ML-проекта](modules/M1-ci-cd-devops-ml/lab-03-ci-cd-pipeline.md)
 
 ### Модуль 2. ML Lifecycle Management
 
-- [Описание модуля](M2-ml-lifecycle/README.md)
-- Лабораторная работа 04: [Реализация ML pipeline от данных до модели](M2-ml-lifecycle/lab-04-ml-pipeline.md)
-- Лабораторная работа 05: [Логирование экспериментов с MLflow](M2-ml-lifecycle/lab-05-mlflow-experiment-tracking.md)
-- Лабораторная работа 06: [Отслеживание изменений в моделях и данных с DVC](M2-ml-lifecycle/lab-06-dvc-data-model-versioning.md)
+- [Описание модуля](modules/M2-ml-lifecycle/README.md)
+- Лабораторная работа 04: [Реализация ML pipeline от данных до модели](modules/M2-ml-lifecycle/lab-04-ml-pipeline.md)
+- Лабораторная работа 05: [Логирование экспериментов с MLflow](modules/M2-ml-lifecycle/lab-05-mlflow-experiment-tracking.md)
+- Лабораторная работа 06: [Отслеживание изменений в моделях и данных с DVC](modules/M2-ml-lifecycle/lab-06-dvc-data-model-versioning.md)
 
 ### Модуль 3. Deployment, Monitoring, and Model Support
 
-- [Описание модуля](M3-deployment-monitoring/README.md)
-- Лабораторная работа 07: [Сервис на FastAPI для модели](M3-deployment-monitoring/lab-07-fastapi-model-service.md)
-- Лабораторная работа 08: [Мониторинг модели с Prometheus и Grafana](M3-deployment-monitoring/lab-08-monitoring-prometheus-grafana.md)
+- [Описание модуля](modules/M3-deployment-monitoring/README.md)
+- Лабораторная работа 07: [Сервис на FastAPI для модели](modules/M3-deployment-monitoring/lab-07-fastapi-model-service.md)
+- Лабораторная работа 08: [Мониторинг модели с Prometheus и Grafana](modules/M3-deployment-monitoring/lab-08-monitoring-prometheus-grafana.md)
 
 ## Планируемые результаты обучения
 

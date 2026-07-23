@@ -10,5 +10,5 @@
 
 ## Что использовать вместо этого
 
-- лабораторные работы в `M1-ci-cd-devops-ml/`, `M2-ml-lifecycle/` и `M3-deployment-monitoring/`;
+- лабораторные работы в [modules/M1-ci-cd-devops-ml/](../modules/M1-ci-cd-devops-ml/), [modules/M2-ml-lifecycle/](../modules/M2-ml-lifecycle/) и [modules/M3-deployment-monitoring/](../modules/M3-deployment-monitoring/);
 - материалы зачета в [Exam/README.md](../Exam/README.md).

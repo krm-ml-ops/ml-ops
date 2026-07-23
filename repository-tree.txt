@@ -4,23 +4,24 @@
 │   ├── README.md
 │   ├── quality-checklist.md
 │   └── rpd.md
-├── M1-ci-cd-devops-ml/
-│   ├── README.md
-│   ├── attachments/
-│   ├── lab-01-docker-reproducible-environment.md
-│   ├── lab-02-docker-images-and-containers.md
-│   └── lab-03-ci-cd-pipeline.md
-├── M2-ml-lifecycle/
-│   ├── README.md
-│   ├── attachments/
-│   ├── lab-04-ml-pipeline.md
-│   ├── lab-05-mlflow-experiment-tracking.md
-│   └── lab-06-dvc-data-model-versioning.md
-├── M3-deployment-monitoring/
-│   ├── README.md
-│   ├── attachments/
-│   ├── lab-07-fastapi-model-service.md
-│   └── lab-08-monitoring-prometheus-grafana.md
+├── modules/
+│   ├── M1-ci-cd-devops-ml/
+│   │   ├── README.md
+│   │   ├── attachments/
+│   │   ├── lab-01-docker-reproducible-environment.md
+│   │   ├── lab-02-docker-images-and-containers.md
+│   │   └── lab-03-ci-cd-pipeline.md
+│   ├── M2-ml-lifecycle/
+│   │   ├── README.md
+│   │   ├── attachments/
+│   │   ├── lab-04-ml-pipeline.md
+│   │   ├── lab-05-mlflow-experiment-tracking.md
+│   │   └── lab-06-dvc-data-model-versioning.md
+│   └── M3-deployment-monitoring/
+│       ├── README.md
+│       ├── attachments/
+│       ├── lab-07-fastapi-model-service.md
+│       └── lab-08-monitoring-prometheus-grafana.md
 ├── Exam/
 │   ├── README.md
 │   ├── attachments/
