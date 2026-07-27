@@ -13,6 +13,7 @@ jobs:
       - uses: DavidAnson/markdownlint-cli2-action@v19
         with:
           globs: "README.md docs/**/*.md Exam/**/*.md modules/**/*.md Project/**/*.md resources/**/*.md methodical-guidelines/**/*.md team/**/*.md"
-      - uses: lycheeverse/lychee-action@v2
+      - uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2
         with:
-          args: "--no-progress --exclude-mail README.md docs Exam modules Project resources methodical-guidelines"
+          lycheeVersion: v0.24.2
+          args: "--no-progress README.md docs Exam modules Project resources methodical-guidelines"
