@@ -1,6 +1,6 @@
 # Эталонный минимальный MLOps-проект
 
-Проект показывает полный, но компактный контур для курса: воспроизводимые данные, обучение, HTTP-инференс, метрики, контейнеризация, CI и декларации DVC/MLflow. Задача модели учебная: бинарно классифицировать синтетические наблюдения по четырём числовым признакам. Артефакты данных и модели не коммитятся.
+Проект показывает полный, но компактный контур для курса: воспроизводимые данные, обучение, HTTP-инференс, метрики, контейнеризация, CI и декларации DVC/MLflow. Задача модели учебная: бинарно классифицировать синтетические наблюдения по четырём числовым признакам. Артефакты данных и модели не коммитятся. Код проекта распространяется по [лицензии MIT](../../../LICENSE-CODE.md).
 
 ## Быстрый старт
 
@@ -18,8 +18,10 @@ Shell поддерживается на Linux, macOS на Apple Silicon и WSL 2
 ## Локальный жизненный цикл
 
 ```bash
-uv run python -m reference_mlops.generate_data --output data/synthetic.csv --samples 500 --seed 42
-uv run python -m reference_mlops.train --input data/synthetic.csv --model-output artifacts/model.pkl --metrics-output artifacts/metrics.json
+uv run python -m reference_mlops.generate_data --output data/raw.csv --samples 500 --seed 42
+uv run python -m reference_mlops.prepare --input data/raw.csv --train-output data/prepared/train.csv --test-output data/prepared/test.csv --test-size 0.2 --seed 42
+uv run python -m reference_mlops.train --input data/prepared/train.csv --model-output artifacts/model.pkl
+uv run python -m reference_mlops.evaluate --input data/prepared/test.csv --model artifacts/model.pkl --metrics-output artifacts/metrics.json
 MODEL_PATH=artifacts/model.pkl uvicorn reference_mlops.api:app --reload
 ```
 
@@ -34,7 +36,7 @@ curl -X POST http://127.0.0.1:8000/predict -H 'content-type: application/json' -
 
 ## Воспроизводимость и тесты
 
-Генератор использует `make_classification` с фиксированным seed, а обучение использует фиксированное стратифицированное разбиение и `LogisticRegression`. Тесты проверяют побайтовую детерминированность CSV, наличие модели и метрик, а также контракт API. Запуск: `uv run pytest`.
+Генератор использует `make_classification` с фиксированным seed, подготовка валидирует схему и создает фиксированное стратифицированное разбиение, а обучение использует `LogisticRegression`. Тесты проверяют побайтовую детерминированность CSV, подготовку, модель, метрики и контракт API. Запуск: `uv run pytest`.
 
 Версии зависимостей закреплены в `pyproject.toml` и `uv.lock`. Данные, модели, MLflow runs и локальные кэши исключены в `.gitignore`.
 
@@ -48,23 +50,22 @@ Compose создаёт данные и модель только внутри к
 
 ## DVC и MLflow (опционально)
 
-`dvc.yaml` описывает стадии `generate` и `train`; он является декларацией и не участвует в стандартной проверке. В Nix shell DVC можно запустить без постоянной установки:
+`dvc.yaml` и зафиксированный `dvc.lock` описывают стадии `generate`, `prepare`, `train` и `evaluate`. Они дают локальный воспроизводимый baseline без remote и без учебных Git-тегов. В Nix shell DVC можно запустить без постоянной установки:
 
 ```bash
-uvx --from dvc dvc init
-uvx --from dvc dvc repro
+nix develop ../.. --command uvx --from dvc==3.67.1 dvc repro
 ```
 
-Для ЛР 05 используйте [рабочий сценарий MLflow](mlflow/README.md). Он запускает tracking server и сохраняет реальные параметры, метрики и артефакты. MLflow импортируется только по `--mlflow` или при заданном `MLFLOW_TRACKING_URI`, поэтому базовый контур остается запускаемым без него.
+Для ЛР 06 каждый студент отдельно настраивает local remote, создает две ревизии и Git-теги, затем сравнивает и восстанавливает их. Для ЛР 05 используйте [рабочий сценарий MLflow](mlflow/README.md). Он запускает tracking server и сохраняет реальные параметры, метрики и артефакты. MLflow импортируется только по `--mlflow` или при заданном `MLFLOW_TRACKING_URI`, поэтому базовый контур остается запускаемым без него.
 
 ## Структура
 
 ```text
-src/reference_mlops/  генерация, обучение и FastAPI
+src/reference_mlops/  генерация, подготовка, обучение, оценка и FastAPI
 tests/                модульные и API-тесты
 scripts/verify.sh     проверка без DVC и MLflow
 monitoring/           Prometheus alerts и Grafana provisioning/dashboard
-.github/workflows/    CI, расположенный внутри эталонного проекта
+../../.github/workflows/reference-project-ci.yml  root workflow CI для эталонного проекта
 ```
 
 Для реального проекта замените генератор проверяемым источником данных, добавьте валидацию схемы и дрейфа, безопасное хранилище моделей, аутентификацию API, централизованные логи и маршрутизацию оповещений.

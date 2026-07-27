@@ -9,7 +9,7 @@ def test_prediction_endpoints(tmp_path):
     data = tmp_path / "data.csv"
     model = tmp_path / "model.pkl"
     generate_dataset(data, samples=100)
-    train(data, model, tmp_path / "metrics.json")
+    train(data, model)
     client = TestClient(create_app(model))
 
     assert client.get("/health").json()["model"] == "ready"

@@ -1,16 +1,44 @@
 stages:
   generate:
-    cmd: python -m reference_mlops.generate_data --output data/synthetic.csv --samples 500 --seed 42
+    cmd: uv run python -m reference_mlops.generate_data --output data/raw.csv --samples ${data.samples} --seed ${data.seed}
     deps:
       - src/reference_mlops/generate_data.py
+    params:
+      - data.samples
+      - data.seed
     outs:
-      - data/synthetic.csv
-  train:
-    cmd: python -m reference_mlops.train --input data/synthetic.csv --model-output artifacts/model.pkl --metrics-output artifacts/metrics.json
+      - data/raw.csv
+  prepare:
+    cmd: uv run python -m reference_mlops.prepare --input data/raw.csv --train-output data/prepared/train.csv --test-output data/prepared/test.csv --test-size ${prepare.test_size} --seed ${prepare.seed}
     deps:
-      - data/synthetic.csv
+      - data/raw.csv
+      - src/reference_mlops/prepare.py
+      - src/reference_mlops/generate_data.py
+    params:
+      - prepare.test_size
+      - prepare.seed
+    outs:
+      - data/prepared/train.csv
+      - data/prepared/test.csv
+  train:
+    cmd: uv run python -m reference_mlops.train --input data/prepared/train.csv --model-output artifacts/model.pkl --seed ${train.seed} --max-iter ${train.max_iter}
+    deps:
+      - data/prepared/train.csv
       - src/reference_mlops/train.py
+      - src/reference_mlops/prepare.py
+      - src/reference_mlops/generate_data.py
+    params:
+      - train.seed
+      - train.max_iter
     outs:
       - artifacts/model.pkl
+  evaluate:
+    cmd: uv run python -m reference_mlops.evaluate --input data/prepared/test.csv --model artifacts/model.pkl --metrics-output artifacts/metrics.json
+    deps:
+      - data/prepared/test.csv
+      - artifacts/model.pkl
+      - src/reference_mlops/evaluate.py
+      - src/reference_mlops/prepare.py
+      - src/reference_mlops/generate_data.py
     metrics:
       - artifacts/metrics.json

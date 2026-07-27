@@ -1,43 +1,20 @@
 """Train and serialize the reference classification model."""
 
 import argparse
-import csv
-import json
 import os
 import pickle
 from pathlib import Path
 
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score, f1_score
-from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 
 from reference_mlops import __version__
 from reference_mlops.generate_data import FEATURE_NAMES
+from reference_mlops.prepare import load_dataset
 
 
-def load_dataset(input_path: Path) -> tuple[list[list[float]], list[int]]:
-    with input_path.open(newline="", encoding="utf-8") as file:
-        reader = csv.DictReader(file)
-        if reader.fieldnames != [*FEATURE_NAMES, "target"]:
-            raise ValueError("CSV must contain feature_0..feature_3 and target columns")
-        rows = list(reader)
-    if len(rows) < 10:
-        raise ValueError("dataset must contain at least 10 rows")
-    return (
-        [[float(row[name]) for name in FEATURE_NAMES] for row in rows],
-        [int(row["target"]) for row in rows],
-    )
-
-
-def log_mlflow_run(
-    input_path: Path,
-    model_output: Path,
-    metrics_output: Path,
-    metrics: dict[str, float],
-    seed: int,
-) -> None:
+def log_mlflow_run(input_path: Path, model_output: Path, seed: int) -> None:
     """Log an optional MLflow run without making MLflow a baseline dependency."""
     try:
         import mlflow
@@ -50,15 +27,12 @@ def log_mlflow_run(
             mlflow.log_params(
                 {
                     "dataset": input_path.name,
-                    "dataset_rows": len(load_dataset(input_path)[0]),
+                    "dataset_rows": len(load_dataset(input_path)),
                     "seed": seed,
                     "model": "LogisticRegression",
-                    "test_size": 0.2,
                 }
             )
-            mlflow.log_metrics(metrics)
             mlflow.log_artifact(str(model_output), artifact_path="model")
-            mlflow.log_artifact(str(metrics_output), artifact_path="metrics")
     except Exception as error:
         raise RuntimeError("MLflow logging failed; verify MLFLOW_TRACKING_URI and server access.") from error
 
@@ -66,41 +40,35 @@ def log_mlflow_run(
 def train(
     input_path: Path,
     model_output: Path,
-    metrics_output: Path,
     seed: int = 42,
+    max_iter: int = 200,
     mlflow_enabled: bool = False,
-) -> dict[str, float]:
-    features, target = load_dataset(input_path)
-    x_train, x_test, y_train, y_test = train_test_split(
-        features, target, test_size=0.2, random_state=seed, stratify=target
+) -> None:
+    """Fit a model using only the prepared training split."""
+    rows = load_dataset(input_path)
+    features = [[float(row[name]) for name in FEATURE_NAMES] for row in rows]
+    target = [int(row["target"]) for row in rows]
+    model = Pipeline(
+        [("scale", StandardScaler()), ("classifier", LogisticRegression(random_state=seed, max_iter=max_iter))]
     )
-    model = Pipeline([("scale", StandardScaler()), ("classifier", LogisticRegression(random_state=seed))])
-    model.fit(x_train, y_train)
-    predictions = model.predict(x_test)
-    metrics = {
-        "accuracy": round(float(accuracy_score(y_test, predictions)), 6),
-        "f1": round(float(f1_score(y_test, predictions)), 6),
-    }
-    bundle = {"model": model, "features": FEATURE_NAMES, "version": __version__, "metrics": metrics}
+    model.fit(features, target)
+    bundle = {"model": model, "features": FEATURE_NAMES, "version": __version__, "metrics": {}}
     model_output.parent.mkdir(parents=True, exist_ok=True)
-    metrics_output.parent.mkdir(parents=True, exist_ok=True)
     with model_output.open("wb") as file:
         pickle.dump(bundle, file)
-    metrics_output.write_text(json.dumps(metrics, indent=2) + "\n", encoding="utf-8")
     if mlflow_enabled or os.environ.get("MLFLOW_TRACKING_URI"):
-        log_mlflow_run(input_path, model_output, metrics_output, metrics, seed)
-    return metrics
+        log_mlflow_run(input_path, model_output, seed)
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Train the reference model")
     parser.add_argument("--input", type=Path, required=True)
     parser.add_argument("--model-output", type=Path, required=True)
-    parser.add_argument("--metrics-output", type=Path, required=True)
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--max-iter", type=int, default=200)
     parser.add_argument("--mlflow", action="store_true", help="log this run to MLflow")
     args = parser.parse_args()
-    train(args.input, args.model_output, args.metrics_output, args.seed, args.mlflow)
+    train(args.input, args.model_output, args.seed, args.max_iter, args.mlflow)
 
 
 if __name__ == "__main__":

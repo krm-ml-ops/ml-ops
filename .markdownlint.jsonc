@@ -1,0 +1,7 @@
+{
+    // Course tables and canonical external references cannot be wrapped safely.
+    "line-length": false,
+    // Resource catalogs retain compact tables and canonical URLs for readability.
+    "table-column-style": false,
+    "no-bare-urls": false
+}

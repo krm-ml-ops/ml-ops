@@ -20,9 +20,14 @@ data/synthetic.csv
 # Временные файлы офисных приложений
 ~$*.docx
 ~$*.xlsx
+.~lock.*
 *.tmp
 
 # Локальные результаты проверки
 validation-report.txt
 
 backlog
+
+# Локальные рабочие материалы, не входящие в опубликованный ФОС
+assessment/
+tmp/

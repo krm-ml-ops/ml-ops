@@ -1,0 +1,108 @@
+schema: '2.0'
+stages:
+  generate:
+    cmd: uv run python -m reference_mlops.generate_data --output data/raw.csv
+      --samples 500 --seed 42
+    deps:
+    - path: src/reference_mlops/generate_data.py
+      hash: md5
+      md5: e57c99b063dbc4235205d49803eedb2a
+      size: 1353
+    params:
+      params.yaml:
+        data.samples: 500
+        data.seed: 42
+    outs:
+    - path: data/raw.csv
+      hash: md5
+      md5: f282a8489f31f70d9f63a3a93b9b641a
+      size: 40633
+  prepare:
+    cmd: uv run python -m reference_mlops.prepare --input data/raw.csv
+      --train-output data/prepared/train.csv --test-output
+      data/prepared/test.csv --test-size 0.2 --seed 42
+    deps:
+    - path: data/raw.csv
+      hash: md5
+      md5: f282a8489f31f70d9f63a3a93b9b641a
+      size: 40633
+    - path: src/reference_mlops/generate_data.py
+      hash: md5
+      md5: e57c99b063dbc4235205d49803eedb2a
+      size: 1353
+    - path: src/reference_mlops/prepare.py
+      hash: md5
+      md5: fbb70d107fd6eb4ca3024f185f725be7
+      size: 2467
+    params:
+      params.yaml:
+        prepare.seed: 42
+        prepare.test_size: 0.2
+    outs:
+    - path: data/prepared/test.csv
+      hash: md5
+      md5: cd71e7cea403ea4d6e5a0c4d5e03b12d
+      size: 8185
+    - path: data/prepared/train.csv
+      hash: md5
+      md5: db52bbbe39e21bc233ddf714b606d40f
+      size: 32496
+  train:
+    cmd: uv run python -m reference_mlops.train --input data/prepared/train.csv
+      --model-output artifacts/model.pkl --seed 42 --max-iter 200
+    deps:
+    - path: data/prepared/train.csv
+      hash: md5
+      md5: db52bbbe39e21bc233ddf714b606d40f
+      size: 32496
+    - path: src/reference_mlops/generate_data.py
+      hash: md5
+      md5: e57c99b063dbc4235205d49803eedb2a
+      size: 1353
+    - path: src/reference_mlops/prepare.py
+      hash: md5
+      md5: fbb70d107fd6eb4ca3024f185f725be7
+      size: 2467
+    - path: src/reference_mlops/train.py
+      hash: md5
+      md5: b87cb5715dbeeb233d7f57c1e221d0a2
+      size: 2850
+    params:
+      params.yaml:
+        train.max_iter: 200
+        train.seed: 42
+    outs:
+    - path: artifacts/model.pkl
+      hash: md5
+      md5: a36e988bcec9a21c3ea45f05c5479487
+      size: 1322
+  evaluate:
+    cmd: uv run python -m reference_mlops.evaluate --input
+      data/prepared/test.csv --model artifacts/model.pkl --metrics-output
+      artifacts/metrics.json
+    deps:
+    - path: artifacts/model.pkl
+      hash: md5
+      md5: a36e988bcec9a21c3ea45f05c5479487
+      size: 1322
+    - path: data/prepared/test.csv
+      hash: md5
+      md5: cd71e7cea403ea4d6e5a0c4d5e03b12d
+      size: 8185
+    - path: src/reference_mlops/evaluate.py
+      hash: md5
+      md5: b9bd3ccb1e5e6ff44af778c29aaed8dd
+      size: 1511
+    - path: src/reference_mlops/generate_data.py
+      hash: md5
+      md5: e57c99b063dbc4235205d49803eedb2a
+      size: 1353
+    - path: src/reference_mlops/prepare.py
+      hash: md5
+      md5: fbb70d107fd6eb4ca3024f185f725be7
+      size: 2467
+    outs:
+    - path: artifacts/metrics.json
+      hash: md5
+      md5: f402f697fc1072698ccc9142315ef2f0
+      size: 41
