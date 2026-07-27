@@ -7,6 +7,7 @@
 | Учебники и основные материалы | [textbooks](textbooks/README.md) | базовое чтение по курсу |
 | Программные средства и библиотеки | [software/python-libs](software/python-libs/README.md) | практический toolchain для лабораторных работ |
 | Датасеты | [datasets](datasets/README.md) | открытые и синтетические данные для учебного использования |
+| Исполняемый baseline | [reference-mlops-project](reference-mlops-project/README.md) | локальный учебный контур Docker, CI, MLflow, DVC, API и мониторинга |
 | Банки тестов | [test-banks](test-banks/README.md) | теоретические и компетентностно-ориентированные материалы зачета |
 | Банки задач | [problem-banks](problem-banks/README.md) | практические задания к зачету и источники вариантов |
 | Прочие ссылки | [other](other/README.md) | официальная документация и дополнительные справочные материалы |

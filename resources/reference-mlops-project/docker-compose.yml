@@ -1,0 +1,25 @@
+services:
+  api:
+    build: .
+    command: >
+      sh -c "python -m reference_mlops.generate_data --output /tmp/data.csv --samples 500 --seed 42 &&
+      python -m reference_mlops.train --input /tmp/data.csv --model-output /tmp/model.pkl --metrics-output /tmp/metrics.json &&
+      uvicorn reference_mlops.api:app --host 0.0.0.0 --port 8000"
+    environment:
+      MODEL_PATH: /tmp/model.pkl
+    ports:
+      - "8000:8000"
+  prometheus:
+    image: prom/prometheus:v2.55.1
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./monitoring/alerts.yml:/etc/prometheus/alerts.yml:ro
+    ports:
+      - "9090:9090"
+  grafana:
+    image: grafana/grafana:11.4.0
+    volumes:
+      - ./monitoring/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./monitoring/grafana/dashboards:/var/lib/grafana/dashboards:ro
+    ports:
+      - "3000:3000"

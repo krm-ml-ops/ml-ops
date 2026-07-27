@@ -89,3 +89,9 @@
 
 - LC-5.1
 - BD-5.3
+
+## Оценивание и ресурс
+
+- [Рубрика ЛР 02](../lab-rubrics.md)
+- [Эталонный baseline: Compose](../../resources/reference-mlops-project/docker-compose.yml)
+- Ожидаемое время: 4 академических часа. До защиты представьте образ, `docker inspect`/логи, health check и измерения.

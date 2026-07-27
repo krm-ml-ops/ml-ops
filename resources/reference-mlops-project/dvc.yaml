@@ -1,0 +1,16 @@
+stages:
+  generate:
+    cmd: python -m reference_mlops.generate_data --output data/synthetic.csv --samples 500 --seed 42
+    deps:
+      - src/reference_mlops/generate_data.py
+    outs:
+      - data/synthetic.csv
+  train:
+    cmd: python -m reference_mlops.train --input data/synthetic.csv --model-output artifacts/model.pkl --metrics-output artifacts/metrics.json
+    deps:
+      - data/synthetic.csv
+      - src/reference_mlops/train.py
+    outs:
+      - artifacts/model.pkl
+    metrics:
+      - artifacts/metrics.json
