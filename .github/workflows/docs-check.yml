@@ -24,8 +24,17 @@ jobs:
         working-directory: resources/reference-mlops-project
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-      - run: python -m pip install '.[dev]'
-      - run: ./scripts/verify.sh
+      - uses: cachix/install-nix-action@v31
+      - run: nix develop ../.. --command uv sync --extra dev --locked
+      - run: nix develop ../.. --command ./scripts/verify.sh
+
+  reference-project-mlflow:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: resources/reference-mlops-project
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cachix/install-nix-action@v31
+      - run: nix develop ../.. --command uv sync --extra dev --extra mlflow --locked
+      - run: nix develop ../.. --command uv run pytest tests/test_pipeline.py

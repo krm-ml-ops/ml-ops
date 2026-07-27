@@ -3,6 +3,7 @@
 import argparse
 import csv
 import json
+import os
 import pickle
 from pathlib import Path
 
@@ -30,7 +31,45 @@ def load_dataset(input_path: Path) -> tuple[list[list[float]], list[int]]:
     )
 
 
-def train(input_path: Path, model_output: Path, metrics_output: Path, seed: int = 42) -> dict[str, float]:
+def log_mlflow_run(
+    input_path: Path,
+    model_output: Path,
+    metrics_output: Path,
+    metrics: dict[str, float],
+    seed: int,
+) -> None:
+    """Log an optional MLflow run without making MLflow a baseline dependency."""
+    try:
+        import mlflow
+    except ImportError as error:
+        raise RuntimeError("MLflow was requested; install it with pip install '.[mlflow]'.") from error
+
+    try:
+        with mlflow.start_run(run_name="reference-mlops-training"):
+            mlflow.set_tag("course_lab", "lab-05")
+            mlflow.log_params(
+                {
+                    "dataset": input_path.name,
+                    "dataset_rows": len(load_dataset(input_path)[0]),
+                    "seed": seed,
+                    "model": "LogisticRegression",
+                    "test_size": 0.2,
+                }
+            )
+            mlflow.log_metrics(metrics)
+            mlflow.log_artifact(str(model_output), artifact_path="model")
+            mlflow.log_artifact(str(metrics_output), artifact_path="metrics")
+    except Exception as error:
+        raise RuntimeError("MLflow logging failed; verify MLFLOW_TRACKING_URI and server access.") from error
+
+
+def train(
+    input_path: Path,
+    model_output: Path,
+    metrics_output: Path,
+    seed: int = 42,
+    mlflow_enabled: bool = False,
+) -> dict[str, float]:
     features, target = load_dataset(input_path)
     x_train, x_test, y_train, y_test = train_test_split(
         features, target, test_size=0.2, random_state=seed, stratify=target
@@ -48,6 +87,8 @@ def train(input_path: Path, model_output: Path, metrics_output: Path, seed: int 
     with model_output.open("wb") as file:
         pickle.dump(bundle, file)
     metrics_output.write_text(json.dumps(metrics, indent=2) + "\n", encoding="utf-8")
+    if mlflow_enabled or os.environ.get("MLFLOW_TRACKING_URI"):
+        log_mlflow_run(input_path, model_output, metrics_output, metrics, seed)
     return metrics
 
 
@@ -57,8 +98,9 @@ def main() -> None:
     parser.add_argument("--model-output", type=Path, required=True)
     parser.add_argument("--metrics-output", type=Path, required=True)
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--mlflow", action="store_true", help="log this run to MLflow")
     args = parser.parse_args()
-    train(args.input, args.model_output, args.metrics_output, args.seed)
+    train(args.input, args.model_output, args.metrics_output, args.seed, args.mlflow)
 
 
 if __name__ == "__main__":

@@ -86,9 +86,15 @@
 - [Исполняемый учебный baseline](resources/reference-mlops-project/README.md)
 - [Междисциплинарный проект](Project/README.md)
 - [Чек-лист готовности репозитория](docs/quality-checklist.md)
-- [Сведения о команде](team/README.md) - TODO-заполнители сохранены там, где исходные данные отсутствуют
 
 ## Примечания
 
 - `source-materials/` остается архивом исходных материалов, на основе которых собрана опубликованная структура.
-- Для локального baseline требуются Python 3.11+; Docker Compose нужен только для полного контура наблюдаемости.
+- Для локального baseline требуется Nix development shell; Docker Compose нужен только для полного контура наблюдаемости.
+- Лицензии на оригинальные материалы и код публикуются только после подтверждения прав ответственными правообладателями; внешние материалы сохраняют собственные условия использования.
+
+## Nix development shell
+
+`uv` поставляется только из [Nix](https://nixos.org/download/) development shell. Поддерживаются Linux, macOS на Apple Silicon и WSL 2 с Nix, установленным внутри Linux-дистрибутива; Intel macOS не поддерживается, так как используемый nixpkgs прекращает эту платформу. В корне репозитория выполните `nix develop`, затем в `resources/reference-mlops-project/` - `uv sync --extra dev` и `uv run ./scripts/verify.sh`.
+
+Nix shell предоставляет Python 3.11, `uv`, Git и вспомогательные инструменты, но не Docker daemon, Prometheus, Grafana или MLflow server. На macOS Docker Desktop должен быть установлен и запущен на хосте. В WSL 2 для Docker Compose включите WSL integration в Docker Desktop либо настройте совместимый Linux Docker daemon.

@@ -4,23 +4,22 @@
 
 ## Быстрый старт
 
-Требуется Python 3.11+. Создайте окружение и установите прикладные и тестовые зависимости:
+`uv` предоставляется только root Nix development shell. Из корня репозитория выполните `nix develop`, перейдите в этот каталог и синхронизируйте прикладные и тестовые зависимости из зафиксированного `uv.lock`:
 
 ```bash
-python -m venv .venv
-. .venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install '.[dev]'
-./scripts/verify.sh
+uv sync --extra dev
+uv run ./scripts/verify.sh
 ```
 
-`verify.sh` запускает pytest, генерирует данные, обучает модель и проверяет JSON-метрики во временном каталоге. Он не вызывает DVC или MLflow и удаляет все созданные файлы после завершения.
+`verify.sh` запускает pytest через `uv`, генерирует данные, обучает модель и проверяет JSON-метрики во временном каталоге. Он не вызывает DVC или MLflow и удаляет все созданные файлы после завершения.
+
+Shell поддерживается на Linux, macOS на Apple Silicon и WSL 2; Intel macOS не поддерживается, так как используемый nixpkgs прекращает эту платформу. На WSL 2 Nix и команды `uv` выполняются внутри Linux-дистрибутива. Shell не дает доступа к Docker daemon и не устанавливает monitoring services: на macOS используйте запущенный Docker Desktop, а в WSL 2 включите Docker Desktop WSL integration или настройте Linux Docker daemon.
 
 ## Локальный жизненный цикл
 
 ```bash
-python -m reference_mlops.generate_data --output data/synthetic.csv --samples 500 --seed 42
-python -m reference_mlops.train --input data/synthetic.csv --model-output artifacts/model.pkl --metrics-output artifacts/metrics.json
+uv run python -m reference_mlops.generate_data --output data/synthetic.csv --samples 500 --seed 42
+uv run python -m reference_mlops.train --input data/synthetic.csv --model-output artifacts/model.pkl --metrics-output artifacts/metrics.json
 MODEL_PATH=artifacts/model.pkl uvicorn reference_mlops.api:app --reload
 ```
 
@@ -35,9 +34,9 @@ curl -X POST http://127.0.0.1:8000/predict -H 'content-type: application/json' -
 
 ## Воспроизводимость и тесты
 
-Генератор использует `make_classification` с фиксированным seed, а обучение использует фиксированное стратифицированное разбиение и `LogisticRegression`. Тесты проверяют побайтовую детерминированность CSV, наличие модели и метрик, а также контракт API. Запуск: `python -m pytest`.
+Генератор использует `make_classification` с фиксированным seed, а обучение использует фиксированное стратифицированное разбиение и `LogisticRegression`. Тесты проверяют побайтовую детерминированность CSV, наличие модели и метрик, а также контракт API. Запуск: `uv run pytest`.
 
-Версии зависимостей закреплены в `pyproject.toml`. Данные, модели, MLflow runs и локальные кэши исключены в `.gitignore`.
+Версии зависимостей закреплены в `pyproject.toml` и `uv.lock`. Данные, модели, MLflow runs и локальные кэши исключены в `.gitignore`.
 
 ## Docker и наблюдаемость
 
@@ -49,22 +48,14 @@ Compose создаёт данные и модель только внутри к
 
 ## DVC и MLflow (опционально)
 
-`dvc.yaml` описывает стадии `generate` и `train`; он является декларацией и не участвует в стандартной проверке. После отдельной установки DVC можно выполнить:
+`dvc.yaml` описывает стадии `generate` и `train`; он является декларацией и не участвует в стандартной проверке. В Nix shell DVC можно запустить без постоянной установки:
 
 ```bash
-pip install dvc
-dvc init
-dvc repro
+uvx --from dvc dvc init
+uvx --from dvc dvc repro
 ```
 
-Для экспериментов отдельно установите MLflow и запустите сервер:
-
-```bash
-pip install mlflow
-mlflow server --host 127.0.0.1 --port 5000
-```
-
-В учебном расширении оберните вызов `train(...)` в `mlflow.start_run()`, залогируйте `seed`, размер набора, `metrics` и `artifacts/model.pkl`; адрес сервера задайте `MLFLOW_TRACKING_URI=http://127.0.0.1:5000`. Базовая реализация намеренно не импортирует MLflow, чтобы оставаться запускаемой без него.
+Для ЛР 05 используйте [рабочий сценарий MLflow](mlflow/README.md). Он запускает tracking server и сохраняет реальные параметры, метрики и артефакты. MLflow импортируется только по `--mlflow` или при заданном `MLFLOW_TRACKING_URI`, поэтому базовый контур остается запускаемым без него.
 
 ## Структура
 

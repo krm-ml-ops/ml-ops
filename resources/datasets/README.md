@@ -1,15 +1,14 @@
 # Датасеты
 
-| Датасет | Ссылка | Назначение | Связь с лабораторными или аттестацией |
+| Датасет | Тип, версия/дата | Ссылка и условия доступа | Назначение и связь с курсом |
 |---|---|---|---|
-| Iris | https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html | компактный набор для задач классификации в работах по окружению, pipeline и serving | лабораторные 01, 04, 07 |
-| Wine | https://scikit-learn.org/stable/datasets/toy_dataset.html | многопризнаковый классификационный набор для задач жизненного цикла ML | лабораторные 01, 04, 07 |
-| Breast Cancer Wisconsin | https://scikit-learn.org/stable/datasets/toy_dataset.html | набор для бинарной классификации и задач оценки качества и drift | лабораторные 01, 04, 07 |
-| Diabetes | https://scikit-learn.org/stable/datasets/toy_dataset.html | легковесный регрессионный набор для pipeline и API-задач | лабораторные 01, 04, 07 |
-| Digits | https://scikit-learn.org/stable/datasets/toy_dataset.html | компактный image-like набор для serving и тестовых вариантов | лабораторные 01, 04, 07 |
-| Синтетические датасеты | https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_classification.html | управляемые данные для вариантных экспериментов и моделирования drift | лабораторные 01, 04, 06, 08 |
-| Локальные CSV и текстовые входы | https://pandas.pydata.org/ | простые табличные и текстовые входы для задач воспроизводимости и инференса | лабораторные 01, 02, 07 |
+| Iris | встроенный toy dataset; scikit-learn stable, проверен 2026-07-27 | https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html; BSD 3-Clause для scikit-learn, исходное описание набора приведено в документации | компактная классификация; ЛР 01, 04, 07 |
+| Wine | встроенный toy dataset; scikit-learn stable, проверен 2026-07-27 | https://scikit-learn.org/stable/datasets/toy_dataset.html; BSD 3-Clause для scikit-learn, используйте attribution из документации | многопризнаковая классификация; ЛР 01, 04, 07 |
+| Breast Cancer Wisconsin | встроенный toy dataset; scikit-learn stable, проверен 2026-07-27 | https://scikit-learn.org/stable/datasets/toy_dataset.html; BSD 3-Clause для scikit-learn, медицинский учебный набор не применять для решений о людях | бинарная классификация, качество и drift; ЛР 01, 04, 07 |
+| Diabetes | встроенный toy dataset; scikit-learn stable, проверен 2026-07-27 | https://scikit-learn.org/stable/datasets/toy_dataset.html; BSD 3-Clause для scikit-learn, attribution по документации | легковесная регрессия; ЛР 01, 04, 07 |
+| Digits | встроенный toy dataset; scikit-learn stable, проверен 2026-07-27 | https://scikit-learn.org/stable/datasets/toy_dataset.html; BSD 3-Clause для scikit-learn, attribution по документации | компактные image-like входы; ЛР 01, 04, 07 |
+| Синтетические данные | генератор `make_classification`; scikit-learn stable, проверен 2026-07-27 | https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_classification.html; BSD 3-Clause для scikit-learn | управляемые варианты и моделирование drift; ЛР 01, 04, 06, 08 |
 
 ## Локальный учебный набор
 
-- [Паспорт детерминированного синтетического набора](reference-mlops-synthetic.md): рекомендуемый локальный ресурс для baseline и лабораторных 01, 04, 06-08. Генератор, seed, схема, ограничения и условия использования описаны в паспорте.
+- [Паспорт детерминированного синтетического набора](reference-mlops-synthetic.md): внутренний учебный материал для baseline и ЛР 01, 04, 06-08; генератор, seed, схема, ограничения и условия использования описаны в паспорте.
