@@ -12,6 +12,7 @@
 4. Проверьте относительные ссылки и заполненность обязательных разделов.
 5. После изменения Markdown-файлов выполните `lychee --config lychee.toml --no-progress AGENTS.md README.md docs Exam modules Project resources methodical-guidelines` из корня репозитория.
 6. В Pull Request укажите, какие результаты обучения, компетенции и КИМ затронуты.
+7. После изменения отслеживаемых Git файлов обновите [снимок структуры репозитория](repository-tree.txt): `nix develop --command sh -c 'git -c core.quotepath=false ls-files | tree --fromfile -a --noreport > repository-tree.txt'`. Команда включает все отслеживаемые файлы, включая dotfiles.
 
 ## Требования к КИМ
 

@@ -19,6 +19,7 @@
               pkgs.lychee
               pkgs.nodejs_22
               pkgs.pandoc
+              pkgs.tree
             ];
             LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
               pkgs.stdenv.cc.cc
