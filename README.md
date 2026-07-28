@@ -100,4 +100,4 @@
 
 `uv` поставляется только из [Nix](https://nixos.org/download/) development shell. Поддерживаются Linux, macOS на Apple Silicon и WSL 2 с Nix, установленным внутри Linux-дистрибутива; Intel macOS не поддерживается, так как используемый nixpkgs прекращает эту платформу. В корне репозитория выполните `nix develop`, затем в `resources/reference-mlops-project/` - `uv sync --extra dev` и `uv run ./scripts/verify.sh`.
 
-Nix shell предоставляет Python 3.11, `uv`, Git, `lychee` и вспомогательные инструменты, но не Docker daemon, Prometheus, Grafana или MLflow server. На macOS Docker Desktop должен быть установлен и запущен на хосте. В WSL 2 для Docker Compose включите WSL integration в Docker Desktop либо настройте совместимый Linux Docker daemon.
+Nix shell предоставляет Python 3.12 с пакетом `openpyxl`, `uv`, Git, `lychee` и вспомогательные инструменты, но не Docker daemon, Prometheus, Grafana или MLflow server. На macOS Docker Desktop должен быть установлен и запущен на хосте. В WSL 2 для Docker Compose включите WSL integration в Docker Desktop либо настройте совместимый Linux Docker daemon.

@@ -13,7 +13,7 @@
         in {
           default = pkgs.mkShell {
             packages = [
-              pkgs.python311
+              (pkgs.python312.withPackages (ps: [ ps.openpyxl ]))
               pkgs.uv
               pkgs.git
               pkgs.lychee
