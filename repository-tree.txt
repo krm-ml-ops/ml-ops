@@ -1,9 +1,6 @@
 .
 ├── AGENTS.md
 ├── CONTRIBUTING.md
-├── data
-│   ├── krm-v3.0.xlsx
-│   └── README.md
 ├── docs
 │   ├── ai-use-policy.md
 │   ├── krm-alignment.md
@@ -151,6 +148,11 @@
 │   │       ├── ФОС-0.3.0.md
 │   │       ├── ФОС-0.4.0.md
 │   │       └── ФОС-1.0.0.md
+│   ├── krm
+│   │   ├── krm-v3.0.xlsx
+│   │   └── README.md
+│   ├── krm-used
+│   │   └── README.md
 │   ├── labs
 │   │   ├── docx
 │   │   │   ├── ЛР-0.1.0.docx
