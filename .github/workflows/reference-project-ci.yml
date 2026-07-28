@@ -1,0 +1,29 @@
+name: Reference project checks
+
+on:
+  pull_request:
+    paths:
+      - "resources/reference-mlops-project/**"
+      - "flake.nix"
+      - "flake.lock"
+      - ".github/workflows/reference-project-ci.yml"
+  push:
+    branches: [main]
+    paths:
+      - "resources/reference-mlops-project/**"
+      - "flake.nix"
+      - "flake.lock"
+      - ".github/workflows/reference-project-ci.yml"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: resources/reference-mlops-project
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cachix/install-nix-action@v31
+      - run: nix develop ../.. --command uv sync --extra dev --locked
+      - run: nix develop ../.. --command ./scripts/verify.sh
+      - run: nix develop ../.. --command uv run pytest tests

@@ -1,0 +1,19 @@
+name: Documentation checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  markdown-and-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DavidAnson/markdownlint-cli2-action@v19
+        with:
+          globs: "AGENTS.md README.md docs/**/*.md Exam/**/*.md modules/**/*.md Project/**/*.md resources/**/*.md methodical-guidelines/**/*.md team/**/*.md"
+      - uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2
+        with:
+          lycheeVersion: v0.24.2
+          args: "--config lychee.toml --no-progress AGENTS.md README.md docs Exam modules Project resources methodical-guidelines"

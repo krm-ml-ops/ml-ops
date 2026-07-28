@@ -1,0 +1,17 @@
+groups:
+  - name: reference-mlops
+    rules:
+      - alert: ReferenceApiUnavailable
+        expr: up{job="reference-api"} == 0
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: Reference MLOps API is unreachable
+      - alert: ReferenceApiHighErrorRate
+        expr: sum(rate(http_requests_total{status=~"5.."}[5m])) / sum(rate(http_requests_total[5m])) > 0.05
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: API 5xx rate exceeds 5 percent

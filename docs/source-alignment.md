@@ -1,16 +1,16 @@
 # Согласование с источниками
 
-Этот файл фиксирует, как опубликованные материалы репозитория соотносятся с исходными документами в `source-materials/md/`.
+Этот файл фиксирует, как опубликованные материалы репозитория соотносятся с актуальными исходными документами в `source-materials/md/`.
 
 ## Источники
 
-- `source-materials/md/РПД.md` - рабочая программа дисциплины
-- `source-materials/md/ФОС.md` - оценочные материалы для текущего контроля и промежуточной аттестации
-- `source-materials/md/лабораторные.md` - методические указания к выполнению лабораторных работ
+- [`РПД-1.0.0.md`](../source-materials/md/rpd/РПД-1.0.0.md) - рабочая программа дисциплины
+- [`ФОС-1.0.0.md`](../source-materials/md/fos/ФОС-1.0.0.md) - оценочные материалы для текущего контроля и промежуточной аттестации
+- [`ЛР-0.4.0.md`](../source-materials/md/labs/ЛР-0.4.0.md) - методические указания к выполнению лабораторных работ
 
 ## Правило публикации
 
-Приоритетом является содержательная верность исходным материалам.
+Приоритетом является содержательная верность актуальным исходным материалам. Предыдущие версии сохраняются как архив; рабочая надстройка может исправлять измерительные расхождения только с явной фиксацией решения.
 
 Допускается:
 
@@ -24,11 +24,17 @@
 - смешение материалов из разных приложений без явного указания источника;
 - замена официального названия дисциплины альтернативным названием.
 
+## Разрешение противоречий источников
+
+Для структурированной публикации применяется следующий порядок: ФОС используется для оценивания, РПД - для результатов освоения, тематической структуры и трудоемкости, а `ЛР-0.4.0.md` - для заданий, официальных рубрик, минимального порога, типовых ошибок и защиты. Этот выбор не изменяет исходные документы и применяется только к их публикации в репозитории.
+
+РПД фиксирует `32` часа лабораторных работ, что соответствует ФОС и `ЛР-0.4.0.md`: `8 x 4 = 32` часа. Эксплуатационные требования репозитория не изменяют официальные баллы, критерии и пороги.
+
 ## Сопоставление файлов
 
 ### РПД
 
-- `docs/rpd.md` <- структурированная публикация `source-materials/md/РПД.md`
+- [`docs/rpd.md`](rpd.md) <- структурированная публикация [`РПД-1.0.0.md`](../source-materials/md/rpd/РПД-1.0.0.md)
 
 В этой публикации осознанно не воспроизводятся:
 
@@ -41,29 +47,31 @@
 
 ### ФОС
 
-- `Exam/theoretical-questions.md` <- приложение № 1 и приложение № 6 `source-materials/md/ФОС.md`
-- `Exam/competence-tests.md` <- приложение № 2 `source-materials/md/ФОС.md`
-- `Exam/current-control-practical-tasks.md` <- приложение № 3 `source-materials/md/ФОС.md`
-- `Exam/practical-tasks.md` <- приложение № 7 `source-materials/md/ФОС.md`
-- `Exam/grading.md` <- раздел 4 `source-materials/md/ФОС.md` (регламент, пороги, распределение баллов, критерии)
-- `Exam/assessment-map.md` <- разделы 1-3 и приложение № 5 `source-materials/md/ФОС.md`
-- `Exam/README.md` <- обзорная навигация по материалам `ФОС.md`
+- [`Exam/theoretical-questions.md`](../Exam/theoretical-questions.md) <- приложение № 1 и приложение № 6 [`ФОС-1.0.0.md`](../source-materials/md/fos/ФОС-1.0.0.md)
+- [`Exam/competence-tests.md`](../Exam/competence-tests.md) <- приложение № 2 [`ФОС-1.0.0.md`](../source-materials/md/fos/ФОС-1.0.0.md)
+- [`Exam/current-control-practical-tasks.md`](../Exam/current-control-practical-tasks.md) <- приложение № 3 [`ФОС-1.0.0.md`](../source-materials/md/fos/ФОС-1.0.0.md)
+- [`Exam/practical-tasks.md`](../Exam/practical-tasks.md) <- приложение № 7 [`ФОС-1.0.0.md`](../source-materials/md/fos/ФОС-1.0.0.md)
+- [`Exam/grading.md`](../Exam/grading.md) <- раздел 4 [`ФОС-1.0.0.md`](../source-materials/md/fos/ФОС-1.0.0.md) (регламент, пороги, распределение баллов, критерии)
+- [`Exam/assessment-map.md`](../Exam/assessment-map.md) <- разделы 1-3 и приложение № 5 [`ФОС-1.0.0.md`](../source-materials/md/fos/ФОС-1.0.0.md)
+- [`Exam/README.md`](../Exam/README.md) <- обзорная навигация по материалам [`ФОС-1.0.0.md`](../source-materials/md/fos/ФОС-1.0.0.md)
 
 ### Методические указания к лабораторным работам
 
-- `methodical-guidelines/students/README.md` <- общие положения, требования к воспроизводимости, отчету, защите, информационной безопасности и рекомендуемая структура репозитория из `source-materials/md/лабораторные.md`
-- `modules/M1-ci-cd-devops-ml/lab-01-docker-reproducible-environment.md` <- лабораторная работа № 1 `source-materials/md/лабораторные.md`
-- `modules/M1-ci-cd-devops-ml/lab-02-docker-images-and-containers.md` <- лабораторная работа № 2 `source-materials/md/лабораторные.md`
-- `modules/M1-ci-cd-devops-ml/lab-03-ci-cd-pipeline.md` <- лабораторная работа № 3 `source-materials/md/лабораторные.md`
-- `modules/M2-ml-lifecycle/lab-04-ml-pipeline.md` <- лабораторная работа № 4 `source-materials/md/лабораторные.md`
-- `modules/M2-ml-lifecycle/lab-05-mlflow-experiment-tracking.md` <- лабораторная работа № 5 `source-materials/md/лабораторные.md`
-- `modules/M2-ml-lifecycle/lab-06-dvc-data-model-versioning.md` <- лабораторная работа № 6 `source-materials/md/лабораторные.md`
-- `modules/M3-deployment-monitoring/lab-07-fastapi-model-service.md` <- лабораторная работа № 7 `source-materials/md/лабораторные.md`
-- `modules/M3-deployment-monitoring/lab-08-monitoring-prometheus-grafana.md` <- лабораторная работа № 8 `source-materials/md/лабораторные.md`
+- `methodical-guidelines/students/README.md` <- общие положения, требования к воспроизводимости, отчету, защите, информационной безопасности и рекомендуемая структура репозитория из `source-materials/md/labs/ЛР-0.4.0.md`
+- `modules/M1-ci-cd-devops-ml/lab-01-docker-reproducible-environment.md` <- лабораторная работа № 1 `source-materials/md/labs/ЛР-0.4.0.md`
+- `modules/M1-ci-cd-devops-ml/lab-02-docker-images-and-containers.md` <- лабораторная работа № 2 `source-materials/md/labs/ЛР-0.4.0.md`
+- `modules/M1-ci-cd-devops-ml/lab-03-ci-cd-pipeline.md` <- лабораторная работа № 3 `source-materials/md/labs/ЛР-0.4.0.md`
+- `modules/M2-ml-lifecycle/lab-04-ml-pipeline.md` <- лабораторная работа № 4 `source-materials/md/labs/ЛР-0.4.0.md`
+- `modules/M2-ml-lifecycle/lab-05-mlflow-experiment-tracking.md` <- лабораторная работа № 5 `source-materials/md/labs/ЛР-0.4.0.md`
+- `modules/M2-ml-lifecycle/lab-06-dvc-data-model-versioning.md` <- лабораторная работа № 6 `source-materials/md/labs/ЛР-0.4.0.md`
+- `modules/M3-deployment-monitoring/lab-07-fastapi-model-service.md` <- лабораторная работа № 7 `source-materials/md/labs/ЛР-0.4.0.md`
+- `modules/M3-deployment-monitoring/lab-08-monitoring-prometheus-grafana.md` <- лабораторная работа № 8 `source-materials/md/labs/ЛР-0.4.0.md`
 
 В этой публикации осознанно не воспроизводятся:
 
 - титульный блок и административные реквизиты методических указаний.
+
+Все требования к заданиям, индивидуальным вариантам, контрольным вопросам, официальным рубрикам, минимальным порогам, типовым ошибкам и правилам защиты лабораторных работ воспроизводятся в опубликованных файлах лабораторных работ. Репозиторий дополнительно публикует прозрачные требования к воспроизводимости и проверяемым доказательствам как правила организации работы, не изменяющие официальные баллы, веса критериев и минимальные пороги.
 
 ## Намеренные структурные решения
 
@@ -71,8 +79,12 @@
 2. Тесты публикуются как нумерованный список с вложенными вариантами ответа для читаемости в Markdown.
 3. Практические задания к промежуточной аттестации вынесены в отдельный файл без смешения с заданиями текущего контроля.
 4. `docs/rpd.md` оставляет официальное содержание, но не дублирует административные блоки, которые хуже читаются и не используются как учебное содержимое в репозитории.
-5. Материалы `лабораторные.md` распределены между `modules/*` и `methodical-guidelines/students/README.md`, чтобы общие правила не дублировались в каждой лабораторной работе.
+5. Материалы `ЛР-0.4.0.md` распределены между `modules/*` и `methodical-guidelines/students/README.md`, чтобы общие правила не дублировались в каждой лабораторной работе.
 
 ## Если потребуется дальнейшая адаптация
 
 Любое осознанное отклонение от формулировок источника следует отдельно зафиксировать в этом файле, чтобы отличать структурную публикацию от содержательной переработки.
+
+## Рабочая оценочная надстройка
+
+Следующие файлы являются новыми эксплуатационными материалами: [`krm-alignment.md`](krm-alignment.md), [`measurement-model.md`](measurement-model.md), [`lab-rubrics.md`](../modules/lab-rubrics.md), [`answer-key-and-rubrics.md`](../Exam/answer-key-and-rubrics.md), [`Project/`](../Project/) и [`reference-mlops-project/`](../resources/reference-mlops-project/).

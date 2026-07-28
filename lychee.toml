@@ -1,0 +1,11 @@
+# These official resources reject automated requests or time out reliably.
+# Keep all other links subject to validation.
+exclude = [
+  "^http://book\\.ru/$",
+  "^https://www\\.elibrary\\.ru/defaultx\\.asp$",
+  "^http://fcior\\.edu\\.ru/$",
+  "^https://digital\\.gov\\.ru/ru/documents/$",
+  "^http://iprbookshop\\.ru/$",
+  "^http://www\\.edu\\.ru/$",
+  "^https://www\\.garant\\.ru/$",
+]

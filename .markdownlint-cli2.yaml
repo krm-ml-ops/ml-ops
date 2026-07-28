@@ -1,0 +1,4 @@
+ignores:
+  - "source-materials/md/**"
+  - "tmp/**"
+  - "resources/reference-mlops-project/.venv/**"

@@ -9,11 +9,27 @@ __pycache__/
 *.py[cod]
 .venv/
 venv/
+*.egg-info/
+.pytest_cache/
+build/
+artifacts/
+mlruns/
+mlartifacts/
+data/synthetic.csv
 
 # Временные файлы офисных приложений
 ~$*.docx
 ~$*.xlsx
+.~lock.*
 *.tmp
 
 # Локальные результаты проверки
 validation-report.txt
+
+backlog
+
+# Локальные рабочие материалы, не входящие в опубликованный ФОС
+assessment/
+tmp/
+
+.direnv

@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reference-mlops-project"
+version = "0.1.0"
+description = "Minimal reproducible MLOps course baseline"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi==0.115.6",
+    "prometheus-client==0.21.1",
+    "scikit-learn==1.6.0",
+    "uvicorn==0.34.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "httpx==0.28.1",
+    "pytest==8.3.4",
+]
+mlflow = [
+    "mlflow==2.19.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
