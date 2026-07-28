@@ -16,4 +16,4 @@ jobs:
       - uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2
         with:
           lycheeVersion: v0.24.2
-          args: "--no-progress AGENTS.md README.md docs Exam modules Project resources methodical-guidelines"
+          args: "--config lychee.toml --no-progress AGENTS.md README.md docs Exam modules Project resources methodical-guidelines"

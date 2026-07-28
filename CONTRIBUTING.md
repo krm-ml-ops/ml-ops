@@ -10,7 +10,7 @@
 2. Вносите одно логически завершенное изменение за коммит.
 3. Используйте понятные сообщения коммитов, например: `docs: добавить рубрику лабораторной работы`.
 4. Проверьте относительные ссылки и заполненность обязательных разделов.
-5. После изменения Markdown-файлов выполните `lychee --no-progress AGENTS.md README.md docs Exam modules Project resources methodical-guidelines` из корня репозитория.
+5. После изменения Markdown-файлов выполните `lychee --config lychee.toml --no-progress AGENTS.md README.md docs Exam modules Project resources methodical-guidelines` из корня репозитория.
 6. В Pull Request укажите, какие результаты обучения, компетенции и КИМ затронуты.
 
 ## Требования к КИМ
