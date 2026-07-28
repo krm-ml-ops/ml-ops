@@ -20,7 +20,10 @@
               pkgs.nodejs_22
               pkgs.pandoc
             ];
-            LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [ pkgs.stdenv.cc.cc ];
+            LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
+              pkgs.stdenv.cc.cc
+              pkgs.zlib
+            ];
           };
         });
     };
