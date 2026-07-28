@@ -22,6 +22,7 @@ uv run python -m reference_mlops.generate_data --output data/raw.csv --samples 5
 uv run python -m reference_mlops.prepare --input data/raw.csv --train-output data/prepared/train.csv --test-output data/prepared/test.csv --test-size 0.2 --seed 42
 uv run python -m reference_mlops.train --input data/prepared/train.csv --model-output artifacts/model.pkl
 uv run python -m reference_mlops.evaluate --input data/prepared/test.csv --model artifacts/model.pkl --metrics-output artifacts/metrics.json
+uv run python -m reference_mlops.evaluate --input data/prepared/test.csv --model artifacts/model.pkl --metrics-output artifacts/metrics-cv.json --cv-input data/prepared/train.csv --cv-folds 5
 MODEL_PATH=artifacts/model.pkl uvicorn reference_mlops.api:app --reload
 ```
 
@@ -32,11 +33,11 @@ curl http://127.0.0.1:8000/health
 curl -X POST http://127.0.0.1:8000/predict -H 'content-type: application/json' -d '{"features":[0.1,-0.2,0.3,0.4]}'
 ```
 
-`/health` всегда сообщает доступность процесса и отдельно состояние модели. Инференс и сведения о модели вернут `503`, пока файла модели нет. В `model.pkl` сериализованы sklearn `Pipeline`, порядок признаков, версия пакета и метрики `accuracy`/`f1`. Загружайте pickle только из доверенного источника.
+`/health` всегда сообщает доступность процесса и отдельно состояние модели. Инференс и сведения о модели вернут `503`, пока файла модели нет. В `model.pkl` сериализованы sklearn `Pipeline`, порядок признаков, версия пакета и метрики `accuracy`/`f1`. При передаче `--cv-input` оценка дополнительно записывает средние `cv_accuracy` и `cv_f1` стратифицированной кросс-валидации по обучающей выборке. Загружайте pickle только из доверенного источника.
 
 ## Воспроизводимость и тесты
 
-Генератор использует `make_classification` с фиксированным seed, подготовка валидирует схему и создает фиксированное стратифицированное разбиение, а обучение использует `LogisticRegression`. Тесты проверяют побайтовую детерминированность CSV, подготовку, модель, метрики и контракт API. Запуск: `uv run pytest`.
+Генератор использует `make_classification` с фиксированным seed, подготовка валидирует схему и создает фиксированное стратифицированное разбиение, а обучение использует `LogisticRegression`. Тесты проверяют побайтовую детерминированность CSV, подготовку, модель, метрики, кросс-валидацию и контракт API. Запуск: `uv run pytest`.
 
 Версии зависимостей закреплены в `pyproject.toml` и `uv.lock`. Данные, модели, MLflow runs и локальные кэши исключены в `.gitignore`.
 

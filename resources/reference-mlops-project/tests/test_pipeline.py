@@ -25,6 +25,21 @@ def test_pipeline_stages_are_deterministic_and_write_outputs(tmp_path):
     assert json.loads(metrics_file.read_text()) == metrics
 
 
+def test_evaluation_writes_cross_validation_metrics(tmp_path):
+    dataset = tmp_path / "data.csv"
+    generate_dataset(dataset, samples=100, seed=7)
+    train_data = tmp_path / "train.csv"
+    test_data = tmp_path / "test.csv"
+    prepare(dataset, train_data, test_data, test_size=0.2, seed=42)
+    model = tmp_path / "model.pkl"
+    train(train_data, model)
+
+    metrics = evaluate(test_data, model, tmp_path / "metrics.json", cv_input_path=train_data)
+
+    assert set(metrics) == {"accuracy", "f1", "cv_accuracy", "cv_f1"}
+    assert all(0 <= value <= 1 for value in metrics.values())
+
+
 def test_training_logs_optional_mlflow_run(tmp_path, monkeypatch):
     mlflow = pytest.importorskip("mlflow")
     if not hasattr(mlflow, "start_run"):
