@@ -6,7 +6,15 @@
 
 ## `md`
 
-`Markdown` версии [`docx` документов](#docx).
+`Markdown` версии [`docx` документов](#docx), полученные при помощи `pandoc`.
+
+Остальные документы должны ссылаться на эти `Markdown` версии для удобства предпросмотра и навигации.
+
+### Генерация `md`
+
+```terminal
+nix develop --command sh -c 'for source in source-materials/docx/fos/*.docx source-materials/docx/labs/*.docx source-materials/docx/rpd/*.docx; do target="${source/source-materials\/docx/source-materials\/md}"; pandoc --from=docx --to=gfm --wrap=none --output="${target%.docx}.md" "$source" || exit; done'
+```
 
 ## Версионирование
 
