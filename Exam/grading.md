@@ -1,6 +1,6 @@
 # Шкала оценивания и пороги
 
-Источник: раздел 4 и приложение № 1 файла [`source-materials/md/ФОС.md`](../source-materials/md/ФОС.md).
+Источник: раздел 4 и приложение № 1 файла [`source-materials/md/fos/ФОС-0.3.0.md`](../source-materials/md/fos/ФОС-0.3.0.md).
 
 ## Распределение баллов
 
