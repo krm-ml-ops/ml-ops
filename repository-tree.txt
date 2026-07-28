@@ -151,8 +151,6 @@
 │   ├── krm
 │   │   ├── krm-v3.0.xlsx
 │   │   └── README.md
-│   ├── krm-used
-│   │   └── README.md
 │   ├── labs
 │   │   ├── docx
 │   │   │   ├── ЛР-0.1.0.docx
