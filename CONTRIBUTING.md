@@ -24,7 +24,10 @@
 
 ## Именование
 
-- папки модулей: `modules/M1-short-name`, `modules/M2-short-name`, `modules/M3-short-name`;
+- Имена новых файлов и каталогов записывайте строчными буквами в kebab case: `short-name.md`, `short-name/`.
+- папки модулей: `modules/m1-short-name`, `modules/m2-short-name`, `modules/m3-short-name`;
 - КИМ: `kim-01-practical-work.md`, `kim-02-test.md`;
 - рубрики: `rubric-01.md`;
 - приложения: `appendix-01-<name>.<ext>`.
+- Исключения: `README.md`, `AGENTS.md`, `CONTRIBUTING.md`, `LICENSE*.md`, dotfiles и имена, требуемые инструментами (`Dockerfile`, `pyproject.toml`, lock-файлы, DVC- и Nix-файлы).
+- В [`sources/`](sources/) сохраняйте исходные имена архивных документов: они обеспечивают прослеживаемость источников.

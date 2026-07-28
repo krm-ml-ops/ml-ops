@@ -58,14 +58,14 @@
 ### Методические указания к лабораторным работам
 
 - [`methodical-guidelines/students/README.md`](../methodical-guidelines/students/README.md) <- общие положения, требования к воспроизводимости, отчету, защите, информационной безопасности и рекомендуемая структура репозитория из [`ЛР-0.4.0.md`](../sources/labs/md/ЛР-0.4.0.md)
-- [`modules/M1-ci-cd-devops-ml/lab-01-docker-reproducible-environment.md`](../modules/M1-ci-cd-devops-ml/lab-01-docker-reproducible-environment.md) <- лабораторная работа № 1 [`ЛР-0.4.0.md`](../sources/labs/md/ЛР-0.4.0.md)
-- [`modules/M1-ci-cd-devops-ml/lab-02-docker-images-and-containers.md`](../modules/M1-ci-cd-devops-ml/lab-02-docker-images-and-containers.md) <- лабораторная работа № 2 [`ЛР-0.4.0.md`](../sources/labs/md/ЛР-0.4.0.md)
-- [`modules/M1-ci-cd-devops-ml/lab-03-ci-cd-pipeline.md`](../modules/M1-ci-cd-devops-ml/lab-03-ci-cd-pipeline.md) <- лабораторная работа № 3 [`ЛР-0.4.0.md`](../sources/labs/md/ЛР-0.4.0.md)
-- [`modules/M2-ml-lifecycle/lab-04-ml-pipeline.md`](../modules/M2-ml-lifecycle/lab-04-ml-pipeline.md) <- лабораторная работа № 4 [`ЛР-0.4.0.md`](../sources/labs/md/ЛР-0.4.0.md)
-- [`modules/M2-ml-lifecycle/lab-05-mlflow-experiment-tracking.md`](../modules/M2-ml-lifecycle/lab-05-mlflow-experiment-tracking.md) <- лабораторная работа № 5 [`ЛР-0.4.0.md`](../sources/labs/md/ЛР-0.4.0.md)
-- [`modules/M2-ml-lifecycle/lab-06-dvc-data-model-versioning.md`](../modules/M2-ml-lifecycle/lab-06-dvc-data-model-versioning.md) <- лабораторная работа № 6 [`ЛР-0.4.0.md`](../sources/labs/md/ЛР-0.4.0.md)
-- [`modules/M3-deployment-monitoring/lab-07-fastapi-model-service.md`](../modules/M3-deployment-monitoring/lab-07-fastapi-model-service.md) <- лабораторная работа № 7 [`ЛР-0.4.0.md`](../sources/labs/md/ЛР-0.4.0.md)
-- [`modules/M3-deployment-monitoring/lab-08-monitoring-prometheus-grafana.md`](../modules/M3-deployment-monitoring/lab-08-monitoring-prometheus-grafana.md) <- лабораторная работа № 8 [`ЛР-0.4.0.md`](../sources/labs/md/ЛР-0.4.0.md)
+- [`modules/m1-ci-cd-devops-ml/lab-01-docker-reproducible-environment.md`](../modules/m1-ci-cd-devops-ml/lab-01-docker-reproducible-environment.md) <- лабораторная работа № 1 [`ЛР-0.4.0.md`](../sources/labs/md/ЛР-0.4.0.md)
+- [`modules/m1-ci-cd-devops-ml/lab-02-docker-images-and-containers.md`](../modules/m1-ci-cd-devops-ml/lab-02-docker-images-and-containers.md) <- лабораторная работа № 2 [`ЛР-0.4.0.md`](../sources/labs/md/ЛР-0.4.0.md)
+- [`modules/m1-ci-cd-devops-ml/lab-03-ci-cd-pipeline.md`](../modules/m1-ci-cd-devops-ml/lab-03-ci-cd-pipeline.md) <- лабораторная работа № 3 [`ЛР-0.4.0.md`](../sources/labs/md/ЛР-0.4.0.md)
+- [`modules/m2-ml-lifecycle/lab-04-ml-pipeline.md`](../modules/m2-ml-lifecycle/lab-04-ml-pipeline.md) <- лабораторная работа № 4 [`ЛР-0.4.0.md`](../sources/labs/md/ЛР-0.4.0.md)
+- [`modules/m2-ml-lifecycle/lab-05-mlflow-experiment-tracking.md`](../modules/m2-ml-lifecycle/lab-05-mlflow-experiment-tracking.md) <- лабораторная работа № 5 [`ЛР-0.4.0.md`](../sources/labs/md/ЛР-0.4.0.md)
+- [`modules/m2-ml-lifecycle/lab-06-dvc-data-model-versioning.md`](../modules/m2-ml-lifecycle/lab-06-dvc-data-model-versioning.md) <- лабораторная работа № 6 [`ЛР-0.4.0.md`](../sources/labs/md/ЛР-0.4.0.md)
+- [`modules/m3-deployment-monitoring/lab-07-fastapi-model-service.md`](../modules/m3-deployment-monitoring/lab-07-fastapi-model-service.md) <- лабораторная работа № 7 [`ЛР-0.4.0.md`](../sources/labs/md/ЛР-0.4.0.md)
+- [`modules/m3-deployment-monitoring/lab-08-monitoring-prometheus-grafana.md`](../modules/m3-deployment-monitoring/lab-08-monitoring-prometheus-grafana.md) <- лабораторная работа № 8 [`ЛР-0.4.0.md`](../sources/labs/md/ЛР-0.4.0.md)
 
 В этой публикации осознанно не воспроизводятся:
 

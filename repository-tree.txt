@@ -47,21 +47,21 @@
 │       └── README.md
 ├── modules
 │   ├── lab-rubrics.md
-│   ├── M1-ci-cd-devops-ml
+│   ├── m1-ci-cd-devops-ml
 │   │   ├── attachments
 │   │   │   └── .gitkeep
 │   │   ├── lab-01-docker-reproducible-environment.md
 │   │   ├── lab-02-docker-images-and-containers.md
 │   │   ├── lab-03-ci-cd-pipeline.md
 │   │   └── README.md
-│   ├── M2-ml-lifecycle
+│   ├── m2-ml-lifecycle
 │   │   ├── attachments
 │   │   │   └── .gitkeep
 │   │   ├── lab-04-ml-pipeline.md
 │   │   ├── lab-05-mlflow-experiment-tracking.md
 │   │   ├── lab-06-dvc-data-model-versioning.md
 │   │   └── README.md
-│   └── M3-deployment-monitoring
+│   └── m3-deployment-monitoring
 │       ├── attachments
 │       │   └── .gitkeep
 │       ├── lab-07-fastapi-model-service.md
