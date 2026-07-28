@@ -5,7 +5,7 @@
 ## Источники
 
 - [`РПД-1.0.0.md`](../sources/rpd/md/РПД-1.0.0.md) - рабочая программа дисциплины
-- [`ФОС-1.0.0.md`](../sources/fos/md/ФОС-1.0.0.md) - оценочные материалы для текущего контроля и промежуточной аттестации
+- [`ФОС-1.0.1.md`](../sources/fos/md/ФОС-1.0.1.md) - оценочные материалы для текущего контроля и промежуточной аттестации
 - [`ЛР-0.4.0.md`](../sources/labs/md/ЛР-0.4.0.md) - методические указания к выполнению лабораторных работ
 
 ## Правило публикации
@@ -47,13 +47,13 @@
 
 ### ФОС
 
-- [`exam/theoretical-questions.md`](../exam/theoretical-questions.md) <- приложение № 1 и приложение № 6 [`ФОС-1.0.0.md`](../sources/fos/md/ФОС-1.0.0.md)
-- [`exam/competence-tests.md`](../exam/competence-tests.md) <- приложение № 2 [`ФОС-1.0.0.md`](../sources/fos/md/ФОС-1.0.0.md)
-- [`exam/current-control-practical-tasks.md`](../exam/current-control-practical-tasks.md) <- приложение № 3 [`ФОС-1.0.0.md`](../sources/fos/md/ФОС-1.0.0.md)
-- [`exam/practical-tasks.md`](../exam/practical-tasks.md) <- приложение № 7 [`ФОС-1.0.0.md`](../sources/fos/md/ФОС-1.0.0.md)
-- [`exam/grading.md`](../exam/grading.md) <- раздел 4 [`ФОС-1.0.0.md`](../sources/fos/md/ФОС-1.0.0.md) (регламент, пороги, распределение баллов, критерии)
-- [`exam/assessment-map.md`](../exam/assessment-map.md) <- разделы 1-3 и приложение № 5 [`ФОС-1.0.0.md`](../sources/fos/md/ФОС-1.0.0.md)
-- [`exam/README.md`](../exam/README.md) <- обзорная навигация по материалам [`ФОС-1.0.0.md`](../sources/fos/md/ФОС-1.0.0.md)
+- [`exam/theoretical-questions.md`](../exam/theoretical-questions.md) <- приложение № 1 и приложение № 6 [`ФОС-1.0.1.md`](../sources/fos/md/ФОС-1.0.1.md)
+- [`exam/competence-tests.md`](../exam/competence-tests.md) <- приложение № 2 [`ФОС-1.0.1.md`](../sources/fos/md/ФОС-1.0.1.md)
+- [`exam/current-control-practical-tasks.md`](../exam/current-control-practical-tasks.md) <- приложение № 3 [`ФОС-1.0.1.md`](../sources/fos/md/ФОС-1.0.1.md)
+- [`exam/practical-tasks.md`](../exam/practical-tasks.md) <- приложение № 7 [`ФОС-1.0.1.md`](../sources/fos/md/ФОС-1.0.1.md)
+- [`exam/grading.md`](../exam/grading.md) <- раздел 4 [`ФОС-1.0.1.md`](../sources/fos/md/ФОС-1.0.1.md) (регламент, пороги, распределение баллов, критерии)
+- [`exam/assessment-map.md`](../exam/assessment-map.md) <- разделы 1-3 и приложение № 5 [`ФОС-1.0.1.md`](../sources/fos/md/ФОС-1.0.1.md)
+- [`exam/README.md`](../exam/README.md) <- обзорная навигация по материалам [`ФОС-1.0.1.md`](../sources/fos/md/ФОС-1.0.1.md)
 
 ### Методические указания к лабораторным работам
 
