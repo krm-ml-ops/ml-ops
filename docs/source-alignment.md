@@ -1,16 +1,16 @@
 # Согласование с источниками
 
-Этот файл фиксирует, как опубликованные материалы репозитория соотносятся с исходными документами в `source-materials/md/`.
+Этот файл фиксирует, как опубликованные материалы репозитория соотносятся с актуальными исходными документами в `source-materials/md/`.
 
 ## Источники
 
-- `source-materials/md/rpd/РПД-0.5.0.md` - рабочая программа дисциплины
-- `source-materials/md/fos/ФОС-0.4.0.md` - оценочные материалы для текущего контроля и промежуточной аттестации
-- `source-materials/md/labs/ЛР-0.4.0.md` - методические указания к выполнению лабораторных работ
+- [`РПД-1.0.0.md`](../source-materials/md/rpd/РПД-1.0.0.md) - рабочая программа дисциплины
+- [`ФОС-1.0.0.md`](../source-materials/md/fos/ФОС-1.0.0.md) - оценочные материалы для текущего контроля и промежуточной аттестации
+- [`ЛР-0.4.0.md`](../source-materials/md/labs/ЛР-0.4.0.md) - методические указания к выполнению лабораторных работ
 
 ## Правило публикации
 
-Приоритетом является содержательная верность исходным материалам. Исходники остаются архивной публикацией; рабочая надстройка может исправлять измерительные расхождения только с явной фиксацией решения.
+Приоритетом является содержательная верность актуальным исходным материалам. Предыдущие версии сохраняются как архив; рабочая надстройка может исправлять измерительные расхождения только с явной фиксацией решения.
 
 Допускается:
 
@@ -34,7 +34,7 @@
 
 ### РПД
 
-- `docs/rpd.md` <- структурированная публикация `source-materials/md/rpd/РПД-0.5.0.md`
+- [`docs/rpd.md`](rpd.md) <- структурированная публикация [`РПД-1.0.0.md`](../source-materials/md/rpd/РПД-1.0.0.md)
 
 В этой публикации осознанно не воспроизводятся:
 
@@ -47,13 +47,13 @@
 
 ### ФОС
 
-- `Exam/theoretical-questions.md` <- приложение № 1 и приложение № 6 `source-materials/md/fos/ФОС-0.4.0.md`
-- `Exam/competence-tests.md` <- приложение № 2 `source-materials/md/fos/ФОС-0.4.0.md`
-- `Exam/current-control-practical-tasks.md` <- приложение № 3 `source-materials/md/fos/ФОС-0.4.0.md`
-- `Exam/practical-tasks.md` <- приложение № 7 `source-materials/md/fos/ФОС-0.4.0.md`
-- `Exam/grading.md` <- раздел 4 `source-materials/md/fos/ФОС-0.4.0.md` (регламент, пороги, распределение баллов, критерии)
-- `Exam/assessment-map.md` <- разделы 1-3 и приложение № 5 `source-materials/md/fos/ФОС-0.4.0.md`
-- `Exam/README.md` <- обзорная навигация по материалам `source-materials/md/fos/ФОС-0.4.0.md`
+- [`Exam/theoretical-questions.md`](../Exam/theoretical-questions.md) <- приложение № 1 и приложение № 6 [`ФОС-1.0.0.md`](../source-materials/md/fos/ФОС-1.0.0.md)
+- [`Exam/competence-tests.md`](../Exam/competence-tests.md) <- приложение № 2 [`ФОС-1.0.0.md`](../source-materials/md/fos/ФОС-1.0.0.md)
+- [`Exam/current-control-practical-tasks.md`](../Exam/current-control-practical-tasks.md) <- приложение № 3 [`ФОС-1.0.0.md`](../source-materials/md/fos/ФОС-1.0.0.md)
+- [`Exam/practical-tasks.md`](../Exam/practical-tasks.md) <- приложение № 7 [`ФОС-1.0.0.md`](../source-materials/md/fos/ФОС-1.0.0.md)
+- [`Exam/grading.md`](../Exam/grading.md) <- раздел 4 [`ФОС-1.0.0.md`](../source-materials/md/fos/ФОС-1.0.0.md) (регламент, пороги, распределение баллов, критерии)
+- [`Exam/assessment-map.md`](../Exam/assessment-map.md) <- разделы 1-3 и приложение № 5 [`ФОС-1.0.0.md`](../source-materials/md/fos/ФОС-1.0.0.md)
+- [`Exam/README.md`](../Exam/README.md) <- обзорная навигация по материалам [`ФОС-1.0.0.md`](../source-materials/md/fos/ФОС-1.0.0.md)
 
 ### Методические указания к лабораторным работам
 
@@ -87,6 +87,4 @@
 
 ## Рабочая оценочная надстройка
 
-Следующие файлы являются новыми эксплуатационными материалами, а не незаметной заменой архивного ФОС: `docs/krm-alignment.md`, `docs/measurement-model.md`, `modules/lab-rubrics.md`, `Exam/answer-key-and-rubrics.md`, `Project/` и `resources/reference-mlops-project/`.
-
-`DL-3.3` и `PL-1.3` остаются официальными индикаторами РПД и ФОС, но не измеряются текущими рабочими КИМ. Обоснование и условия повторного включения приведены в [сверке КРМ](krm-alignment.md).
+Следующие файлы являются новыми эксплуатационными материалами: [`krm-alignment.md`](krm-alignment.md), [`measurement-model.md`](measurement-model.md), [`lab-rubrics.md`](../modules/lab-rubrics.md), [`answer-key-and-rubrics.md`](../Exam/answer-key-and-rubrics.md), [`Project/`](../Project/) и [`reference-mlops-project/`](../resources/reference-mlops-project/).
