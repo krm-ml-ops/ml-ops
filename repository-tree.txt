@@ -13,7 +13,7 @@
 │   ├── rpd.md
 │   └── source-alignment.md
 ├── .envrc
-├── Exam
+├── exam
 │   ├── answer-key-and-rubrics.md
 │   ├── assessment-map.md
 │   ├── attachments
@@ -69,7 +69,7 @@
 │       └── README.md
 ├── other
 │   └── README.md
-├── Project
+├── project
 │   ├── attachments
 │   │   └── .gitkeep
 │   ├── integrated-mlops-project.md

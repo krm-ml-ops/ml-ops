@@ -47,13 +47,13 @@
 
 ### ФОС
 
-- [`Exam/theoretical-questions.md`](../Exam/theoretical-questions.md) <- приложение № 1 и приложение № 6 [`ФОС-1.0.0.md`](../sources/fos/md/ФОС-1.0.0.md)
-- [`Exam/competence-tests.md`](../Exam/competence-tests.md) <- приложение № 2 [`ФОС-1.0.0.md`](../sources/fos/md/ФОС-1.0.0.md)
-- [`Exam/current-control-practical-tasks.md`](../Exam/current-control-practical-tasks.md) <- приложение № 3 [`ФОС-1.0.0.md`](../sources/fos/md/ФОС-1.0.0.md)
-- [`Exam/practical-tasks.md`](../Exam/practical-tasks.md) <- приложение № 7 [`ФОС-1.0.0.md`](../sources/fos/md/ФОС-1.0.0.md)
-- [`Exam/grading.md`](../Exam/grading.md) <- раздел 4 [`ФОС-1.0.0.md`](../sources/fos/md/ФОС-1.0.0.md) (регламент, пороги, распределение баллов, критерии)
-- [`Exam/assessment-map.md`](../Exam/assessment-map.md) <- разделы 1-3 и приложение № 5 [`ФОС-1.0.0.md`](../sources/fos/md/ФОС-1.0.0.md)
-- [`Exam/README.md`](../Exam/README.md) <- обзорная навигация по материалам [`ФОС-1.0.0.md`](../sources/fos/md/ФОС-1.0.0.md)
+- [`exam/theoretical-questions.md`](../exam/theoretical-questions.md) <- приложение № 1 и приложение № 6 [`ФОС-1.0.0.md`](../sources/fos/md/ФОС-1.0.0.md)
+- [`exam/competence-tests.md`](../exam/competence-tests.md) <- приложение № 2 [`ФОС-1.0.0.md`](../sources/fos/md/ФОС-1.0.0.md)
+- [`exam/current-control-practical-tasks.md`](../exam/current-control-practical-tasks.md) <- приложение № 3 [`ФОС-1.0.0.md`](../sources/fos/md/ФОС-1.0.0.md)
+- [`exam/practical-tasks.md`](../exam/practical-tasks.md) <- приложение № 7 [`ФОС-1.0.0.md`](../sources/fos/md/ФОС-1.0.0.md)
+- [`exam/grading.md`](../exam/grading.md) <- раздел 4 [`ФОС-1.0.0.md`](../sources/fos/md/ФОС-1.0.0.md) (регламент, пороги, распределение баллов, критерии)
+- [`exam/assessment-map.md`](../exam/assessment-map.md) <- разделы 1-3 и приложение № 5 [`ФОС-1.0.0.md`](../sources/fos/md/ФОС-1.0.0.md)
+- [`exam/README.md`](../exam/README.md) <- обзорная навигация по материалам [`ФОС-1.0.0.md`](../sources/fos/md/ФОС-1.0.0.md)
 
 ### Методические указания к лабораторным работам
 
@@ -87,4 +87,4 @@
 
 ## Рабочая оценочная надстройка
 
-Следующие файлы являются новыми эксплуатационными материалами: [`krm-alignment.md`](krm-alignment.md), [`measurement-model.md`](measurement-model.md), [`lab-rubrics.md`](../modules/lab-rubrics.md), [`answer-key-and-rubrics.md`](../Exam/answer-key-and-rubrics.md), [`Project/`](../Project/) и [`reference-mlops-project/`](../resources/reference-mlops-project/).
+Следующие файлы являются новыми эксплуатационными материалами: [`krm-alignment.md`](krm-alignment.md), [`measurement-model.md`](measurement-model.md), [`lab-rubrics.md`](../modules/lab-rubrics.md), [`answer-key-and-rubrics.md`](../exam/answer-key-and-rubrics.md), [`project/`](../project/) и [`reference-mlops-project/`](../resources/reference-mlops-project/).
