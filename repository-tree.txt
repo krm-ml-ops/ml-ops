@@ -2,34 +2,34 @@
 ├── AGENTS.md
 ├── CONTRIBUTING.md
 ├── data
-│   ├── krm-v3.0.xlsx
-│   └── README.md
+│   ├── krm-v3.0.xlsx
+│   └── README.md
 ├── docs
-│   ├── ai-use-policy.md
-│   ├── krm-alignment.md
-│   ├── measurement-model.md
-│   ├── quality-checklist.md
-│   ├── README.md
-│   ├── rpd.md
-│   └── source-alignment.md
+│   ├── ai-use-policy.md
+│   ├── krm-alignment.md
+│   ├── measurement-model.md
+│   ├── quality-checklist.md
+│   ├── README.md
+│   ├── rpd.md
+│   └── source-alignment.md
 ├── .envrc
 ├── Exam
-│   ├── answer-key-and-rubrics.md
-│   ├── assessment-map.md
-│   ├── attachments
-│   │   └── .gitkeep
-│   ├── competence-tests.md
-│   ├── current-control-practical-tasks.md
-│   ├── grading.md
-│   ├── practical-tasks.md
-│   ├── README.md
-│   └── theoretical-questions.md
+│   ├── answer-key-and-rubrics.md
+│   ├── assessment-map.md
+│   ├── attachments
+│   │   └── .gitkeep
+│   ├── competence-tests.md
+│   ├── current-control-practical-tasks.md
+│   ├── grading.md
+│   ├── practical-tasks.md
+│   ├── README.md
+│   └── theoretical-questions.md
 ├── flake.lock
 ├── flake.nix
 ├── .github
-│   └── workflows
-│       ├── docs-check.yml
-│       └── reference-project-ci.yml
+│   └── workflows
+│       ├── docs-check.yml
+│       └── reference-project-ci.yml
 ├── .gitignore
 ├── LICENSE-CODE.md
 ├── LICENSE-CONTENT.md
@@ -38,142 +38,143 @@
 ├── .markdownlint-cli2.yaml
 ├── .markdownlint.jsonc
 ├── methodical-guidelines
-│   ├── README.md
-│   ├── students
-│   │   └── README.md
-│   ├── teachers-assessment
-│   │   └── README.md
-│   └── teachers-resources
-│       └── README.md
+│   ├── README.md
+│   ├── students
+│   │   └── README.md
+│   ├── teachers-assessment
+│   │   └── README.md
+│   └── teachers-resources
+│       └── README.md
 ├── modules
-│   ├── lab-rubrics.md
-│   ├── M1-ci-cd-devops-ml
-│   │   ├── attachments
-│   │   │   └── .gitkeep
-│   │   ├── lab-01-docker-reproducible-environment.md
-│   │   ├── lab-02-docker-images-and-containers.md
-│   │   ├── lab-03-ci-cd-pipeline.md
-│   │   └── README.md
-│   ├── M2-ml-lifecycle
-│   │   ├── attachments
-│   │   │   └── .gitkeep
-│   │   ├── lab-04-ml-pipeline.md
-│   │   ├── lab-05-mlflow-experiment-tracking.md
-│   │   ├── lab-06-dvc-data-model-versioning.md
-│   │   └── README.md
-│   └── M3-deployment-monitoring
-│       ├── attachments
-│       │   └── .gitkeep
-│       ├── lab-07-fastapi-model-service.md
-│       ├── lab-08-monitoring-prometheus-grafana.md
-│       └── README.md
+│   ├── lab-rubrics.md
+│   ├── M1-ci-cd-devops-ml
+│   │   ├── attachments
+│   │   │   └── .gitkeep
+│   │   ├── lab-01-docker-reproducible-environment.md
+│   │   ├── lab-02-docker-images-and-containers.md
+│   │   ├── lab-03-ci-cd-pipeline.md
+│   │   └── README.md
+│   ├── M2-ml-lifecycle
+│   │   ├── attachments
+│   │   │   └── .gitkeep
+│   │   ├── lab-04-ml-pipeline.md
+│   │   ├── lab-05-mlflow-experiment-tracking.md
+│   │   ├── lab-06-dvc-data-model-versioning.md
+│   │   └── README.md
+│   └── M3-deployment-monitoring
+│       ├── attachments
+│       │   └── .gitkeep
+│       ├── lab-07-fastapi-model-service.md
+│       ├── lab-08-monitoring-prometheus-grafana.md
+│       └── README.md
 ├── other
-│   └── README.md
+│   └── README.md
 ├── Project
-│   ├── attachments
-│   │   └── .gitkeep
-│   ├── integrated-mlops-project.md
-│   ├── README.md
-│   └── rubric.md
+│   ├── attachments
+│   │   └── .gitkeep
+│   ├── integrated-mlops-project.md
+│   ├── README.md
+│   └── rubric.md
 ├── README.md
 ├── repository-tree.txt
 ├── resources
-│   ├── benchmarks
-│   │   └── README.md
-│   ├── datasets
-│   │   ├── README.md
-│   │   └── reference-mlops-synthetic.md
-│   ├── llm-prompts
-│   │   └── README.md
-│   ├── other
-│   │   └── README.md
-│   ├── papers
-│   │   └── README.md
-│   ├── problem-banks
-│   │   └── README.md
-│   ├── README.md
-│   ├── reference-mlops-project
-│   │   ├── docker-compose.yml
-│   │   ├── Dockerfile
-│   │   ├── .dockerignore
-│   │   ├── .dvc
-│   │   │   ├── config
-│   │   │   └── .gitignore
-│   │   ├── .dvcignore
-│   │   ├── dvc.lock
-│   │   ├── dvc.yaml
-│   │   ├── .gitignore
-│   │   ├── mlflow
-│   │   │   └── README.md
-│   │   ├── monitoring
-│   │   │   ├── alerts.yml
-│   │   │   ├── grafana
-│   │   │   │   ├── dashboards
-│   │   │   │   │   └── reference-mlops.json
-│   │   │   │   └── provisioning
-│   │   │   │       ├── dashboards
-│   │   │   │       │   └── dashboard.yml
-│   │   │   │       └── datasources
-│   │   │   │           └── prometheus.yml
-│   │   │   └── prometheus.yml
-│   │   ├── params.yaml
-│   │   ├── pyproject.toml
-│   │   ├── .python-version
-│   │   ├── README.md
-│   │   ├── scripts
-│   │   │   └── verify.sh
-│   │   ├── src
-│   │   │   └── reference_mlops
-│   │   │       ├── api.py
-│   │   │       ├── evaluate.py
-│   │   │       ├── generate_data.py
-│   │   │       ├── __init__.py
-│   │   │       ├── prepare.py
-│   │   │       └── train.py
-│   │   ├── tests
-│   │   │   ├── test_api.py
-│   │   │   └── test_pipeline.py
-│   │   └── uv.lock
-│   ├── software
-│   │   └── python-libs
-│   │       └── README.md
-│   ├── test-banks
-│   │   └── README.md
-│   └── textbooks
-│       └── README.md
-├── source-materials
-│   ├── docx
-│   │   ├── fos
-│   │   │   ├── ФОС-0.3.0.docx
-│   │   │   ├── ФОС-0.4.0.docx
-│   │   │   └── ФОС-1.0.0.docx
-│   │   ├── labs
-│   │   │   ├── ЛР-0.1.0.docx
-│   │   │   ├── ЛР-0.2.0.docx
-│   │   │   ├── ЛР-0.3.0.docx
-│   │   │   └── ЛР-0.4.0.docx
-│   │   └── rpd
-│   │       ├── РПД-0.3.0.docx
-│   │       ├── РПД-0.4.0.docx
-│   │       ├── РПД-0.5.0.docx
-│   │       └── РПД-1.0.0.docx
-│   ├── md
-│   │   ├── fos
-│   │   │   ├── ФОС-0.3.0.md
-│   │   │   ├── ФОС-0.4.0.md
-│   │   │   └── ФОС-1.0.0.md
-│   │   ├── labs
-│   │   │   ├── ЛР-0.1.0.md
-│   │   │   ├── ЛР-0.2.0.md
-│   │   │   ├── ЛР-0.3.0.md
-│   │   │   └── ЛР-0.4.0.md
-│   │   └── rpd
-│   │       ├── РПД-0.3.0.md
-│   │       ├── РПД-0.4.0.md
-│   │       ├── РПД-0.5.0.md
-│   │       └── РПД-1.0.0.md
-│   └── README..md
+│   ├── benchmarks
+│   │   └── README.md
+│   ├── datasets
+│   │   ├── README.md
+│   │   └── reference-mlops-synthetic.md
+│   ├── llm-prompts
+│   │   └── README.md
+│   ├── other
+│   │   └── README.md
+│   ├── papers
+│   │   └── README.md
+│   ├── problem-banks
+│   │   └── README.md
+│   ├── README.md
+│   ├── reference-mlops-project
+│   │   ├── docker-compose.yml
+│   │   ├── Dockerfile
+│   │   ├── .dockerignore
+│   │   ├── .dvc
+│   │   │   ├── config
+│   │   │   └── .gitignore
+│   │   ├── .dvcignore
+│   │   ├── dvc.lock
+│   │   ├── dvc.yaml
+│   │   ├── .gitignore
+│   │   ├── mlflow
+│   │   │   └── README.md
+│   │   ├── monitoring
+│   │   │   ├── alerts.yml
+│   │   │   ├── grafana
+│   │   │   │   ├── dashboards
+│   │   │   │   │   └── reference-mlops.json
+│   │   │   │   └── provisioning
+│   │   │   │       ├── dashboards
+│   │   │   │       │   └── dashboard.yml
+│   │   │   │       └── datasources
+│   │   │   │           └── prometheus.yml
+│   │   │   └── prometheus.yml
+│   │   ├── params.yaml
+│   │   ├── pyproject.toml
+│   │   ├── .python-version
+│   │   ├── README.md
+│   │   ├── scripts
+│   │   │   └── verify.sh
+│   │   ├── src
+│   │   │   └── reference_mlops
+│   │   │       ├── api.py
+│   │   │       ├── evaluate.py
+│   │   │       ├── generate_data.py
+│   │   │       ├── __init__.py
+│   │   │       ├── prepare.py
+│   │   │       └── train.py
+│   │   ├── tests
+│   │   │   ├── test_api.py
+│   │   │   └── test_pipeline.py
+│   │   └── uv.lock
+│   ├── software
+│   │   └── python-libs
+│   │       └── README.md
+│   ├── test-banks
+│   │   └── README.md
+│   └── textbooks
+│       └── README.md
+├── sources
+│   ├── fos
+│   │   ├── docx
+│   │   │   ├── ФОС-0.3.0.docx
+│   │   │   ├── ФОС-0.4.0.docx
+│   │   │   └── ФОС-1.0.0.docx
+│   │   └── md
+│   │       ├── ФОС-0.3.0.md
+│   │       ├── ФОС-0.4.0.md
+│   │       └── ФОС-1.0.0.md
+│   ├── labs
+│   │   ├── docx
+│   │   │   ├── ЛР-0.1.0.docx
+│   │   │   ├── ЛР-0.2.0.docx
+│   │   │   ├── ЛР-0.3.0.docx
+│   │   │   └── ЛР-0.4.0.docx
+│   │   └── md
+│   │       ├── ЛР-0.1.0.md
+│   │       ├── ЛР-0.2.0.md
+│   │       ├── ЛР-0.3.0.md
+│   │       └── ЛР-0.4.0.md
+│   ├── README.md
+│   └── rpd
+│       ├── docx
+│       │   ├── РПД-0.3.0.docx
+│       │   ├── РПД-0.4.0.docx
+│       │   ├── РПД-0.5.0.docx
+│       │   └── РПД-1.0.0.docx
+│       └── md
+│           ├── РПД-0.3.0.md
+│           ├── РПД-0.4.0.md
+│           ├── РПД-0.5.0.md
+│           └── РПД-1.0.0.md
 └── team
     ├── images
-    │   └── .gitkeep
+    │   └── .gitkeep
     └── README.md

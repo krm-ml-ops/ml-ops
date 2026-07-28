@@ -1,4 +1,4 @@
 ignores:
-  - "source-materials/md/**"
+  - "sources/*/md/**"
   - "tmp/**"
   - "resources/reference-mlops-project/.venv/**"

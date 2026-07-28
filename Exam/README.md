@@ -29,14 +29,14 @@
 
 ## Сопоставление с исходными материалами
 
-Все материалы папки основаны на файле [`ФОС-1.0.0.md`](../source-materials/md/fos/ФОС-1.0.0.md).
+Все материалы папки основаны на файле [`ФОС-1.0.0.md`](../sources/fos/md/ФОС-1.0.0.md).
 
 - [theoretical-questions.md](theoretical-questions.md): приложение № 1 `Теоретические вопросы к промежуточному контролю` и приложение № 6 `Вопросы для проведения промежуточной аттестации`
 - [competence-tests.md](competence-tests.md): приложение № 2 `Компетентностно-ориентированные тесты к промежуточному контролю`
 - [current-control-practical-tasks.md](current-control-practical-tasks.md): приложение № 3 `Практические задания и задачи к промежуточному контролю`
 - [practical-tasks.md](practical-tasks.md): приложение № 7 `Практические задания и задачи к промежуточной аттестации`
 - [grading.md](grading.md): раздел 4 `Регламент проведения текущей и промежуточной аттестации...`, включая распределение баллов и критерии оценивания
-- [assessment-map.md](assessment-map.md): разделы 1-3 и приложение № 5 [`ФОС-1.0.0.md`](../source-materials/md/fos/ФОС-1.0.0.md)
+- [assessment-map.md](assessment-map.md): разделы 1-3 и приложение № 5 [`ФОС-1.0.0.md`](../sources/fos/md/ФОС-1.0.0.md)
 - [answer-key-and-rubrics.md](answer-key-and-rubrics.md): рабочие ключи и аналитические шкалы
 
 ## Назначение материалов

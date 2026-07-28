@@ -1,12 +1,12 @@
 # Согласование с источниками
 
-Этот файл фиксирует, как опубликованные материалы репозитория соотносятся с актуальными исходными документами в `source-materials/md/`.
+Этот файл фиксирует, как опубликованные материалы репозитория соотносятся с актуальными исходными документами в [`sources/`](../sources/).
 
 ## Источники
 
-- [`РПД-1.0.0.md`](../source-materials/md/rpd/РПД-1.0.0.md) - рабочая программа дисциплины
-- [`ФОС-1.0.0.md`](../source-materials/md/fos/ФОС-1.0.0.md) - оценочные материалы для текущего контроля и промежуточной аттестации
-- [`ЛР-0.4.0.md`](../source-materials/md/labs/ЛР-0.4.0.md) - методические указания к выполнению лабораторных работ
+- [`РПД-1.0.0.md`](../sources/rpd/md/РПД-1.0.0.md) - рабочая программа дисциплины
+- [`ФОС-1.0.0.md`](../sources/fos/md/ФОС-1.0.0.md) - оценочные материалы для текущего контроля и промежуточной аттестации
+- [`ЛР-0.4.0.md`](../sources/labs/md/ЛР-0.4.0.md) - методические указания к выполнению лабораторных работ
 
 ## Правило публикации
 
@@ -34,7 +34,7 @@
 
 ### РПД
 
-- [`docs/rpd.md`](rpd.md) <- структурированная публикация [`РПД-1.0.0.md`](../source-materials/md/rpd/РПД-1.0.0.md)
+- [`docs/rpd.md`](rpd.md) <- структурированная публикация [`РПД-1.0.0.md`](../sources/rpd/md/РПД-1.0.0.md)
 
 В этой публикации осознанно не воспроизводятся:
 
@@ -47,25 +47,25 @@
 
 ### ФОС
 
-- [`Exam/theoretical-questions.md`](../Exam/theoretical-questions.md) <- приложение № 1 и приложение № 6 [`ФОС-1.0.0.md`](../source-materials/md/fos/ФОС-1.0.0.md)
-- [`Exam/competence-tests.md`](../Exam/competence-tests.md) <- приложение № 2 [`ФОС-1.0.0.md`](../source-materials/md/fos/ФОС-1.0.0.md)
-- [`Exam/current-control-practical-tasks.md`](../Exam/current-control-practical-tasks.md) <- приложение № 3 [`ФОС-1.0.0.md`](../source-materials/md/fos/ФОС-1.0.0.md)
-- [`Exam/practical-tasks.md`](../Exam/practical-tasks.md) <- приложение № 7 [`ФОС-1.0.0.md`](../source-materials/md/fos/ФОС-1.0.0.md)
-- [`Exam/grading.md`](../Exam/grading.md) <- раздел 4 [`ФОС-1.0.0.md`](../source-materials/md/fos/ФОС-1.0.0.md) (регламент, пороги, распределение баллов, критерии)
-- [`Exam/assessment-map.md`](../Exam/assessment-map.md) <- разделы 1-3 и приложение № 5 [`ФОС-1.0.0.md`](../source-materials/md/fos/ФОС-1.0.0.md)
-- [`Exam/README.md`](../Exam/README.md) <- обзорная навигация по материалам [`ФОС-1.0.0.md`](../source-materials/md/fos/ФОС-1.0.0.md)
+- [`Exam/theoretical-questions.md`](../Exam/theoretical-questions.md) <- приложение № 1 и приложение № 6 [`ФОС-1.0.0.md`](../sources/fos/md/ФОС-1.0.0.md)
+- [`Exam/competence-tests.md`](../Exam/competence-tests.md) <- приложение № 2 [`ФОС-1.0.0.md`](../sources/fos/md/ФОС-1.0.0.md)
+- [`Exam/current-control-practical-tasks.md`](../Exam/current-control-practical-tasks.md) <- приложение № 3 [`ФОС-1.0.0.md`](../sources/fos/md/ФОС-1.0.0.md)
+- [`Exam/practical-tasks.md`](../Exam/practical-tasks.md) <- приложение № 7 [`ФОС-1.0.0.md`](../sources/fos/md/ФОС-1.0.0.md)
+- [`Exam/grading.md`](../Exam/grading.md) <- раздел 4 [`ФОС-1.0.0.md`](../sources/fos/md/ФОС-1.0.0.md) (регламент, пороги, распределение баллов, критерии)
+- [`Exam/assessment-map.md`](../Exam/assessment-map.md) <- разделы 1-3 и приложение № 5 [`ФОС-1.0.0.md`](../sources/fos/md/ФОС-1.0.0.md)
+- [`Exam/README.md`](../Exam/README.md) <- обзорная навигация по материалам [`ФОС-1.0.0.md`](../sources/fos/md/ФОС-1.0.0.md)
 
 ### Методические указания к лабораторным работам
 
-- `methodical-guidelines/students/README.md` <- общие положения, требования к воспроизводимости, отчету, защите, информационной безопасности и рекомендуемая структура репозитория из `source-materials/md/labs/ЛР-0.4.0.md`
-- `modules/M1-ci-cd-devops-ml/lab-01-docker-reproducible-environment.md` <- лабораторная работа № 1 `source-materials/md/labs/ЛР-0.4.0.md`
-- `modules/M1-ci-cd-devops-ml/lab-02-docker-images-and-containers.md` <- лабораторная работа № 2 `source-materials/md/labs/ЛР-0.4.0.md`
-- `modules/M1-ci-cd-devops-ml/lab-03-ci-cd-pipeline.md` <- лабораторная работа № 3 `source-materials/md/labs/ЛР-0.4.0.md`
-- `modules/M2-ml-lifecycle/lab-04-ml-pipeline.md` <- лабораторная работа № 4 `source-materials/md/labs/ЛР-0.4.0.md`
-- `modules/M2-ml-lifecycle/lab-05-mlflow-experiment-tracking.md` <- лабораторная работа № 5 `source-materials/md/labs/ЛР-0.4.0.md`
-- `modules/M2-ml-lifecycle/lab-06-dvc-data-model-versioning.md` <- лабораторная работа № 6 `source-materials/md/labs/ЛР-0.4.0.md`
-- `modules/M3-deployment-monitoring/lab-07-fastapi-model-service.md` <- лабораторная работа № 7 `source-materials/md/labs/ЛР-0.4.0.md`
-- `modules/M3-deployment-monitoring/lab-08-monitoring-prometheus-grafana.md` <- лабораторная работа № 8 `source-materials/md/labs/ЛР-0.4.0.md`
+- [`methodical-guidelines/students/README.md`](../methodical-guidelines/students/README.md) <- общие положения, требования к воспроизводимости, отчету, защите, информационной безопасности и рекомендуемая структура репозитория из [`ЛР-0.4.0.md`](../sources/labs/md/ЛР-0.4.0.md)
+- [`modules/M1-ci-cd-devops-ml/lab-01-docker-reproducible-environment.md`](../modules/M1-ci-cd-devops-ml/lab-01-docker-reproducible-environment.md) <- лабораторная работа № 1 [`ЛР-0.4.0.md`](../sources/labs/md/ЛР-0.4.0.md)
+- [`modules/M1-ci-cd-devops-ml/lab-02-docker-images-and-containers.md`](../modules/M1-ci-cd-devops-ml/lab-02-docker-images-and-containers.md) <- лабораторная работа № 2 [`ЛР-0.4.0.md`](../sources/labs/md/ЛР-0.4.0.md)
+- [`modules/M1-ci-cd-devops-ml/lab-03-ci-cd-pipeline.md`](../modules/M1-ci-cd-devops-ml/lab-03-ci-cd-pipeline.md) <- лабораторная работа № 3 [`ЛР-0.4.0.md`](../sources/labs/md/ЛР-0.4.0.md)
+- [`modules/M2-ml-lifecycle/lab-04-ml-pipeline.md`](../modules/M2-ml-lifecycle/lab-04-ml-pipeline.md) <- лабораторная работа № 4 [`ЛР-0.4.0.md`](../sources/labs/md/ЛР-0.4.0.md)
+- [`modules/M2-ml-lifecycle/lab-05-mlflow-experiment-tracking.md`](../modules/M2-ml-lifecycle/lab-05-mlflow-experiment-tracking.md) <- лабораторная работа № 5 [`ЛР-0.4.0.md`](../sources/labs/md/ЛР-0.4.0.md)
+- [`modules/M2-ml-lifecycle/lab-06-dvc-data-model-versioning.md`](../modules/M2-ml-lifecycle/lab-06-dvc-data-model-versioning.md) <- лабораторная работа № 6 [`ЛР-0.4.0.md`](../sources/labs/md/ЛР-0.4.0.md)
+- [`modules/M3-deployment-monitoring/lab-07-fastapi-model-service.md`](../modules/M3-deployment-monitoring/lab-07-fastapi-model-service.md) <- лабораторная работа № 7 [`ЛР-0.4.0.md`](../sources/labs/md/ЛР-0.4.0.md)
+- [`modules/M3-deployment-monitoring/lab-08-monitoring-prometheus-grafana.md`](../modules/M3-deployment-monitoring/lab-08-monitoring-prometheus-grafana.md) <- лабораторная работа № 8 [`ЛР-0.4.0.md`](../sources/labs/md/ЛР-0.4.0.md)
 
 В этой публикации осознанно не воспроизводятся:
 
