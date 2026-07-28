@@ -16,6 +16,7 @@
               pkgs.python311
               pkgs.uv
               pkgs.git
+              pkgs.lychee
               pkgs.nodejs_22
               pkgs.pandoc
             ];
