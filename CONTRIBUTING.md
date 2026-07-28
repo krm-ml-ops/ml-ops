@@ -10,8 +10,9 @@
 2. Вносите одно логически завершенное изменение за коммит.
 3. Используйте понятные сообщения коммитов, например: `docs: добавить рубрику лабораторной работы`.
 4. Проверьте относительные ссылки и заполненность обязательных разделов.
-5. После изменения Markdown-файлов выполните `lychee --config lychee.toml --no-progress AGENTS.md README.md docs Exam modules Project resources methodical-guidelines` из корня репозитория.
+5. После изменения Markdown-файлов выполните `lychee --config lychee.toml --no-progress AGENTS.md README.md docs exam modules project resources methodical-guidelines` из корня репозитория.
 6. В Pull Request укажите, какие результаты обучения, компетенции и КИМ затронуты.
+7. После изменения отслеживаемых Git файлов обновите [снимок структуры репозитория](repository-tree.txt): `nix develop --command sh -c 'git -c core.quotepath=false ls-files | tree --fromfile -a --noreport > repository-tree.txt'`. Команда включает все отслеживаемые файлы, включая dotfiles.
 
 ## Требования к КИМ
 
@@ -23,7 +24,10 @@
 
 ## Именование
 
-- папки модулей: `modules/M1-short-name`, `modules/M2-short-name`, `modules/M3-short-name`;
+- Имена новых файлов и каталогов записывайте строчными буквами в kebab case: `short-name.md`, `short-name/`.
+- папки модулей: `modules/m1-short-name`, `modules/m2-short-name`, `modules/m3-short-name`;
 - КИМ: `kim-01-practical-work.md`, `kim-02-test.md`;
 - рубрики: `rubric-01.md`;
 - приложения: `appendix-01-<name>.<ext>`.
+- Исключения: `README.md`, `AGENTS.md`, `CONTRIBUTING.md`, `LICENSE*.md`, dotfiles и имена, требуемые инструментами (`Dockerfile`, `pyproject.toml`, lock-файлы, DVC- и Nix-файлы).
+- В [`sources/`](sources/) сохраняйте исходные имена архивных документов: они обеспечивают прослеживаемость источников.

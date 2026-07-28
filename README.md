@@ -37,23 +37,23 @@
 
 ### Модуль 1. CI/CD and DevOps for ML
 
-- [Описание модуля](modules/M1-ci-cd-devops-ml/README.md)
-- Лабораторная работа 01: [Docker и настройка воспроизводимого окружения](modules/M1-ci-cd-devops-ml/lab-01-docker-reproducible-environment.md)
-- Лабораторная работа 02: [Создание Docker-образа и работа с контейнерами](modules/M1-ci-cd-devops-ml/lab-02-docker-images-and-containers.md)
-- Лабораторная работа 03: [Создание CI/CD pipeline для ML-проекта](modules/M1-ci-cd-devops-ml/lab-03-ci-cd-pipeline.md)
+- [Описание модуля](modules/m1-ci-cd-devops-ml/README.md)
+- Лабораторная работа 01: [Docker и настройка воспроизводимого окружения](modules/m1-ci-cd-devops-ml/lab-01-docker-reproducible-environment.md)
+- Лабораторная работа 02: [Создание Docker-образа и работа с контейнерами](modules/m1-ci-cd-devops-ml/lab-02-docker-images-and-containers.md)
+- Лабораторная работа 03: [Создание CI/CD pipeline для ML-проекта](modules/m1-ci-cd-devops-ml/lab-03-ci-cd-pipeline.md)
 
 ### Модуль 2. ML Lifecycle Management
 
-- [Описание модуля](modules/M2-ml-lifecycle/README.md)
-- Лабораторная работа 04: [Реализация ML pipeline от данных до модели](modules/M2-ml-lifecycle/lab-04-ml-pipeline.md)
-- Лабораторная работа 05: [Логирование экспериментов с MLflow](modules/M2-ml-lifecycle/lab-05-mlflow-experiment-tracking.md)
-- Лабораторная работа 06: [Отслеживание изменений в моделях и данных с DVC](modules/M2-ml-lifecycle/lab-06-dvc-data-model-versioning.md)
+- [Описание модуля](modules/m2-ml-lifecycle/README.md)
+- Лабораторная работа 04: [Реализация ML pipeline от данных до модели](modules/m2-ml-lifecycle/lab-04-ml-pipeline.md)
+- Лабораторная работа 05: [Логирование экспериментов с MLflow](modules/m2-ml-lifecycle/lab-05-mlflow-experiment-tracking.md)
+- Лабораторная работа 06: [Отслеживание изменений в моделях и данных с DVC](modules/m2-ml-lifecycle/lab-06-dvc-data-model-versioning.md)
 
 ### Модуль 3. Deployment, Monitoring, and Model Support
 
-- [Описание модуля](modules/M3-deployment-monitoring/README.md)
-- Лабораторная работа 07: [Сервис на FastAPI для модели](modules/M3-deployment-monitoring/lab-07-fastapi-model-service.md)
-- Лабораторная работа 08: [Мониторинг модели с Prometheus и Grafana](modules/M3-deployment-monitoring/lab-08-monitoring-prometheus-grafana.md)
+- [Описание модуля](modules/m3-deployment-monitoring/README.md)
+- Лабораторная работа 07: [Сервис на FastAPI для модели](modules/m3-deployment-monitoring/lab-07-fastapi-model-service.md)
+- Лабораторная работа 08: [Мониторинг модели с Prometheus и Grafana](modules/m3-deployment-monitoring/lab-08-monitoring-prometheus-grafana.md)
 
 ## Планируемые результаты обучения
 
@@ -70,7 +70,7 @@
 
 - Текущий контроль: 8 лабораторных работ с выполнением и защитой
 - Допуск к зачету: выполнены и защищены все лабораторные работы
-- Промежуточная аттестация: [материалы зачета](Exam/README.md)
+- Промежуточная аттестация: [материалы зачета](exam/README.md)
 - Максимум: 100 баллов
 - Порог успешного прохождения: 60 баллов
 - Полная интерактивная трассировка элемента, компетенции, индикатора, уровня, дескриптора, формы контроля, КИМ и ресурса: [модель измерения](docs/measurement-model.md)
@@ -84,12 +84,12 @@
 - [Методические указания](methodical-guidelines/README.md)
 - [Подборка ресурсов](resources/README.md)
 - [Исполняемый учебный baseline](resources/reference-mlops-project/README.md)
-- [Междисциплинарный проект](Project/README.md)
+- [Междисциплинарный проект](project/README.md)
 - [Чек-лист готовности репозитория](docs/quality-checklist.md)
 
 ## Примечания
 
-- [`source-materials/`](source-materials/) содержит актуальные и архивные версии исходных материалов, на основе которых собрана опубликованная структура.
+- [`sources/`](sources/) содержит актуальные и архивные версии исходных материалов, на основе которых собрана опубликованная структура.
 - Для локального baseline требуется Nix development shell; Docker Compose нужен только для полного контура наблюдаемости.
 
 ## Лицензия
@@ -100,4 +100,4 @@
 
 `uv` поставляется только из [Nix](https://nixos.org/download/) development shell. Поддерживаются Linux, macOS на Apple Silicon и WSL 2 с Nix, установленным внутри Linux-дистрибутива; Intel macOS не поддерживается, так как используемый nixpkgs прекращает эту платформу. В корне репозитория выполните `nix develop`, затем в `resources/reference-mlops-project/` - `uv sync --extra dev` и `uv run ./scripts/verify.sh`.
 
-Nix shell предоставляет Python 3.11, `uv`, Git, `lychee` и вспомогательные инструменты, но не Docker daemon, Prometheus, Grafana или MLflow server. На macOS Docker Desktop должен быть установлен и запущен на хосте. В WSL 2 для Docker Compose включите WSL integration в Docker Desktop либо настройте совместимый Linux Docker daemon.
+Nix shell предоставляет Python 3.12 с пакетом `openpyxl`, `uv`, Git, `lychee` и вспомогательные инструменты, но не Docker daemon, Prometheus, Grafana или MLflow server. На macOS Docker Desktop должен быть установлен и запущен на хосте. В WSL 2 для Docker Compose включите WSL integration в Docker Desktop либо настройте совместимый Linux Docker daemon.

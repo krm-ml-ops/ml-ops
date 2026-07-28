@@ -13,12 +13,13 @@
         in {
           default = pkgs.mkShell {
             packages = [
-              pkgs.python311
+              (pkgs.python312.withPackages (ps: [ ps.openpyxl ]))
               pkgs.uv
               pkgs.git
               pkgs.lychee
               pkgs.nodejs_22
               pkgs.pandoc
+              pkgs.tree
             ];
             LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
               pkgs.stdenv.cc.cc

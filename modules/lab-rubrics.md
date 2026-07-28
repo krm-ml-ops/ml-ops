@@ -6,11 +6,11 @@
 
 | ЛР | Официальная рубрика |
 |---|---|
-| 01 | [Docker и настройка воспроизводимого окружения](M1-ci-cd-devops-ml/lab-01-docker-reproducible-environment.md#критерии-оценивания) |
-| 02 | [Создание Docker-образа и работа с контейнерами](M1-ci-cd-devops-ml/lab-02-docker-images-and-containers.md#критерии-оценивания) |
-| 03 | [Создание CI/CD pipeline для ML-проекта](M1-ci-cd-devops-ml/lab-03-ci-cd-pipeline.md#критерии-оценивания) |
-| 04 | [Простая реализация ML pipeline](M2-ml-lifecycle/lab-04-ml-pipeline.md#критерии-оценивания) |
-| 05 | [Логирование экспериментов с MLflow](M2-ml-lifecycle/lab-05-mlflow-experiment-tracking.md#критерии-оценивания) |
-| 06 | [Отслеживание изменений в моделях и данных с DVC](M2-ml-lifecycle/lab-06-dvc-data-model-versioning.md#критерии-оценивания) |
-| 07 | [Сервис на FastAPI для модели](M3-deployment-monitoring/lab-07-fastapi-model-service.md#критерии-оценивания) |
-| 08 | [Мониторинг модели: Prometheus и Grafana](M3-deployment-monitoring/lab-08-monitoring-prometheus-grafana.md#критерии-оценивания) |
+| 01 | [Docker и настройка воспроизводимого окружения](m1-ci-cd-devops-ml/lab-01-docker-reproducible-environment.md#критерии-оценивания) |
+| 02 | [Создание Docker-образа и работа с контейнерами](m1-ci-cd-devops-ml/lab-02-docker-images-and-containers.md#критерии-оценивания) |
+| 03 | [Создание CI/CD pipeline для ML-проекта](m1-ci-cd-devops-ml/lab-03-ci-cd-pipeline.md#критерии-оценивания) |
+| 04 | [Простая реализация ML pipeline](m2-ml-lifecycle/lab-04-ml-pipeline.md#критерии-оценивания) |
+| 05 | [Логирование экспериментов с MLflow](m2-ml-lifecycle/lab-05-mlflow-experiment-tracking.md#критерии-оценивания) |
+| 06 | [Отслеживание изменений в моделях и данных с DVC](m2-ml-lifecycle/lab-06-dvc-data-model-versioning.md#критерии-оценивания) |
+| 07 | [Сервис на FastAPI для модели](m3-deployment-monitoring/lab-07-fastapi-model-service.md#критерии-оценивания) |
+| 08 | [Мониторинг модели: Prometheus и Grafana](m3-deployment-monitoring/lab-08-monitoring-prometheus-grafana.md#критерии-оценивания) |

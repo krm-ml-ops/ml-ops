@@ -7,7 +7,7 @@
 ## Структура
 
 - [modules/](modules/) содержит восемь лабораторных работ и их рубрики.
-- [Exam/](Exam/) содержит материалы промежуточной аттестации.
+- [exam/](exam/) содержит материалы промежуточной аттестации.
 - [docs/](docs/) содержит рабочую программу, трассировки и политику курса.
 - [methodical-guidelines/](methodical-guidelines/) содержит указания для студентов и преподавателей.
 - [resources/](resources/) содержит каталоги учебных ресурсов и эталонный проект.
@@ -24,6 +24,6 @@
 ## Ссылки и проверки
 
 - Каждое упоминание конкретного файла репозитория оформляйте Markdown-ссылкой: [`AGENTS.md`](AGENTS.md). Не используйте для таких ссылок только inline-код или обычный текст.
-- После изменения Markdown-файлов обязательно выполните `lychee --config lychee.toml --no-progress AGENTS.md README.md docs Exam modules Project resources methodical-guidelines` из корня репозитория.
+- После изменения Markdown-файлов обязательно выполните `lychee --config lychee.toml --no-progress AGENTS.md README.md docs exam modules project resources methodical-guidelines` из корня репозитория.
 - Перед отправкой изменений в эталонный проект запустите его проверку и тесты согласно [resources/reference-mlops-project/README.md](resources/reference-mlops-project/README.md).
 - CI-конфигурации находятся в [.github/workflows/](.github/workflows/); не ослабляйте обязательные проверки без замены, сохраняющей их покрытие.
