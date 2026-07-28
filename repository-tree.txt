@@ -163,6 +163,11 @@
 │   │       ├── ЛР-0.3.0.md
 │   │       └── ЛР-0.4.0.md
 │   ├── README.md
+│   ├── requirements
+│   │   ├── md
+│   │   │   └── krm-based-rpd-fos.md
+│   │   └── pdf
+│   │       └── krm-based-rpd-fos.pdf
 │   └── rpd
 │       ├── docx
 │       │   ├── РПД-0.3.0.docx
