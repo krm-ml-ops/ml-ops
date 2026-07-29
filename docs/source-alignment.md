@@ -87,4 +87,4 @@
 
 ## Рабочая оценочная надстройка
 
-Следующие файлы являются новыми эксплуатационными материалами: [`krm-alignment.md`](krm-alignment.md), [`measurement-model.md`](measurement-model.md), [`lab-rubrics.md`](../modules/lab-rubrics.md), [`answer-key-and-rubrics.md`](../exam/answer-key-and-rubrics.md), [`project/`](../project/) и [`reference-mlops-project/`](../resources/reference-mlops-project/).
+Следующие файлы являются новыми эксплуатационными материалами: [`krm-alignment.md`](krm-alignment.md), [`measurement-model.md`](measurement-model.md), [`lab-rubrics.md`](../modules/lab-rubrics.md), [`answer-key-and-rubrics.md`](../exam/answer-key-and-rubrics.md) и [`reference-mlops-project/`](../resources/reference-mlops-project/).

@@ -84,7 +84,6 @@
 - [Методические указания](methodical-guidelines/README.md)
 - [Подборка ресурсов](resources/README.md)
 - [Исполняемый учебный baseline](resources/reference-mlops-project/README.md)
-- [Междисциплинарный проект](project/README.md)
 - [Чек-лист готовности репозитория](docs/quality-checklist.md)
 
 ## Примечания
