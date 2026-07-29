@@ -8,11 +8,13 @@
 
 1. Создайте ветку `feature/<краткое-название>` или `fix/<краткое-название>`.
 2. Вносите одно логически завершенное изменение за коммит.
-3. Используйте понятные сообщения коммитов, например: `docs: добавить рубрику лабораторной работы`.
-4. Проверьте относительные ссылки и заполненность обязательных разделов.
-5. После изменения Markdown-файлов выполните `lychee --config lychee.toml --no-progress AGENTS.md README.md docs exam modules project resources methodical-guidelines` из корня репозитория.
-6. В Pull Request укажите, какие результаты обучения, компетенции и КИМ затронуты.
-7. После изменения отслеживаемых Git файлов обновите [снимок структуры репозитория](repository-tree.txt): `nix develop --command sh -c 'git -c core.quotepath=false ls-files | tree --fromfile -a --noreport > repository-tree.txt'`. Команда включает все отслеживаемые файлы, включая dotfiles.
+3. Оформляйте сообщения коммитов по [Conventional Commits](https://www.conventionalcommits.org/): заголовок имеет формат `type(scope): краткое описание`, например `docs: добавить рубрику лабораторной работы`.
+4. После пустой строки добавляйте в тело сообщения объяснение изменения и его причины.
+5. Завершайте сообщение строкой `Co-authored-by: OpenCode (<название используемой модели>) <noreply@openai.com>`; указывайте фактическое отображаемое название модели, например `Co-authored-by: OpenCode (GPT 5.6 Terra) <noreply@openai.com>`.
+6. Проверьте относительные ссылки и заполненность обязательных разделов.
+7. После изменения Markdown-файлов выполните `lychee --config lychee.toml --no-progress AGENTS.md README.md docs exam modules project resources methodical-guidelines` из корня репозитория.
+8. В Pull Request укажите, какие результаты обучения, компетенции и КИМ затронуты.
+9. После изменения отслеживаемых Git файлов обновите [снимок структуры репозитория](repository-tree.txt): `nix develop --command sh -c 'git -c core.quotepath=false ls-files | tree --fromfile -a --noreport > repository-tree.txt'`. Команда включает все отслеживаемые файлы, включая dotfiles.
 
 ## Требования к КИМ
 
