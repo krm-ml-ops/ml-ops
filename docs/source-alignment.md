@@ -88,3 +88,5 @@
 ## Рабочая оценочная надстройка
 
 Следующие файлы являются новыми эксплуатационными материалами: [`krm-alignment.md`](krm-alignment.md), [`measurement-model.md`](measurement-model.md), [`lab-rubrics.md`](../modules/lab-rubrics.md), [`answer-key-and-rubrics.md`](../exam/answer-key-and-rubrics.md) и [`reference-mlops-project/`](../resources/reference-mlops-project/).
+
+Требования КРМ предусматривают рубежный контроль по модулям как возможную форму контроля. Для дисциплины «Основы MLOps» он не применяется: измерение результатов обеспечивают выполнение и защита лабораторных работ, а также зачет согласно актуальным РПД и ФОС.
